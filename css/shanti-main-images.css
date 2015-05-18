@@ -1,0 +1,24 @@
+/** Custom Color Settings **/
+.titlearea,
+.carousel-control,
+.breadcrumb .icon,
+.nav-justified>li.active a,
+.nav-justified>li.active a:hover,
+.nav-justified>li.active a:active{ background-color:#c4be28 !important;}
+.nav-justified>li.active::before{ color:#c4be28 !important;}
+    /* darker shades below are used to better define details */
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a .check-mark,
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a:active .check-mark,
+.main-content .selectpicker .caret::before,
+.view-section .nav-tabs>li.active>a, 
+.view-section .nav-tabs>li.active>a:hover, 
+.view-section .nav-tabs>li.active>a:active,
+.view-section .fancytree-container .glyphicon,
+.view-section .fancytree-container .fancytree-node:hover > .glyphicon,
+.view-section .fancytree-container .fancytree-node:active > .glyphicon,
+.view-section .fancytree-node.fancytree-active > .glyphicon,
+.view-section .fancytree-node.fancytree-selected > .glyphicon{ color:rgb(196,190,40) !important; }
+.view-section .nav-tabs>li.active>a, 
+.view-section .nav-tabs>li.active>a:hover, 
+.view-section .nav-tabs>li.active>a:active{ border-top-color: rgb(196,190,40) !important;}
+.shanti-thumbnail-image.shanti-field-visuals .icon{ background: rgba(196,190,40,0.8); }
