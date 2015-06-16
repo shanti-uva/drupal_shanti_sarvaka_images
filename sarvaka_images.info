@@ -35,6 +35,9 @@ stylesheets[all][] =  css/shanti-search-images.css
 ;;;;;;;;;;;;;;;;;;;;;;
 scripts[] = js/shanti-main-images.js
 scripts[] = js/shanti-search-images.js
+scripts[] = js/contrib/grid.js
+scripts[] = js/contrib/jquery.row-grid.min.js
+scripts[] = js/contrib/modernizr.custom.js
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Theme Settings   
