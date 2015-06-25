@@ -12,3 +12,4 @@
 function sarvaka_images_preprocess_views_view(&$vars) {
 	dpm($vars, 'vars in view preprocess');
 }
+
