@@ -7,8 +7,7 @@
 * Copyright 2011 @louis_remi
 * Licensed under the MIT license.
 */
-
-	var $ = jQuery;
+(function ($) {
 		
 	var $event = $.event,
 	$special,
@@ -165,7 +164,10 @@
 	};
 	
 
-var Grid = (function() {
+})(jQuery);
+
+
+var Grid = (function($) {
 			// list of items
 		var $grid = $( '#og-grid' ),
 			// the items
@@ -205,7 +207,7 @@ var Grid = (function() {
 			settings = $.extend( true, {}, settings, config );
 	
 			// preload all images
-			$grid.imagesLoaded( function() {
+			//$grid.imagesLoaded( function() {
 	
 				// save item´s size and offset
 				saveItemInfo( true );
@@ -214,7 +216,7 @@ var Grid = (function() {
 				// initialize some events
 				initEvents();
 	
-			} );
+			//} );
 	
 		}
 	
@@ -508,11 +510,11 @@ var Grid = (function() {
 			getEl : function() {
 				return this.$previewEl;
 			}
-		}
+		};
 	
 		return { 
 			init : init,
 			addItems : addItems
 		};
 	
-	})();
+	})(jQuery);

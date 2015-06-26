@@ -10,8 +10,8 @@
 		
 		Grid.init();
 		
-		var itemHeight = $(this).closest('.item').height();	    
-		$('.og-grid .item > a').children('img').attr('height', itemHeight );    
+		var itemHeight = $(this).closest(".item").height();	    
+		$(".og-grid .item > a").children("img").attr("height", itemHeight );    
 		  
 		  // --- Than - we need some form of the following for resize
 		 // $(window).bind('load resize orientationchange', galleryGrid_Refresh );  
