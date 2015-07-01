@@ -40,8 +40,9 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 				$fdesc = substr($fdesc, 0, 500);
 				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
 			}
+			$furl = url('file/' . $ftitle);
 			$rows .= '<div class="item">
-		    <a href="#" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '">
+		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '">
 	        <img src="' . $thumb_path . '" >
 		    </a>
 	    </div>';
