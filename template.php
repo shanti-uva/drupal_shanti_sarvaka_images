@@ -37,7 +37,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
 			if (empty($fdesc)) {$fdesc = t("No description currently available.");}
 			if (strlen($fdesc) > 500) {
-				$fdesc = substr($fdesc, 0, 500);
+				$fdesc = substr($fdesc, 0, 400);
 				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
 			}
 			$furl = url('file/' . $file->fid);
