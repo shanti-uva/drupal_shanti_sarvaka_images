@@ -27,8 +27,8 @@
 /* targets single image page template */
 .page-file .file-image .img-responsive{ float:right !important; margin-left:1.5rem;}
 .og-fullimg{ margin-left: 1rem;}
-.og-details{ padding: 0 2%; width:46%;}
+.og-details{ padding: 0 0 0 3%; width:50%;}
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
-
+.og-close{ top:1.5rem;}
 .og-expander-inner{ padding: 50px 110px;}
