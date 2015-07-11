@@ -280,6 +280,7 @@
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif !important;}
 .og-details h3{ margin:0 0 1.25rem !important;}
 .og-close{ top:1.5rem !important;}
-.og-expander-inner{ padding: 50px 30px;}
+.og-expander-inner{ padding: 50px 30px !important;}
 
-
+.last-row ~ .item{ }
+.last-row ~ .item::after{ float:right !important; height:1rem !important;display:inline-block !important;min-width:100% !important;width:100% !important;}
