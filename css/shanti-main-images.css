@@ -9,6 +9,7 @@
     /* darker shades below are used to better define details */
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a .check-mark,
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a:active .check-mark,
+.navbar-brand:hover .site-slogan,
 .main-content .selectpicker .caret::before,
 .view-section .nav-tabs>li.active>a, 
 .view-section .nav-tabs>li.active>a:hover, 
@@ -22,3 +23,17 @@
 .view-section .nav-tabs>li.active>a:hover, 
 .view-section .nav-tabs>li.active>a:active{ border-top-color: rgb(196,190,40) !important;}
 .shanti-thumbnail-image.shanti-field-visuals .icon{ background: rgba(196,190,40,0.8); }
+.navbar-brand:active .site-slogan{ color:#444 !important;}
+
+
+/* targets single image page template */
+.og-fullimg img{ margin-left:1.5rem !important;}
+.og-fullimg{ margin-left: 1rem !important;}
+.og-details{ padding: 0 0 0 3% !important; width:50% !important;}
+.og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif !important;}
+.og-details h3{ margin:0 0 1.25rem !important;}
+.og-close{ top:1.5rem !important;}
+.og-expander-inner{ padding: 50px 30px !important;}
+
+.last-row ~ .item{ border:2px solid red;}
+.last-row ~ .item::after{ height:1rem !important;display:inline-block !important;min-width:100% !important;width:100% !important;}
