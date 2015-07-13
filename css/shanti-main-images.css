@@ -27,13 +27,14 @@
 
 
 /* targets single image page template */
-.og-fullimg img{ margin-left:1.5rem !important;}
-.og-fullimg{ /*margin-left: 1rem !important;*/}
-.og-details{ padding: 0 0 0 3% !important; width:43% !important;}
-.og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif !important;}
-.og-details h3{ margin:0 0 1.25rem !important;}
-.og-close{ top:1.5rem !important;}
-.og-expander-inner{ padding: 50px 30px !important;}
+.og-fullimg img{ margin-left:1.5rem;}
+.og-fullimg{ /*margin-left: 1rem;*/}
+.og-details{ padding: 0 0 0 3%; width:43%;}
+.content-section .og-details a{ border:5px double #303030;}
+.og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details h3{ margin:0 0 1.25rem;}
+.og-close{ top:1.5rem;}
+.og-expander-inner{ padding: 50px 30px;}
 
 .last-row ~ .item:last-of-type{ border:2px solid red;}
-.last-row ~ .item:last-of-type::after{ height:100px !important;display:inline-block !important;min-width:100% !important;width:100% !important;}
+.last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;}
