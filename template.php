@@ -21,7 +21,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_THEME, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid-init.js', array('group'=>JS_THEME, 'weight'=>9980));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_THEME, 'weight'=>9990));
-		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css', array('group'=>CSS_THEME, 'weight'=>9999));
+		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
 		$view = $vars['view'];
 		$results = $view->result;
 		$rows = '<div id="og-grid" class="container og-grid">';
