@@ -35,5 +35,5 @@
 .og-close{ top:1.5rem !important;}
 .og-expander-inner{ padding: 50px 30px !important;}
 
-.last-row ~ .item{ border:2px solid red;}
-.last-row ~ .item::after{ height:1rem !important;display:inline-block !important;min-width:100% !important;width:100% !important;}
+.last-row ~ .item:last-of-type{ border:2px solid red;}
+.last-row ~ .item:last-of-type::after{ height:100px !important;display:inline-block !important;min-width:100% !important;width:100% !important;}
