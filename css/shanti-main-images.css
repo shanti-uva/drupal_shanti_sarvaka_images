@@ -27,7 +27,7 @@
 
 
 /* targets single image page template */
-.og-fullimg{ border-right:2px solid #000;padding-top:2rem;width: 55%;}
+.og-fullimg{ border-right:2px solid #000;padding-top:2rem;padding-right:1.5rem; width:55%;}
 
 .og-fullimg img{ margin:0 1rem;}
 
@@ -35,7 +35,8 @@
 
 .content-section .og-details a{ border:5px double #303030;}
 .content-section .og-details a:hover{ border:5px double #555;color:#eee;}
-.content-section .og-details a:active{ border:5px double #888;color:#fff;}
+.content-section .og-details a:focus,
+.content-section .og-details a:active{ border:5px double #888 !important;color:#fff;}
 
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
