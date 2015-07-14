@@ -408,10 +408,10 @@ console.info('in grid', $('#og-grid .item').length);
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
-			this.$href.attr( 'photographer', eldata.photographer );
-			this.$href.attr( 'creator', eldata.creator );
-			this.$href.attr( 'date', eldata.date );
-			this.$href.attr( 'place', eldata.place );
+			this.$photographer.html( 'photographer', eldata.photographer );
+			this.$creator.html( 'creator', eldata.creator );
+			this.$date.html( 'date', eldata.date );
+			this.$place.html( 'place', eldata.place );
 
 			var self = this;
 			
