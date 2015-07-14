@@ -27,7 +27,7 @@
 
 
 /* targets single image page template */
-.og-fullimg{ border-right:2px solid #000;margin-top:2rem;padding-top:2rem;width: 55%;}
+.og-fullimg{ border-right:2px solid #000;padding-top:2rem;width: 55%;}
 
 .og-fullimg img{ margin-left:1.5rem;}
 
@@ -37,7 +37,7 @@
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
 .og-close{ top:1.5rem;}
-.og-expander-inner{ padding: 30px 20px;}
+.og-expander-inner{ padding: 25px 15px;}
 
 /*
 .last-row ~ .item:last-of-type{ border:2px solid red;}
