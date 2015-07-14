@@ -37,8 +37,8 @@
 .og-fullimg img{ margin:0 0 0 1rem;}
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
-.og-close{ position:absolute;top:1.5rem;z-index:10;}
-.og-expander-inner{ overflow-x:auto; padding: 2.5rem 1.5rem 8rem;}
+.og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
+.og-expander-inner{ overflow-x:auto; padding: 2.5rem 1.5rem;}
 
 .page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
@@ -50,9 +50,15 @@
 
 @media screen and (max-width: 650px) {
 
+	.og-fullimg{ padding:3rem 0 0;}
     .og-fullimg, 
-    .og-details { display: block; width:100%; border:none;}
+    .og-details { display:block; width:100%; border:none;}
     /* .og-details { float:none;} */
+    .og-close{ position:absolute;top:1rem;right:1rem;}
+    .og-expander-inner{ overflow-x:auto; padding-bottom: 8rem;}
+    .page-file .file-image img{ float:left;}
+    .og-fullimg img{ margin:0;}
+
 }
 
 
