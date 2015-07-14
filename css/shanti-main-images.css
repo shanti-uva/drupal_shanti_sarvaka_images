@@ -31,7 +31,7 @@
 
 .og-fullimg img{ margin:0 1rem;}
 
-.og-details{ padding: 0 0 0 3%; padding-top:2rem; width:38%; border-left:1px solid #222;}
+.og-details{ padding: 0 2%; padding-top:2rem; width:38%; border-left:1px solid #222;}
 
 .content-section .og-details a{ border:5px double #303030;}
 .content-section .og-details a:hover{ border:5px double #555;color:#eee;}
@@ -41,7 +41,7 @@
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
 .og-close{ top:1.5rem;}
-.og-expander-inner{ padding: 2.5rem 1.5rem;}
+.og-expander-inner{ padding: 2.5rem 1.5rem 8rem;}
 
 /*
 .last-row ~ .item:last-of-type{ border:2px solid red;}
