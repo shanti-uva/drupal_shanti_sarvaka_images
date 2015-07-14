@@ -41,7 +41,7 @@
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
 .og-close{ top:1.5rem;}
-.og-expander-inner{ padding: 2.5rem 1.5rem 8rem;}
+.og-expander-inner{ overflow-x:auto; padding: 2.5rem 1.5rem 8rem;}
 
 .page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
@@ -49,6 +49,8 @@
 .last-row ~ .item:last-of-type{ border:2px solid red;}
 .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;}
 */
+
+
 
 @media screen and (max-width: 650px) {
 
