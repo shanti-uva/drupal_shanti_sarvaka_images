@@ -351,18 +351,7 @@ console.info('in grid', $('#og-grid .item').length);
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
-			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
-   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
-   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li></ul>');
-   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$href);
-   		this.$photographer = $('<li class="photographer"></li>');
-   		this.$creator = $('<li class="creator"></li>');
-   		this.$date = $('<li class="date"></li>');
-   		this.$place = $('<li class="place"></li>');
-   		this.$infolist = $('<ul></ul>').append($photographer, $creator, $date, $place);
-   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append($infolist);
-   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
-			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
+			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -376,6 +365,7 @@ console.info('in grid', $('#og-grid .item').length);
 			}
 		},
 		update : function( $item ) {
+
 			if( $item ) {
 				this.$item = $item;
 			}
@@ -398,20 +388,12 @@ console.info('in grid', $('#og-grid .item').length);
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' ),
-					photographer : $itemEl.data( 'photographer' ),
-					creator : $itemEl.data( 'creator' ),
-					date : $itemEl.data( 'date' ),
-					place :  $itemEl.data( 'place' ),
+					description : $itemEl.data( 'description' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
-			this.$photographer.html( 'photographer', eldata.photographer );
-			this.$creator.html( 'creator', eldata.creator );
-			this.$date.html( 'date', eldata.date );
-			this.$place.html( 'place', eldata.place );
 
 			var self = this;
 			
