@@ -29,9 +29,9 @@
 /* targets single image page template */
 .og-fullimg{ border-right:2px solid #000;padding-top:2rem;padding-right:1.5rem; width:55%;}
 
-.og-fullimg img{ margin:0 1rem;}
+.og-fullimg img{ margin:0 0 0 1rem;}
 
-.og-details{ padding: 0 2%; padding-top:2rem; width:38%; border-left:1px solid #222;}
+.og-details{ padding: 0 1.5rem; padding-top:2rem; width:38%; border-left:1px solid #222;}
 
 .content-section .og-details a{ border:5px double #303030;}
 .content-section .og-details a:hover{ border:5px double #555;color:#eee;}
