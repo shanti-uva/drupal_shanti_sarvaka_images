@@ -33,6 +33,8 @@
 
 .og-details{ padding: 0 1.5rem; padding-top:2rem; width:38%; border-left:1px solid #222;}
 
+
+
 .content-section .og-details a{ border:5px double #303030;}
 .content-section .og-details a:hover{ border:5px double #555;color:#eee;}
 .content-section .og-details a:focus,
@@ -57,6 +59,13 @@
 	.og-fullimg { display: block; }
 	.og-details { float:none; width: 100%; }	
 }
+
+
+@media screen and (min-width: 768px) {
+
+    .og-fullimg, .og-details { width:100%; border:none;}
+}
+
 
 
 
