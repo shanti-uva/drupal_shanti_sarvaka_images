@@ -34,8 +34,8 @@
 .og-details{ padding: 0 0 0 3%; padding-top:2rem; width:38%; border-left:1px solid #222;}
 
 .content-section .og-details a{ border:5px double #303030;}
-.content-section .og-details a:hover{ border:5px double #555;}
-.content-section .og-details a:active{ border:5px double #888;}
+.content-section .og-details a:hover{ border:5px double #555;color:#eee;}
+.content-section .og-details a:active{ border:5px double #888;color:#fff;}
 
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
