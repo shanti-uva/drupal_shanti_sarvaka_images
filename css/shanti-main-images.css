@@ -27,8 +27,8 @@
 
 
 /* targets single image page template */
-.og-fullimg{ border-right: 2px solid #111;padding-top:2rem;padding-right:1.5rem; width:55%;height:auto;}
-.og-details{ border-left:1px solid #333; padding: 0 1.5rem; padding-top:1rem; width:44%; height: auto;}
+.og-fullimg{ /*border-right: 2px solid #111;*/ padding-top:2rem;padding-right:1%; width:54%;height:auto;}
+.og-details{ /*border-left:1px solid #333;*/ padding: 0 1.5rem; padding-top:1rem; width:44%; height: auto;}
 
 .content-section .og-details a,
 .content-section .og-details a:hover,
@@ -41,14 +41,12 @@
 .og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
 
 .og-expander{ }
-.og-expander-inner{ background:#222;overflow-x:auto; padding: 2.5rem 1.5rem;}
+.og-expander-inner{ background:#222;padding: 2.5rem 1.5rem;}
 
 .og-details .tab-content{ background:#222;}
 .og-details #info ul { margin: 12px 0px 0px 0px;padding: 0px;}
 .og-details #info li { list-style-type: none;color: #c0c0c0;margin: 3px 0px 0px 0px;padding: 0px;}
 .og-details #info li label { color: #c0c0c0;}
-
-.page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
 .og-details .nav-tabs>li>a{ border:none; color:#ccc; cursor:default; background:transparent; font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
@@ -56,18 +54,20 @@
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
 .og-details .nav-tabs>li>a::before{ content:'';display:none;}
-.og-details .nav-tabs>li>a:nth-of-type:(1){ margin-left:.5rem;}
+.og-details .nav-tabs>li>a:nth-of-type:(1){ margin-left:0.8rem;}
 
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:active{ background:#222; color:#ddd; border: 1px solid #555; border-bottom:none;}
-
+.nav-tabs>li.active>a:active{ background:#222; color:#eee; border: 1px solid #555; border-bottom:none;}
 
 /*
 .last-row ~ .item:last-of-type{ border:2px solid red;}
 .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;}
 */
+
+/* single image page */
+.page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
 
 @media screen and (max-width: 767px) {
