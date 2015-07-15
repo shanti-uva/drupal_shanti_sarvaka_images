@@ -27,25 +27,53 @@
 
 
 /* targets single image page template */
-.og-fullimg{ border-right:2px solid #000;padding-top:2rem;padding-right:1.5rem; width:55%;}
-
-.og-fullimg img{ margin:0 0 0 1rem;}
-
-.og-details{ padding: 0 1.5rem; padding-top:2rem; width:42%; border-left:1px solid #222;}
+.og-fullimg{ border-right:2px solid #000;padding-top:2rem;padding-right:1.5rem; width:55%;height:auto;}
+.og-details{ padding: 0 1.5rem; padding-top:2rem; width:38%; border-left:1px solid #222;height: auto;}
 
 .content-section .og-details a{ border:5px double #303030;}
 .content-section .og-details a:hover{ border:5px double #555;color:#eee;}
 .content-section .og-details a:focus,
 .content-section .og-details a:active{ border:5px double #888 !important;color:#fff;}
 
+.og-fullimg img{ margin:0 0 0 1rem;}
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
-.og-close{ top:1.5rem;}
-.og-expander-inner{ padding: 2.5rem 1.5rem 8rem;}
+.og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
+.og-expander-inner{ overflow-x:auto; padding: 2.5rem 1.5rem;}
 
+.og-details #info ul {
+	margin: 12px 0px 0px 0px;
+	padding: 0px;
+}
+
+.og-details #info li {
+  list-style-type: none;
+  color: #c0c0c0;
+  margin: 3px 0px 0px 0px;
+  padding: 0px;
+}
+
+.og-details #info li label {
+  color: #c0c0c0;
+}
 .page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
 /*
 .last-row ~ .item:last-of-type{ border:2px solid red;}
 .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;}
 */
+
+
+@media screen and (max-width: 650px) {
+
+	.og-fullimg{ padding:3rem 0 0;}
+    .og-fullimg, 
+    .og-details { display:block; width:100%; border:none; margin-top:2rem;}
+    /* .og-details { float:none;} */
+    .og-close{ position:absolute;top:1rem;right:1rem;}
+    .og-expander-inner{ overflow-x:auto; padding-bottom: 8rem;}
+    .page-file .file-image img{ float:left;}
+    .og-fullimg img{ margin:0;}
+
+}
+

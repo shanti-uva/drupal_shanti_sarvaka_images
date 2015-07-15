@@ -348,15 +348,34 @@ console.info('in grid', $('#og-grid .item').length);
 	Preview.prototype = {
 		create : function() {
 			// create Preview structure:
+			/*old
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+			*/
+			/* New */
+			this.$title = $( '<h3></h3>' );
+			this.$description = $( '<p></p>' );
+			this.$href = $( '<a href="#">View</a>' );
+			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
+   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
+   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li></ul>');
+   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$href);
+   		//this.$photographer = $('<li class="photographer">Photographer</li>');
+   		this.$creator = $('<li class="creator">Photographer</li>');
+   		this.$date = $('<li class="date">Date</li>');
+   		this.$place = $('<li class="place">Place</li>');
+   		this.$infolist = $('<ul></ul>').append(this.$photographer, this.$creator, this.$date, this.$place);
+   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
+   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
+			this.$details = $( '<div class="og-details col-sm-12 col-md-6"></div>' ).append(this.$tabs, this.$tabcontent);
+			
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg col-sm-12 col-md-6"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
-			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
+			this.$previewInner = $( '<div class="og-expander-inner row"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+			this.$previewEl = $( '<div class="og-expander container-fluid"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );
 			// set the transitions for the preview and the item
@@ -388,12 +407,18 @@ console.info('in grid', $('#og-grid .item').length);
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					description : $itemEl.data( 'description' ),
+					creator : $itemEl.data( 'creator' ),
+					date : $itemEl.data( 'date' ),
+					place : $itemEl.data( 'place' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+			this.$creator.html( "<label>Photographer:</label> " + eldata.creator );
+			this.$date.html( "<label>Date:</label> " + eldata.date );
+			this.$place.html( "<label>Location:</label> " + eldata.place );
 
 			var self = this;
 			

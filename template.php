@@ -34,6 +34,15 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 	    $info_bundle = array('bundle' => $file->type);
 	    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
 			$ftitle = $file->filename;
+			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
+			if(empty($creator)) {$creator = "Not available";}
+			$date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
+			if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
+			$photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
+			if(empty($photographer)) {$photographer = "Not available";}
+			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
+			if(empty($place)) {$place = "Not available";}
+			
 			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
 			if (empty($fdesc)) {$fdesc = t("No description currently available.");}
 			if (strlen($fdesc) > 500) {
@@ -42,13 +51,27 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			}
 			$furl = url('file/' . $file->fid);
 			$rows .= '<div class="item">
-		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '">
+		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
+		    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
+		    >
 	        <img src="' . $thumb_path . '" >
 		    </a>
 	    </div>';
 		}
 		$rows .= '</div>';
 		$vars['rows'] = $rows;
+	}
+}
+
+function sarvaka_images_metadata_process($mdinfo) {
+	if (is_array($mdinfo)) {
+		if(count($mdinfo) > 0) {
+			return $mdinfo[0];
+		} else {
+			return "";
+		}
+	} else {
+		return $mdinfo;
 	}
 }
 
