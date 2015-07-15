@@ -37,7 +37,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
 			if(empty($creator)) {$creator = "Not available";}
 			$date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
-			if(empty($date)) {$date = "Not available";}
+			if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
 			$photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
 			if(empty($photographer)) {$photographer = "Not available";}
 			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
