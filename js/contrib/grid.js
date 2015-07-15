@@ -407,12 +407,18 @@ console.info('in grid', $('#og-grid .item').length);
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					description : $itemEl.data( 'description' )
+					description : $itemEl.data( 'description' ),
+					creator : $itemEl.data( 'creator' ),
+					date : $itemEl.data( 'date' ),
+					place : $itemEl.data( 'place' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			this.$href.attr( 'href', eldata.href );
+			this.$creator.html( "<label>Photographer:</label> " + eldata.creator );
+			this.$date.html( "<label>Date:</label> " + eldata.date );
+			this.$place.html( "<label>Location:</label> " + eldata.place );
 
 			var self = this;
 			
