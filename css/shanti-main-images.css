@@ -39,16 +39,19 @@
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ margin:0 0 1.25rem;}
 .og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
-.og-expander-inner{ overflow-x:auto; padding: 2.5rem 1.5rem;}
 
-.og-details #info ul {margin: 12px 0px 0px 0px;padding: 0px;}
-.og-details #info li {list-style-type: none;color: #c0c0c0;margin: 3px 0px 0px 0px;padding: 0px;}
+.og-expander{ }
+.og-expander-inner{ background:#222;overflow-x:auto; padding: 2.5rem 1.5rem;}
+
+.og-details .tab-content{ background:#222;}
+.og-details #info ul { margin: 12px 0px 0px 0px;padding: 0px;}
+.og-details #info li { list-style-type: none;color: #c0c0c0;margin: 3px 0px 0px 0px;padding: 0px;}
 .og-details #info li label { color: #c0c0c0;}
 
 .page-file .file-image img{ float:right; margin:0 1rem 1rem 2rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
-.og-details .nav-tabs>li>a{ color:#ccc; cursor:default; background-color:transparent;}
+.og-details .nav-tabs>li>a{ color:#ccc; cursor:default; background:#222;}
 .og-details .nav-tabs>li>a:hover{ border:none; color:#ddd;}
 
 
