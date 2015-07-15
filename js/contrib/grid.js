@@ -359,8 +359,8 @@ console.info('in grid', $('#og-grid .item').length);
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
-   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
-   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li></ul>');
+   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
+   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
    		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$href);
    		//this.$photographer = $('<li class="photographer">Photographer</li>');
    		this.$creator = $('<li class="creator">Photographer</li>');
