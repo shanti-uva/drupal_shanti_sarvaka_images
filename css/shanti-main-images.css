@@ -54,12 +54,14 @@
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
 .og-details .nav-tabs>li>a::before{ content:'';display:none;}
-.og-details .nav-tabs>li>a:first-child{ margin-left:0.5rem;}
 
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:active{ background:#222; color:#eee; border: 1px solid #555; border-bottom:none;}
+
+.og-details .tab-pane{ padding-top:1.5rem;}
+.og-details .tab-pane ul{ font-size:1.12em;}
 
 /*
 .last-row ~ .item:last-of-type{ border:2px solid red;}
