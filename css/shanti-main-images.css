@@ -37,16 +37,16 @@
 .content-section .og-details a:last-child{ margin-top:1rem;}
 
 .og-fullimg img{ margin:0 0 0 1rem;}
-.og-details p{ font-size:95%; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
-.og-details h3{ font-size:95%; margin:1.5rem 0 1.25rem;}
+.og-details p{ font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details h3{ font-size:1.5em; margin:1.5rem 0 1.25rem;}
 .og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
 
 .og-expander-inner{ background:#222;padding: 4.5rem 1.5rem;}
 
 .og-details .tab-content{ background:#222;}
-.og-details #info ul { margin: 2.5rem 0 0 0;padding: 0px;}
-.og-details #info li { list-style-type: none;color: #c0c0c0;margin:1.5rem 0 0 0;padding: 0px;}
-.og-details #info li label { color: #c0c0c0; display:block; font-size:1em;}
+.og-details #info ul { margin: 2.5rem 0 0 0;padding: 0;}
+.og-details #info li { list-style-type: none;color: #c0c0c0;margin:1.5rem 0 0 0;padding: 0;}
+.og-details #info li label { color: #c0c0c0; display:block; font-size:1em; margin-left:0;}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
 .og-details .nav-tabs>li>a{ border:none; color:#ccc; cursor:default; background:transparent; font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
