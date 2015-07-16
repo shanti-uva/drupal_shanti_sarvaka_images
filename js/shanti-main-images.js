@@ -1,7 +1,7 @@
 Drupal.behaviors.shantiImages = {
   attach: function (context, settings) {
   	if(context == document) {
-  		jQuery(".container.og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
+  		jQuery(".container.og-grid").rowGrid({itemSelector: ".item", minMargin: 4, maxMargin: 4, firstItemClass: "first-item"});
 		
 			Grid.init();
 			

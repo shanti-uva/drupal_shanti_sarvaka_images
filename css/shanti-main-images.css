@@ -49,7 +49,7 @@
 .og-details #info li label { color: #c0c0c0; display:block; font-size:1em; margin-left:0;}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
-.og-details .nav-tabs>li>a{ border:none; color:#ccc; cursor:default; background:transparent; font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details .nav-tabs>li>a{ border:none; color:#999; cursor:default; background:transparent; font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
@@ -58,7 +58,7 @@
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:active{ background:#222; color:#eee; border: 1px solid #555; border-bottom:none;}
+.nav-tabs>li.active>a:active{ background:#222; color:#ccc; border: 1px solid #555; border-bottom:none;}
 
 .og-details .tab-pane{ padding-top:1.5rem;}
 .og-details .tab-pane ul{ font-size:1.12em;}
