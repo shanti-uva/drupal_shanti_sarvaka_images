@@ -28,11 +28,13 @@
 
 /* targets single image page template */
 .og-fullimg{ /*border-right: 2px solid #111;*/ padding-top:2rem 1rem 3rem 0; width:54%; min-height:200px;height:auto;}
-.og-details{ /*border-left:1px solid #333;*/ padding: 0rem 1.5rem 0; width:42%;height:100%;}
+.og-details{ /*border-left:1px solid #333;*/ padding: 0rem 1.5rem 0; width:42%;height:auto;}
 
 .content-section .og-details a{ border:none; color:#999;}
 .content-section .og-details a:hover{ color:#ccc;}
 .content-section .og-details a:active{ color:#eee;}
+
+.content-section .og-details a:last-child{ margin-top:1rem;}
 
 .og-fullimg img{ margin:0 0 0 1rem;}
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
@@ -53,7 +55,7 @@
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
 .og-details .nav-tabs>li>a::before{ content:'';display:none;}
-.og-details .nav-tabs>li>a:nth-of-type:(1){ margin-left:0.8rem;}
+.og-details .nav-tabs>li>a:first-child{ margin-left:0.5rem;}
 
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
