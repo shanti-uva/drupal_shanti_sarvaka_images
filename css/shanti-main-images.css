@@ -27,13 +27,12 @@
 
 
 /* targets single image page template */
-.og-fullimg{ /*border-right: 2px solid #111;*/ padding-top:2rem 1rem 3rem 0; width:54%; min-height:200px;}
-.og-details{ /*border-left:1px solid #333;*/ padding: 1rem 1.5rem 0; width:42%;height:100%;}
+.og-fullimg{ /*border-right: 2px solid #111;*/ padding-top:3rem 1rem 3rem 0; width:54%; min-height:200px;}
+.og-details{ /*border-left:1px solid #333;*/ padding: 0rem 1.5rem 0; width:42%;height:100%;}
 
-.content-section .og-details a,
-.content-section .og-details a:hover,
-.content-section .og-details a:focus,
-.content-section .og-details a:active{ border:none; color:#999;}
+.content-section .og-details a{ border:none; color:#999;}
+.content-section .og-details a:hover{ color:#ccc;}
+.content-section .og-details a:active{ color:#eee;}
 
 .og-fullimg img{ margin:0 0 0 1rem;}
 .og-details p{ font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
