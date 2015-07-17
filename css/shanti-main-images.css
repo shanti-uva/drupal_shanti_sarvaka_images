@@ -39,7 +39,7 @@
 .og-grid .item{ margin-bottom:4px;}
 
 .og-fullimg img{ margin:0 0 0 1rem;}
-.og-details p{ font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details p{ font-size:1em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ font-size:1.5em; margin:1.5rem 0 1.25rem;}
 .og-close{ position:absolute;top:1rem;right:1rem;z-index:10;}
 
@@ -48,10 +48,10 @@
 .og-details .tab-content{ background:#222;}
 .og-details #info ul { margin: 2.5rem 0 0 0;padding: 0;}
 .og-details #info li { list-style-type: none;color: #c0c0c0;margin:1.5rem 0 0 0;padding: 0;}
-.og-details #info li label { color: #c0c0c0; display:block; font-size:1em; margin-left:0;}
+.og-details #info li label { color: #999; display:block; font-size:70%; margin-left:0;}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
-.og-details .nav-tabs>li>a{ border:none; color:#999; cursor:default; background:transparent; font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details .nav-tabs>li>a{ border:none; color:#999; cursor:default; background:transparent; font-size:0.82em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
