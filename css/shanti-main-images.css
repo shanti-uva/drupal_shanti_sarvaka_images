@@ -36,6 +36,8 @@
 
 .content-section .og-details a:last-child{ margin-top:1rem;}
 
+.og-grid .item{ margin-bottom:4px;}
+
 .og-fullimg img{ margin:0 0 0 1rem;}
 .og-details p{ font-size:0.93em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details h3{ font-size:1.5em; margin:1.5rem 0 1.25rem;}
