@@ -89,7 +89,13 @@
     .og-expander-inner{ overflow-x:auto; padding-bottom: 5rem;}
     .page-file .file-image img{ float:left;}
     .og-fullimg img{ margin:0;}
+
+    .page-file .file-image img{ margin: 2rem auto;}
+
+    .page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
 }
+
+
 
 
 
@@ -98,6 +104,8 @@
 	.og-details{ padding: 0 0 0 2rem; width:42%;}
 
 	.page-file .file-image img{ margin-left:1rem;}
+
+
 }
 
 
