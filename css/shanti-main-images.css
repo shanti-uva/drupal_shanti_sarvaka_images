@@ -74,7 +74,6 @@
 .page-file .main-col .block-system > .content{ padding: 0 1.5rem 1.5rem;margin-top: -0.5rem;border: 4px solid #e7e7e7;}
 .page-file .main-col .file-image > .content:nth-of-type(1){ margin-top: -0.5rem;background:white;border: 1px solid #e9e9e9;border-top:1rem solid #ccc;padding:0rem 2rem 2rem 3rem;-webkit-box-shadow:-1px 2px 5px #e0e0e0;box-shadow:-1px 2px 5px #e0e0e0;border-collapse:separate;}
 
-
 .field-name-field-sharedshelf-solr-search{ display:none;}
 
 
@@ -88,24 +87,21 @@
     .og-close{ position:absolute;top:1rem;right:1rem;}
     .og-expander-inner{ overflow-x:auto; padding-bottom: 5rem;}
     .page-file .file-image img{ float:left;}
-    .og-fullimg img{ margin:0;}
-
-    .page-file .file-image img{ margin: 2rem auto;}
-
-    .page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
+    .og-fullimg img{ margin:0;}    
 }
 
 
+@media screen and (max-width: 767px) {
 
+	.page-file .file-image img{ margin: 2rem auto;float:none;}
+	.page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
+}
 
 
 @media screen and (min-width: 992px) {
 
 	.og-details{ padding: 0 0 0 2rem; width:42%;}
-
 	.page-file .file-image img{ margin-left:1rem;}
-
-
 }
 
 
