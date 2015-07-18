@@ -103,9 +103,10 @@
 	.page-file .file-image img{ margin-left:1rem;}
 }
 
+@media screen and (min-width: 1150px) {
 
-
-
+	.og-details {width:38%;}
+}
 
 
 
