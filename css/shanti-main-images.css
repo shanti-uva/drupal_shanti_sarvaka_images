@@ -77,6 +77,14 @@
 .field-name-field-sharedshelf-solr-search{ display:none;}
 
 
+
+
+@media screen and (max-width: 992px) {
+
+    .page-file .file-image img{ float:none;margin:2rem auto;}
+	.page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
+}
+
 @media screen and (max-width: 767px) {
 
 	.og-fullimg{ padding:0 0 3rem;margin-top:1rem;}
@@ -89,12 +97,17 @@
     .og-fullimg img{ margin:0;}    
 }
 
+@media screen and (max-width: 600px) {
 
-@media screen and (max-width: 992px) {
-
-    .page-file .file-image img{ float:none;margin:2rem auto;}
-	.page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
+	.page-file .file-image{ border:none;padding:0;}
 }
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 992px) {
