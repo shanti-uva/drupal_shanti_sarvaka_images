@@ -72,7 +72,7 @@
 .page-file .file-image img{ float:right; margin: 0 1rem 2rem 3rem; padding:0.7rem; border-radius: 0.2rem; background:#fff; border:1px solid #d0d0d0; -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
 .page-file .file-image .field .field-label{ margin-top:1.5rem;text-transform:uppercase;font-family:'museo-sans-500',helvetica,arial,sans-serif;}
 .page-file .main-col .block-system > .content{ background:white;padding: 0 1.5rem 1.5rem;margin-top: -0.5rem;border: 4px solid #e7e7e7;}
-.page-file .main-col .block-system > .content:nth-of-type(1){ background:white;margin-top:-3rem;border: 1px solid #e9e9e9;border-top:1rem solid #ccc;border-bottom:0.6rem solid #ddd;padding:2rem 0 3rem 2rem;-webkit-box-shadow:-1px 2px 5px #e0e0e0;box-shadow:-1px 2px 5px #e0e0e0;border-collapse:separate;}
+.page-file .main-col .file-image > .content:nth-of-type(1){ background:white;margin-top:-3rem;border: 1px solid #e9e9e9;border-top:1rem solid #ccc;border-bottom:0.6rem solid #ddd;padding:2rem 0 3rem 2rem;-webkit-box-shadow:-1px 2px 5px #e0e0e0;box-shadow:-1px 2px 5px #e0e0e0;border-collapse:separate;}
 
 
 .field-name-field-sharedshelf-solr-search{ display:none;}
