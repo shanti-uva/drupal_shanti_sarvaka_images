@@ -91,7 +91,7 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
 
 	.page-file .file-image img{ margin: 2rem auto;float:none;}
 	.page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
