@@ -86,14 +86,13 @@
     /* .og-details { float:none;} */
     .og-close{ position:absolute;top:1rem;right:1rem;}
     .og-expander-inner{ overflow-x:auto; padding-bottom: 5rem;}
-    .page-file .file-image img{ float:left;}
     .og-fullimg img{ margin:0;}    
 }
 
 
 @media screen and (max-width: 992px) {
 
-	.page-file .file-image img{ margin: 2rem auto;float:none;}
+    .page-file .file-image img{ float:none;margin:2rem auto;}
 	.page-file .main-col .file-image > .content:nth-of-type(1){ padding:0 1.5rem;}
 }
 
