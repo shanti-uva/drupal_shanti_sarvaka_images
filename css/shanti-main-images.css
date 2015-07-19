@@ -51,7 +51,7 @@
 .og-details #info li label { color: #999; display:block; font-size:70%; margin-left:0;}
 
 .og-details .nav-tabs{ border-bottom:1px solid #555;}
-.og-details .nav-tabs>li>a{ border:none; color:#999; cursor:default; background:transparent; font-size:0.82em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
+.og-details .nav-tabs>li>a{ border:none; color:#999; background:transparent; font-size:0.82em; font-family:'Helvetica Neue',helvetica,arial,sans-serif;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:focus,
 .og-details .nav-tabs>li>a:active{ border:none; color:#eee;}
