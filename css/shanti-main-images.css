@@ -89,9 +89,8 @@
 
 	.og-fullimg{ padding:0 0 3rem;margin-top:1rem;}
     .og-fullimg, 
-    .og-details { display:block; width:100%; border:none; margin-top:2rem;padding-left:0;}
+    .og-details { display:block; width:100%; border:none; margin-top:2rem; padding-left:0;}
     .og-details h3{ font-size:1.32em;margin-top:1.5rem;}
-    /* .og-details { float:none;} */
     .og-close{ position:absolute;top:1rem;right:1rem;}
     .og-expander-inner{ overflow-x:auto; padding-bottom: 5rem;}
     .og-fullimg img{ margin:0;}    
@@ -109,6 +108,7 @@
 @media screen and (min-width: 992px) {
 
 	.og-details{ padding: 0 0 0 2rem; width:42%;}
+
 	.page-file .file-image img{ margin-left:1rem;}
 }
 

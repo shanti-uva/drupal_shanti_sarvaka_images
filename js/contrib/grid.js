@@ -366,7 +366,7 @@ console.info('in grid', $('#og-grid .item').length);
    		this.$date = $('<li class="date">Date</li>');
    		this.$place = $('<li class="place">Place</li>');
    		this.$creator = $('<li class="creator">Photographer</li>');
-   		this.$infolist = $('<ul></ul>').append(this.$photographer, this.$creator, this.$date, this.$place);
+   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
    		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
    		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
