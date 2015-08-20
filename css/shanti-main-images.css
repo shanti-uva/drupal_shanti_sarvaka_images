@@ -213,6 +213,7 @@
   -webkit-box-shadow: -1px 2px 5px #e0e0e0;
   box-shadow: -1px 2px 5px #e0e0e0;
   border-collapse: separate;
+  min-height:60rem;
 }
 
 .field-name-field-sharedshelf-solr-search {
