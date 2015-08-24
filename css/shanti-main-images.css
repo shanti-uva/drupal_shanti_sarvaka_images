@@ -47,7 +47,7 @@
  /*border-right: 2px solid #111;*/
   padding: 1.5rem 1rem 0;
   width: 54%;
-  min-height: 200px;
+ /* min-height: 200px;*/
   height: auto;
 }
 
@@ -219,6 +219,12 @@
   display: none;
 }
 
+
+
+/*-------------------------*/
+/*=== max-width (first) ===*/
+/*-------------------------*/
+
 @media screen and (max-width: 992px) {
 
   .page-file .file-image img {
@@ -275,18 +281,25 @@
   }
 }
 
+
+
+
+/*--------------------------*/
+/*=== min-width (second) ===*/
+/*--------------------------*/
+
 @media screen and (min-width: 992px) {
 
   .og-details {
-    padding: 0 0 0 2rem;
-    width: 42%;
+    padding: 0 0 0 4rem;
+    width: 45%;
   }
 }
 
 @media screen and (min-width: 1150px) {
 
   .og-details {
-    width: 38%;
+
   }
 }
 
