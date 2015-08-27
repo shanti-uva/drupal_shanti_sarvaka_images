@@ -47,7 +47,7 @@
  /*border-right: 2px solid #111;*/
   padding: 1.5rem 1rem 0;
   width: 54%;
- /* min-height: 200px;*/
+  min-height: 200px; /* helps disply the img loading spinner */
   height: auto;
 }
 
@@ -80,7 +80,6 @@
   display: -moz-inline-box;
   display: inline-block;
   overflow: hidden;
-  position: relative;
   vertical-align: top;
   z-index: 1;
 }
