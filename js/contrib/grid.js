@@ -179,7 +179,7 @@ var Grid = (function($) {
 		// used to know if the preview will expand in a different row
 		previewPos = -1,
 		// extra amount of pixels to scroll the window
-		scrollExtra = 0,
+		scrollExtra = -50,
 		// extra margin when expanded (between preview overlay and the next items)
 		marginExpanded = 10,
 		$window = $( window ), winsize,
