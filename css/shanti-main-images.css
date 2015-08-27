@@ -76,7 +76,13 @@
 }
 
 .og-grid .item {
-  margin-bottom: 4px;
+  margin:0 5px 5px 0;
+  display: -moz-inline-box;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  z-index: 1;
 }
 
 .og-fullimg img {
