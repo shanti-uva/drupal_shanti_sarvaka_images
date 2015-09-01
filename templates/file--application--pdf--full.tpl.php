@@ -82,7 +82,7 @@
     </div>
   <?php endif; ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="file-content"<?php print $content_attributes; ?>>
 	  <!-- Nav tabs -->
 	  <!--<ul class="nav nav-tabs" role="tablist">--></ul>
 	<aside class="content-resources col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas equal-height">
@@ -97,7 +97,7 @@
 	  <section class="content-section col-xs-12 col-sm-12 col-md-9 col-lg-10 equal-height">
 		  <div class="tab-content">
 		    <div role="tabpanel" class="tab-pane iframe active" id="pdf">
-		    	<div class="extlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
+		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
 	  			<iframe src="<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="info">

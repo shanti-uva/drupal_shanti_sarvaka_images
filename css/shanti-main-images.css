@@ -219,7 +219,14 @@
   display: none;
 }
 
+/*----- PDF Styles -----*/
+body.page-file-pdf .main-col .block-system > .content {
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+}
 
+div.pdfextlink { float: right; }
 
 /*-------------------------*/
 /*=== max-width (first) ===*/
