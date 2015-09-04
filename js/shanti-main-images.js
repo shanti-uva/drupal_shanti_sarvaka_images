@@ -5,7 +5,7 @@ Drupal.behaviors.shantiImages = {
 		
 			Grid.init();
 			
-			// What do these two lines do? (ndg)
+			// What do these two lines do? May be the problem with images not showing up (MANU-1872) (ndg)
 			//var itemHeight = jQuery(this).closest(".item").height();	    
 			//jQuery(".og-grid .item > a").children("img").attr("height", itemHeight );    
 			  

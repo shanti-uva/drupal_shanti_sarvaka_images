@@ -201,7 +201,7 @@ var Grid = (function($) {
 			speed : 350,
 			easing : 'ease'
 		};
-console.info('in grid', $('#og-grid .item').length);
+
 	function init( config ) {
 		
 		// the settings..
