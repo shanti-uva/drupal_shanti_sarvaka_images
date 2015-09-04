@@ -5,8 +5,9 @@ Drupal.behaviors.shantiImages = {
 		
 			Grid.init();
 			
-			var itemHeight = jQuery(this).closest(".item").height();	    
-			jQuery(".og-grid .item > a").children("img").attr("height", itemHeight );    
+			// What do these two lines do? (ndg)
+			//var itemHeight = jQuery(this).closest(".item").height();	    
+			//jQuery(".og-grid .item > a").children("img").attr("height", itemHeight );    
 			  
   	}
   }
