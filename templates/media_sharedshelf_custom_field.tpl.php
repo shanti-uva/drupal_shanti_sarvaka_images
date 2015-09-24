@@ -1,0 +1,1 @@
+<div class="field <?php print $class; ?> field-type-text field-label-inline clearfix"><div class="field-label"><?php print $label; ?>:&nbsp;</div><div class="field-items"><div class="field-item even"><?php print $value; ?></div></div></div>

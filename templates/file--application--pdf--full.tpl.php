@@ -67,6 +67,7 @@
  *
  * @ingroup themeable
  */
+ dpm($ssdata, 'ss data var');
 ?>
 <div id="<?php print $id; ?>" class="<?php print $classes ?>"<?php print $attributes; ?>>
 
