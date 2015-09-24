@@ -5,9 +5,18 @@
 	  		
 				var $grid = $( '#og-grid' );
 	  		$grid.imagesLoaded( function() {
+	  			$('#og-grid .item ').each(function() {
+	  				var img = $(this).find('img');
+	  				var imgobj = new Image();
+	  				imgobj.src = img.attr('src');
+	  				$(this).attr('data-w', imgobj.width);
+	  				$(this).attr('data-h', imgobj.height);
+	  			});
+	  			new flexImages({ selector: '#og-grid', rowHeight: 210 });
+	  			/*
 		  		$(".container.og-grid").rowGrid({itemSelector: ".item", minMargin: 5, maxMargin: 5, firstItemClass: "first-item"});
 					Grid.init();
-					
+					*/
 	  		}); 
 	  		
 					// What do these two lines do? "this" does not have a clear referent here
