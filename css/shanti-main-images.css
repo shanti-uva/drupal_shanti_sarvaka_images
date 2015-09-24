@@ -236,6 +236,15 @@ body.page-file-pdf .main-col .block-system > .content {
 
 div.pdfextlink { float: right; }
 
+/*------ File Page ------*/
+.file-ss-div {
+	margin: 12px auto;
+}
+
+.file-ss-div .field {
+	margin: 4px 0 0 0;
+}
+
 /*-------------------------*/
 /*=== max-width (first) ===*/
 /*-------------------------*/

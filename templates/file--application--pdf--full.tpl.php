@@ -67,7 +67,7 @@
  *
  * @ingroup themeable
  */
- dpm($ssdata, 'ss data var');
+
 ?>
 <div id="<?php print $id; ?>" class="<?php print $classes ?>"<?php print $attributes; ?>>
 
@@ -89,6 +89,7 @@
 	<aside class="content-resources col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas equal-height">
     <ul class="nav nav-pills nav-stacked">
 	    <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
+	    <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
 	    <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
 	  </ul>
 	
@@ -101,13 +102,23 @@
 		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
 	  			<iframe src="<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
 		    </div>
+		    <div role="tabpanel" class="tab-pane" id="metadata">
+		    	<div class="file-ss-div file-ss-info">
+				    <?php
+				      print $ssmetadata;
+				    ?>
+			    </div>
+				</div>
 		    <div role="tabpanel" class="tab-pane" id="info">
-			    <?php
-			      // We hide the links now so that we can render them later.
-			      hide($content['links']);
-						hide($content['file']);
-			      print render($content);
-			    ?>
+		    	<div class="file-ss-div file-ss-info">
+				    <?php
+				      // We hide the links now so that we can render them later.
+				      hide($content['links']);
+							hide($content['file']);
+				      //print render($content);
+							print $ssfields;
+				    ?>
+				  </div>
 				</div>
 		  </div>
 		</section>
