@@ -12,7 +12,7 @@
 	  				$(this).attr('data-w', imgobj.width);
 	  				$(this).attr('data-h', imgobj.height);
 	  			});
-	  			new flexImages({ selector: '#og-grid', rowHeight: 210 });
+	  			new flexImages({ selector: '#og-grid', rowHeight: 190 });
 	  			/*
 		  		$(".container.og-grid").rowGrid({itemSelector: ".item", minMargin: 5, maxMargin: 5, firstItemClass: "first-item"});
 					Grid.init();
