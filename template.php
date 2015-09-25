@@ -103,17 +103,16 @@ function sarvaka_images_get_image_extension($file) {
 }
 
 /**
- * Implements hook_preprocess_block
+ * Implements hook_preprocess_file_entity
  * 
- * 	Adds clearfix variable with clearfix value for system main. Used in theme's block.tpl.php.
- */
-function sarvaka_images_preprocess_block(&$vars) {
-	$vars['clearfix'] = '';
-	if ($vars['block_html_id'] == 'block-system-main') {
-		$vars['clearfix'] = ' clearfix';
-	}
+ * 	   (Not used yet.)
+function sarvaka_images_preprocess_file_entity(&$vars) {
+	dpm($vars, 'vars in file pp');
+	//$vars['content_attributes'][] = "clearfix";
 }
 
+ */
+ 
 /**
  * Implements hook preprocess field
  * 	Hide empty fields in image nodes
