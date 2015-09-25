@@ -68,8 +68,7 @@
  * @ingroup themeable
  */
 ?>
-<div id="<?php print $id; ?>" class="<?php print $classes ?>"<?php print $attributes; ?>>
-
+<div id="<?php print $id; ?>" class="<?php print $classes ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $file_url; ?>"><?php print $label; ?></a></h2>
