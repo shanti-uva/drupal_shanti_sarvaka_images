@@ -113,3 +113,13 @@ function sarvaka_images_preprocess_block(&$vars) {
 		$vars['clearfix'] = ' clearfix';
 	}
 }
+
+/**
+ * Implements hook preprocess field
+ * 	Hide empty fields in image nodes
+ */
+function sarvaka_images_preprocess_field(&$vars) {
+	if ($vars['element']['#bundle'] == 'image' && count($vars['element']['#items']) == 1 && empty($vars['element'][0]['#markup'])) {
+		$vars['classes_array'][] = "hidden";
+	}
+}
