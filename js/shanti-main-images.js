@@ -2,7 +2,6 @@
 	Drupal.behaviors.shantiImages = {
 	  attach: function (context, settings) {
 	  	if(context == document) {
-  		
 			var $grid = $( '#flex-images' );
 			if ($grid.length > 0) {
 		  		$grid.imagesLoaded( function() {
@@ -14,7 +13,10 @@
 		  				$(this).attr('data-h', imgobj.height);
 		  			});
 		  			if (typeof(flexImages) == "function") {
+		  				console.log('flex image initializing');
 				  		new flexImages({ selector: '#flex-images', rowHeight: 200 });
+			  		} else {
+			  			console.log(typeof(flexImages));
 			  		}
 		  			
 		  		}); 
