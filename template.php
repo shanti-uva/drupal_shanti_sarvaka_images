@@ -18,7 +18,7 @@
 function sarvaka_images_preprocess_views_view(&$vars) {
 	//dpm($vars, 'vars in view preprocess 2');
 	if ($vars['view']->name == 'media_sharedshelf_my_images') {
-		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.flex-images.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/flex-images.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/flex-images.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
