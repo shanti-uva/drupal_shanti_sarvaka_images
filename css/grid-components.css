@@ -33,7 +33,7 @@
 }
 
 .og-expander {
-	position: absolute;
+	position: absolute !important;
 	background: #111;
 	top: auto;
 	left: 0;

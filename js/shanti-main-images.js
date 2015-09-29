@@ -14,7 +14,7 @@
 		  			});
 		  			if (typeof(flexImages) == "function") {
 		  				console.log('flex image initializing');
-				  		new flexImages({ selector: '#flex-images', rowHeight: 200 });
+				  		new flexImages({ selector: '#flex-images', rowHeight: 210 });
 				  		Grid.init();
 			  		} else {
 			  			console.log(typeof(flexImages));
