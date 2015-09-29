@@ -1,4 +1,4 @@
-.flex-images {
+.og-grid {
 	list-style: none;
 	padding: 20px 0;
 	margin: 0 auto;
@@ -6,19 +6,19 @@
 	width: 100%;
 }
 
-.flex-images .item {
+.og-grid .item {
 	display: inline-block;
 }
-.flex-images .item > a{ }
-.flex-images .item > a,
-.flex-images .item > a img {
+.og-grid .item > a{ }
+.og-grid .item > a,
+.og-grid .item > a img {
 	border: none;
 	outline: none;
 	display: block;
 	position: relative;
 }
 
-.flex-images div.og-expanded > a::after {
+.og-grid div.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
 	content: " ";

@@ -18,13 +18,13 @@
 function sarvaka_images_preprocess_views_view(&$vars) {
 	//dpm($vars, 'vars in view preprocess 2');
 	if ($vars['view']->name == 'media_sharedshelf_my_images') {
-		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.flex-images.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/flex-images.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
 		$view = $vars['view'];
 		$results = $view->result;
-		$rows = '<div id="flex-images" class="flex-images">';
+		$rows = '<div id="og-grid" class="og-grid">';
 		foreach ($results as $res) {
 			$file = file_load($res->fid);
 			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
@@ -55,7 +55,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
 		    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
 		    >
-	        <img src="' . $thumb_path . '" >
+	          <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
 		    </a>
 	    </div>';
 		}
