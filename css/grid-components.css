@@ -9,7 +9,10 @@
 .flex-images .item {
 	display: inline-block;
 }
-.flex-images .item > a{ }
+.flex-images .item > a{ display:inline;}
+.flex-images .item.og-expanded > a{
+	display:block;
+}
 .flex-images .item > a,
 .flex-images .item > a img {
 	border: none;
