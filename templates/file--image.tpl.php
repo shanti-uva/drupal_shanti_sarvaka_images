@@ -85,7 +85,9 @@
     <?php
       // We hide the links now so that we can render them later.
       hide($content['links']);
-      print render($content);
+	  //dpm($content, 'content array');
+      print render($content['file']);
+	  if (isset($ssfields)) { print $ssfields; } else { print render($content); }
     ?>
   </div>
 
