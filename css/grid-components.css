@@ -17,10 +17,7 @@
 	display: block;
 	position: relative;
 }
-.flex-images .item > a{ display:inline;}
-.flex-images .item.og-expanded > a{
-	display:block;
-}
+
 .flex-images div.og-expanded > a::after {
 	top: auto;
 	border: solid transparent;
