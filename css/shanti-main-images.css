@@ -51,7 +51,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-
+div.item.last-row{ clear:both;}
 /* targets single image page template */
 .og-fullimg {
  /*border-right: 2px solid #111;*/
