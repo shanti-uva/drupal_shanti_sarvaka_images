@@ -181,7 +181,7 @@ var Grid = (function($) {
 		// extra amount of pixels to scroll the window
 		scrollExtra = 0,
 		// extra margin when expanded (between preview overlay and the next items)
-		marginExpanded = 5,
+		marginExpanded = 10,
 		$window = $( window ), winsize,
 		$body = $( 'html, body' ),
 		// transitionend events
@@ -291,7 +291,7 @@ var Grid = (function($) {
 	}
 
 	function getWinSize() {
-		winsize = { width : $window.width(), height : $window.height() };
+		winsize = { width : $window.width(), height : $window.height() - 50 };
 	}
 
 	function showPreview( $item ) {
