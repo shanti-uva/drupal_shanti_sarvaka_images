@@ -55,7 +55,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
 		    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
 		    >
-	          <img src="' . $thumb_path . '" >
+	          <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
 		    </a>
 	    </div>';
 		}
