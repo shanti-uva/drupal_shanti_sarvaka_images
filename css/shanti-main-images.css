@@ -47,6 +47,11 @@
 /* Pagerer clear both (should this be in shanti-main.css?) */
 table.pagerer { clear: both; }
 
+ul.pager{ margin: -0.5rem 0 0.5rem;}
+
+
+
+
 /* targets single image page template */
 .og-fullimg {
  /*border-right: 2px solid #111;*/
@@ -162,6 +167,19 @@ table.pagerer { clear: both; }
   display: none;
 }
 
+.og-details .tab-pane {
+  padding-top: 0rem;
+}
+
+.og-details .tab-pane ul {
+  font-size: 1.12em;
+}
+
+
+
+
+
+
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus,
@@ -170,14 +188,6 @@ table.pagerer { clear: both; }
   color: #ccc;
   border: 1px solid #555;
   border-bottom: none;
-}
-
-.og-details .tab-pane {
-  padding-top: 0rem;
-}
-
-.og-details .tab-pane ul {
-  font-size: 1.12em;
 }
 
 /* .last-row ~ .item:last-of-type{ border:2px solid red;} .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;} */
@@ -246,6 +256,12 @@ div.pdfextlink { float: right; }
 .file-ss-div .field {
 	margin: 4px 0 0 0;
 }
+
+
+
+
+
+
 
 /*-------------------------*/
 /*=== max-width (first) ===*/
