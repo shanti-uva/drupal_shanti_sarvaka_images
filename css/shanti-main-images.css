@@ -47,7 +47,7 @@
 /* Pagerer clear both (should this be in shanti-main.css?) */
 table.pagerer { clear: both; }
 
-ul.pager{ margin: -0.5rem 0 0.5rem;}
+ul.pager{ margin: 0 0 0.5rem;}
 
 
 
