@@ -46,8 +46,13 @@
 
 /* Pagerer clear both (should this be in shanti-main.css?) */
 table.pagerer { clear: both; }
-
+.view-media-sharedshelf-my-images table.pagerer:last-child{ 
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
+}
 ul.pager{ margin: 0 0 0.5rem;}
+
+
 
 
 
