@@ -170,7 +170,7 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function($) {
 	
 		// list of items
-	var $grid = $( '#flex-images' ),
+	var $grid = $( '.og-grid' ),
 		// the items
 		$items = $grid.children( '.item' ),
 		// current expanded item's index
