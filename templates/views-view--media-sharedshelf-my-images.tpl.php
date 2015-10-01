@@ -50,10 +50,12 @@
       <?php print $attachment_before; ?>
     </div>
   <?php endif; ?>
-
-  <?php if ($pager): ?>
-    <?php print $pager; ?>
-  <?php endif; ?>
+  
+  <div class="pager-top">
+	  <?php if ($pager): ?>
+	    <?php print $pager; ?>
+	  <?php endif; ?>
+   </div>
   
   <?php if ($rows): ?>
     <div class="view-content">
@@ -64,10 +66,12 @@
       <?php print $empty; ?>
     </div>
   <?php endif; ?>
-
-  <?php if ($pager): ?>
-    <?php print $pager; ?>
-  <?php endif; ?>
+  
+  <div class="pager-bottom">
+	  <?php if ($pager): ?>
+	    <?php print $pager; ?>
+	  <?php endif; ?>
+   </div>
 
   <?php if ($attachment_after): ?>
     <div class="attachment attachment-after">
