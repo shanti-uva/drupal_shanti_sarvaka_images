@@ -359,16 +359,16 @@ var Grid = (function($) {
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
-   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
-   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
-   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$href);
-   		//this.$photographer = $('<li class="photographer">Photographer</li>');
-   		this.$date = $('<li class="date">Date</li>');
-   		this.$place = $('<li class="place">Place</li>');
-   		this.$creator = $('<li class="creator">Photographer</li>');
-   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
-   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
-   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
+	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
+	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
+	   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description);
+	   		//this.$photographer = $('<li class="photographer">Photographer</li>');
+	   		this.$date = $('<li class="date">Date</li>');
+	   		this.$place = $('<li class="place">Place</li>');
+	   		this.$creator = $('<li class="creator">Photographer</li>');
+	   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
+	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
+	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -448,8 +448,13 @@ var Grid = (function($) {
 			setTimeout( $.proxy( function() {	
 				// set the height for the preview and the item
 				this.setHeights();
+				//this.height = this.height - 15;
 				// scroll to position the preview in the right place
 				this.positionPreview();
+				this.$item.next('.first-item, .last-row').addClass('.row-after');
+		
+				console.log("this height: " + this.height);
+				console.log(this);
 			}, this ), 25 );
 
 		},
@@ -473,7 +478,9 @@ var Grid = (function($) {
 				// the current expanded item (might be different from this.$item)
 				var $expandedItem = $items.eq( this.expandedIdx );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
-
+				
+				$('.row-after').removeClass('.row-after');
+				
 				if( !support ) {
 					onEndFn.call();
 				}
@@ -508,7 +515,7 @@ var Grid = (function($) {
 				};
 
 			this.calcHeight();
-			this.$previewEl.css( 'height', this.height );
+			this.$previewEl.css( 'height', this.height - 10);
 			this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
 
 			if( !support ) {
