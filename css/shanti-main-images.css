@@ -55,7 +55,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-div.item.og-expanded{ margin-bottom:1.3rem;}
+div.og-expander{ border-bottom:0.75rem double #eee;}
 div.item.last-row{ clear:both;}
 /* targets single image page template */
 .og-fullimg {
@@ -94,7 +94,7 @@ div.item.last-row{ clear:both;}
   margin:0 5px 5px 0;
   display: -moz-inline-box;
   display: inline-block;
-  overflow: hidden;
+  /* overflow: hidden; removing this fixed hidden pointer on clicking */
   vertical-align: top;
   z-index: 1;
 }
