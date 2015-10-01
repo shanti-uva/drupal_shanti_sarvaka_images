@@ -358,19 +358,19 @@ var Grid = (function($) {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
-			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
+			/*this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
-	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
-	   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description);
+	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');*/
 	   		//this.$photographer = $('<li class="photographer">Photographer</li>');
 	   		this.$date = $('<li class="date">Date</li>');
 	   		this.$place = $('<li class="place">Place</li>');
 	   		this.$creator = $('<li class="creator">Photographer</li>');
 	   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
-	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
-	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
-			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
-			
+	   		//this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$infolist);
+	   		//this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
+	   		//this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
+			//this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
+			this.$details = $( '<div class="og-details"></div>' ).append(this.$title, this.$description, this.$infolist, this.$href);
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );

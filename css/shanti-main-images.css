@@ -135,19 +135,19 @@ table.pagerer { clear: both; }
   background: #222;
 }
 
-.og-details #info ul {
+.og-details ul {
   margin: 0;
   padding: 0;
 }
 
-.og-details #info li {
+.og-details li {
   list-style-type: none;
   color: #c0c0c0;
   margin: 1.5rem 0 0 0;
   padding: 0;
 }
 
-.og-details #info li label {
+.og-details li label {
   color: #999;
   display: block;
   font-size: 70%;
