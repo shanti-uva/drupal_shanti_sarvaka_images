@@ -451,8 +451,8 @@ var Grid = (function($) {
 				//this.height = this.height - 15;
 				// scroll to position the preview in the right place
 				this.positionPreview();
-				this.$item.next('.first-item, .last-row').addClass('.row-after');
-		
+				// Add .row-after class to row after expander
+				this.$item.nextAll('.first-item, .last-row').eq(0).addClass('row-after');
 				console.log("this height: " + this.height);
 				console.log(this);
 			}, this ), 25 );
@@ -479,7 +479,7 @@ var Grid = (function($) {
 				var $expandedItem = $items.eq( this.expandedIdx );
 				$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
 				
-				$('.row-after').removeClass('.row-after');
+				$('.row-after').removeClass('row-after');
 				
 				if( !support ) {
 					onEndFn.call();
