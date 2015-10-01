@@ -48,11 +48,15 @@
 table.pagerer { clear: both; }
 
 .pager-top {
-    margin-top: -28px;
+    margin-top: -18px;
 }
 
-.pager-top .pagerer ul.pager { 
-	margin: 0px;
+.pager-top .pagerer ul.pager {
+	margin: 0px 0px 8px;
+}
+
+.pager-bottom .pagerer ul.pager {
+	margin: 8px 0px;
 }
 
 .view .pagerer tr td {
