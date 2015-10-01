@@ -291,7 +291,7 @@ var Grid = (function($) {
 	}
 
 	function getWinSize() {
-		winsize = { width : $window.width(), height : $window.height() - 50 };
+		winsize = { width : $window.width(), height : $window.height() - 30 };
 	}
 
 	function showPreview( $item ) {
