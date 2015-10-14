@@ -30,7 +30,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
 			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
 			$thumb_path = image_style_url('media_thumbnail', $furi) ;
-			$large_path = image_style_url('large', $furi) ;
+			$large_path = image_style_url('media_large', $furi) ;
 	
 	    $info_bundle = array('bundle' => $file->type);
 	    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
