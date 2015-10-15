@@ -208,13 +208,13 @@ div.item.last-row{ clear:both;}
 .next.og-nav-arrow{
   position: absolute;
   right:1rem;
-  text-shadow:0.3rem 0 #000;
+  text-shadow: 0.2rem 0 0.5rem #111;
 }
 
 .prev.og-nav-arrow{
   position: absolute;
   left: 1rem;
-  text-shadow: 0 0.3rem #000;
+  text-shadow: 0 0.2rem 0.5rem #111;
 }
 
 .og-nav-arrow .icon{
