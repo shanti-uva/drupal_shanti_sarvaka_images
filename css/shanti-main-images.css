@@ -306,8 +306,9 @@ div.pdfextlink { float: right; }
   }
 
   .og-details h3 {
-    font-size: 1.32em;
-    margin-top: 1.5rem;
+    font-size: 1.44em;
+    margin: 1rem 0.5rem 1.25rem;
+    line-height: 1.25em;
   }
 
   .og-close {
