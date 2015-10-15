@@ -113,10 +113,29 @@ function sarvaka_images_preprocess_file_entity(&$vars) {
  
 /**
  * Implements hook preprocess field
- * 	Hide empty fields in image nodes
+ * 		Hide empty fields in image nodes
  */
 function sarvaka_images_preprocess_field(&$vars) {
 	if ($vars['element']['#bundle'] == 'image' && count($vars['element']['#items']) == 1 && empty($vars['element'][0]['#markup'])) {
 		$vars['classes_array'][] = "hidden";
 	}
+}
+
+/**
+ * Implements preprocess search result
+ * 		Removes snippet and info (for now) and adds thumb url
+ */
+ 
+$done = FALSE;
+
+function sarvaka_images_preprocess_search_result(&$vars) {
+	$vars['snippet'] = '';
+	$vars['info'] = '';
+	$vars['title_full'] = $vars['title'];
+	$vars['title'] = truncate_utf8($vars['title'], 40, FALSE, TRUE);
+	$file = file_load($vars['result']['fields']['entity_id']);
+	$uri = str_replace('sharedshelf://', 'public://media-sharedshelf/', $file->uri);
+	$surl = image_style_path('media_thumbnail', $uri . '.jpg');
+	$turl = file_create_url($surl);
+	$vars['thumb_url'] = $turl;
 }

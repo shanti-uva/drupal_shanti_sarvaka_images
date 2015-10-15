@@ -1,0 +1,4 @@
+.search-result .thumbnail {
+    max-height: 124px;
+    overflow: hidden;
+}
