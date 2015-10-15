@@ -82,7 +82,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-nav-arrow .icon{
-  color:#777;
   font-size:3.5rem;
   width: 5rem;
   height: 10rem;
@@ -92,12 +91,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-nav-arrow .icon::before{
   position:relative;
-  color: #555;
+  color: #444;
 }
 
 .next.og-nav-arrow .icon::before{
   content: '\e607';
-  right:1.2rem;
+  right:0;
 }
 
 .prev.og-nav-arrow .icon::before{
@@ -108,11 +107,13 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-nav-arrow:hover .icon::before{
   color:#aaa;
   background: #222;
+  border-color:#555;
 }
 
 .og-nav-arrow:active .icon::before{
   color:#ccc;
   background: #000;
+  border-color:#777;
 }
 
 div.og-expander{ border-bottom:0.75rem double #eee;}
