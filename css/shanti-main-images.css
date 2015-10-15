@@ -65,14 +65,28 @@ ul.pager{ margin: 0 0 0.5rem;}
   height: 10rem;
   border: 1px solid #777;
   margin-top: -5rem;
-  background: #111;
+  background: #444;
 }
 .og-expander .nav-arrow.next{
   right:1rem;
+  content: "\e607";
 }
 
 .og-expander .nav-arrow.prev{
   left: 1rem;
+  content: "\e606";
+}
+.og-expander .nav-arrow .icon{
+  color:#999;
+}
+
+.og-expander .nav-arrow:hover .icon{
+  color:#777;
+  background: #222;
+}
+
+.og-expander .nav-arrow:active .icon{
+  background: #000;
 }
 
 div.og-expander{ border-bottom:0.75rem double #eee;}
