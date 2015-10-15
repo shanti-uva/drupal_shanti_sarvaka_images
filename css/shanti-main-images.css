@@ -197,8 +197,8 @@ div.item.last-row{ clear:both;}
   color: #ccc;
   border: 1px solid #555;
   border-bottom: none;
-  border-top: 3px solid #888;
-  border-radius: 0;
+  border-top: 2px solid #909090;
+  border-radius: 0.2rem;
 }
 
 /* .last-row ~ .item:last-of-type{ border:2px solid red;} .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;} */
