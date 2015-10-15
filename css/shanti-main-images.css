@@ -58,6 +58,22 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
+.og-expander .nav-arrow{
+  position: absolute;
+  top: 50%;
+  width: 5rem;
+  height: 10rem;
+  border: 1px solid #777;
+  margin-top: -5rem;
+  background: #111;
+}
+.og-expander .nav-arrow.next{
+  right:1rem;
+}
+
+.og-expander .nav-arrow.prev{
+  left: 1rem;
+}
 
 div.og-expander{ border-bottom:0.75rem double #eee;}
 div.item.last-row{ clear:both;}
@@ -115,6 +131,7 @@ div.item.last-row{ clear:both;}
 .og-details h3 {
   font-size: 1.44em;
   margin: 1.5rem 0 1.25rem;
+  line-height:1.32em;
 }
 
 .og-close {
