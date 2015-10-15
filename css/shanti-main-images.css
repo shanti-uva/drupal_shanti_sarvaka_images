@@ -78,6 +78,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 .og-expander .nav-arrow .icon{
   color:#999;
+  font-size:3.5rem;
 }
 
 .og-expander .nav-arrow:hover .icon{
