@@ -70,17 +70,25 @@ ul.pager{ margin: 0 0 0.5rem;}
   box-shadow: inset 0 0 15px #111;
   display:inline-block;
 }
+
 .next.og-nav-arrow{
   float:right;
   right:1rem;
-  content: "\e607";
 }
 
 .prev.og-nav-arrow{
   float:left;
   left: 1rem;
+}
+
+.next.og-nav-arrow::before{
+  content: "\e607";
+}
+
+.prev.og-nav-arrow::before{
   content: "\e606";
 }
+
 .og-nav-arrow .icon{
   color:#999;
   font-size:3.5rem;
