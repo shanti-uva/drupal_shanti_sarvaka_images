@@ -72,7 +72,7 @@ div.item.last-row{ clear:both;}
 
 .og-details {
  /*border-left:1px solid #333;*/
-  padding: 0 0 0 2rem;
+  padding: 0;
   width: 40%;
   height: auto;
 }
@@ -302,7 +302,6 @@ div.pdfextlink { float: right; }
     width: 100%;
     border: none;
     margin-top: 2rem;
-    padding-left: 0;
   }
 
   .og-details h3 {
@@ -345,8 +344,12 @@ div.pdfextlink { float: right; }
 @media screen and (min-width: 992px) {
 
   .og-details {
-    padding: 0 0 0 4rem;
-    width: 45%;
+    padding: 0.3em 0 0 4rem;
+    width: 42%;
+  }
+
+  .og-fullimg{
+    padding: 1.5rem 1rem 0 4rem;
   }
 }
 
