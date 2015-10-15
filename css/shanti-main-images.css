@@ -72,10 +72,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .next.og-nav-arrow{
+   position: absolute;
   right:1rem;
 }
 
 .prev.og-nav-arrow{
+   position: absolute;
   left: 1rem;
 }
 
@@ -90,9 +92,10 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-nav-arrow .icon{
   color:#777;
   font-size:3.5rem;
+  width: 5rem;
+  height: 10rem;
   position:relative;
-  top:50%;
-  margin-top:-1.75rem;
+  top:0;
 }
 
 .og-nav-arrow:hover .icon{
@@ -101,8 +104,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-nav-arrow:active .icon{
-  background: #000;
   color:#ccc;
+  background: #000;
 }
 
 div.og-expander{ border-bottom:0.75rem double #eee;}
