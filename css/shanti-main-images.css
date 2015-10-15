@@ -58,63 +58,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-.og-nav-arrow{
-  position: absolute;
-  top: 50%;
-  width: 5rem;
-  height: 10rem;
-  border-radius: .3rem;
-  border: 1px solid #444;
-  margin-top: -5rem;
-  background: #242424;
-  box-shadow: inset 0 0 15px #111;
-  display:inline-block;
-}
 
-.next.og-nav-arrow{
-   position: absolute;
-  right:1rem;
-}
-
-.prev.og-nav-arrow{
-   position: absolute;
-  left: 1rem;
-}
-
-.og-nav-arrow .icon{
-  font-size:3.5rem;
-  width: 5rem;
-  height: 10rem;
-  position:relative;
-  top:3rem;
-}
-
-.og-nav-arrow .icon::before{
-  position:relative;
-  color: #444;
-}
-
-.next.og-nav-arrow .icon::before{
-  content: '\e607';
-  right:0;
-}
-
-.prev.og-nav-arrow .icon::before{
-  content: '\e606';
-  left:1.2rem;
-}
-
-.og-nav-arrow:hover .icon::before{
-  color:#aaa;
-  background: #222;
-  border-color:#555;
-}
-
-.og-nav-arrow:active .icon::before{
-  color:#ccc;
-  background: #000;
-  border-color:#777;
-}
 
 div.og-expander{ border-bottom:0.75rem double #eee;}
 div.item.last-row{ clear:both;}
@@ -130,7 +74,7 @@ div.item.last-row{ clear:both;}
 .og-details {
  /*border-left:1px solid #333;*/
   padding: 0;
-  width: 40%;
+  width: 44%;
   height: auto;
 }
 
@@ -242,6 +186,71 @@ div.item.last-row{ clear:both;}
   font-size: 1.12em;
 }
 
+/**** nav-arrow buttons ****/
+
+.og-nav-arrow{
+  position: absolute;
+  top: 50%;
+  width: 5rem;
+  height: 10rem;
+  border-radius: .3rem;
+  border: 1px solid #444;
+  margin-top: -5rem;
+  background: #242424;
+  box-shadow: inset 0 0 15px #111;
+  display:inline-block;
+}
+
+.next.og-nav-arrow{
+   position: absolute;
+  right:1rem;
+}
+
+.prev.og-nav-arrow{
+   position: absolute;
+  left: 1rem;
+}
+
+.og-nav-arrow .icon{
+  font-size:3.5rem;
+  width: 5rem;
+  height: 10rem;
+  position:relative;
+  top:3rem;
+}
+
+.og-nav-arrow:hover .icon{
+  background: #222;
+}
+
+.og-nav-arrow:active .icon{
+  background: #000;
+}
+
+.og-nav-arrow .icon::before{
+  position:relative;
+  color: #444;
+}
+
+.next.og-nav-arrow .icon::before{
+  content: '\e607';
+  right:0;
+}
+
+.prev.og-nav-arrow .icon::before{
+  content: '\e606';
+  left:1.2rem;
+}
+
+.og-nav-arrow:hover .icon::before{
+  color:#aaa;
+  border-color:#555;
+}
+
+.og-nav-arrow:active .icon::before{
+  color:#ccc;
+  border-color:#777;
+}
 
 
 
@@ -402,8 +411,8 @@ div.pdfextlink { float: right; }
 @media screen and (min-width: 992px) {
 
   .og-details {
-    padding: 0.3em 0 0 4rem;
-    width: 42%;
+    padding: 0.3em 0 0 1rem;
+    width: 44%;
   }
 
   .og-fullimg{
