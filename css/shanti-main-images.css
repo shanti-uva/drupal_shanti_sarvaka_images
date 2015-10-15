@@ -81,14 +81,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   left: 1rem;
 }
 
-.next.og-nav-arrow .icon::before{
-  content: '\e607';
-}
-
-.prev.og-nav-arrow .icon::before{
-  content: '\e606';
-}
-
 .og-nav-arrow .icon{
   color:#777;
   font-size:3.5rem;
@@ -98,12 +90,22 @@ ul.pager{ margin: 0 0 0.5rem;}
   top:0;
 }
 
-.og-nav-arrow:hover .icon{
+.next.og-nav-arrow .icon::before{
+  content: '\e607';
+  color:#777;
+}
+
+.prev.og-nav-arrow .icon::before{
+  content: '\e606';
+  color:#777;
+}
+
+.og-nav-arrow:hover .icon::before{
   color:#aaa;
   background: #222;
 }
 
-.og-nav-arrow:active .icon{
+.og-nav-arrow:active .icon::before{
   color:#ccc;
   background: #000;
 }
