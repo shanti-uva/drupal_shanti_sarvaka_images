@@ -59,7 +59,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 .og-expander .nav-arrow{
-  position: absolute;
+  position: relative;
   top: 50%;
   width: 5rem;
   height: 10rem;
@@ -68,11 +68,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   background: #444;
 }
 .og-expander .nav-arrow.next{
+  float:right;
   right:1rem;
   content: "\e607";
 }
 
 .og-expander .nav-arrow.prev{
+  float:left;
   left: 1rem;
   content: "\e606";
 }
