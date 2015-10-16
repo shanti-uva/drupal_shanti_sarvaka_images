@@ -73,7 +73,8 @@ div.item.last-row{ clear:both;}
 /* targets single image page template */
 .og-fullimg {
  /*border-right: 2px solid #111;*/
-  padding: 1.5rem 1rem 0 2rem;
+  padding: 1.5rem 1rem 0 0;
+  margin-left:1rem;
   width: 54%;
   min-height: 200px; /* helps disply the img loading spinner */
   /* height: auto; */
@@ -386,7 +387,7 @@ div.pdfextlink { float: right; }
   .og-close {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.3rem;
   }
 
   .og-expander-inner {
@@ -414,11 +415,15 @@ div.pdfextlink { float: right; }
 /*=== min-width (second) ===*/
 /*--------------------------*/
 
+@media screen and (min-width: 768px) {
+
+ } 
+
 @media screen and (min-width: 992px) {
 
   .og-details {
-    padding: 0.3em 0 0 1rem;
-    width: 44%;
+    padding: 0.3em 0 0 3rem;
+    width: 43%;
   }
 
   .og-fullimg{
