@@ -196,7 +196,7 @@ div.item.last-row{ clear:both;}
 .og-nav-arrow{
   position: absolute;
   top: 50%;
-  width: 5rem;
+  width: 6rem;
   height: 10rem;
   border-radius: .3rem;
   border: 1px solid #303030;
@@ -208,13 +208,13 @@ div.item.last-row{ clear:both;}
 
 .next.og-nav-arrow{
   position: absolute;
-  right:1rem;
+  right:-1rem;
   text-shadow: 0.2rem 0 0.5rem #111;
 }
 
 .prev.og-nav-arrow{
   position: absolute;
-  left: 1rem;
+  left: -1rem;
   text-shadow: 0 0.2rem 0.5rem #111;
 }
 
@@ -224,6 +224,7 @@ div.item.last-row{ clear:both;}
   height: 10rem;
   position:relative;
   top:3rem;
+  background:transparent;
 }
 
 .og-nav-arrow:hover .icon{
@@ -237,26 +238,29 @@ div.item.last-row{ clear:both;}
 .og-nav-arrow .icon::before{
   position:relative;
   color: #444;
+  background:transparent;
 }
 
 .next.og-nav-arrow .icon::before{
   content: '\e607';
-  right:0;
+  right: -0.7rem;
 }
 
 .prev.og-nav-arrow .icon::before{
   content: '\e606';
-  left:1.2rem;
+  left: 1.4rem;
 }
 
 .og-nav-arrow:hover .icon::before{
   color:#888;
   border-color:#555;
+  background:transparent;
 }
 
 .og-nav-arrow:active .icon::before{
   color:#aaa;
   border-color:#777;
+  background:transparent;
 }
 
 
