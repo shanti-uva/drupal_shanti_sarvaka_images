@@ -70,18 +70,15 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 div.item.last-row{ clear:both;}
-/* targets single image page template */
+
 .og-fullimg {
- /*border-right: 2px solid #111;*/
   padding: 1.5rem 1rem 0 0;
   margin-left:1rem;
   width: 54%;
   min-height: 200px; /* helps disply the img loading spinner */
-  /* height: auto; */
 }
 
 .og-details {
- /*border-left:1px solid #333;*/
   padding: 0;
   width: 44%;
   height: auto;
@@ -105,10 +102,9 @@ div.item.last-row{ clear:both;}
 }
 
 .og-grid .item {
-  margin:0 5px 5px 0;
+  margin:0 10px 10px 0;
   display: -moz-inline-box;
   display: inline-block;
-  /* overflow: hidden; removing this fixed hidden pointer on clicking */
   vertical-align: top;
   z-index: 1;
 }
