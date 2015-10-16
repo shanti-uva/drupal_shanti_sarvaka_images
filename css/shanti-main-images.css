@@ -206,6 +206,16 @@ div.item.last-row{ clear:both;}
   display: inline-block;
 }
 
+.og-nav-arrow:hover{
+  background:#111;
+  border-color:#444;
+}
+
+.og-nav-arrow:active{
+  border-color:#555;
+  background:#222;
+}
+
 .next.og-nav-arrow{
   position: absolute;
   right:-1rem;
@@ -225,16 +235,6 @@ div.item.last-row{ clear:both;}
   position:relative;
   top:3rem;
   background:transparent;
-}
-
-.og-nav-arrow:hover .icon{
-  background: #222;
-    border-color:#555;
-}
-
-.og-nav-arrow:active .icon{
-  background: #000;
-    border-color:#777;
 }
 
 .og-nav-arrow .icon::before{
