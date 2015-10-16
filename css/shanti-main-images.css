@@ -229,10 +229,12 @@ div.item.last-row{ clear:both;}
 
 .og-nav-arrow:hover .icon{
   background: #222;
+    border-color:#555;
 }
 
 .og-nav-arrow:active .icon{
   background: #000;
+    border-color:#777;
 }
 
 .og-nav-arrow .icon::before{
@@ -252,15 +254,13 @@ div.item.last-row{ clear:both;}
 }
 
 .og-nav-arrow:hover .icon::before{
-  color:#888;
-  border-color:#555;
-  background:transparent;
+  color:#707070;
+  background:transparent !important;
 }
 
 .og-nav-arrow:active .icon::before{
   color:#aaa;
-  border-color:#777;
-  background:transparent;
+  background:transparent !important;
 }
 
 
