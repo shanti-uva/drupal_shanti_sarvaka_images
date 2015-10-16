@@ -82,19 +82,7 @@ var Grid = (function($) {
 		
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
-		/*
-		// preload all images
-		$grid.imagesLoaded( function() {
 
-			// save item´s size and offset
-			saveItemInfo( true );
-			// get window´s size
-			getWinSize();
-			// initialize some events
-			initEvents();
-
-		} );
-		*/
 		imagesLoaded($grid, $.proxy(function() {
 			var res = $("#og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
 			console.log("result of rowGrid", res);
