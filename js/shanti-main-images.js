@@ -5,7 +5,8 @@
 				if ($("#og-grid").length > 0) {
 					$("#og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
 					Grid.init();
-					var itemHeight = jQuery(this).closest(".item").height();	    
+					var itemHeight = jQuery(this).closest(".item").height();	 
+					if (isNaN(itemHeight) || itemHeight < 180) { itemHeight = 180; }   
 					$("#og-grid .item > a").children("img").attr("height", itemHeight );
 				}
 			}
