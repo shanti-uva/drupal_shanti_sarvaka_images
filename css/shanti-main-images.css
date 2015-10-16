@@ -167,7 +167,7 @@ div.item.last-row{ clear:both;}
   border: none;
   color: #999;
   background: transparent;
-  font-size: 0.82em;
+  font-size: 0.88em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
 }
 
@@ -230,7 +230,7 @@ div.item.last-row{ clear:both;}
 
 .og-nav-arrow .icon{
   font-size:3.5rem;
-  width: 5rem;
+  width: 6rem;
   height: 10rem;
   position:relative;
   top:3rem;
