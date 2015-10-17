@@ -4,6 +4,8 @@
 			if(context == document) {
 				if ($("#og-grid").length > 0) {
 					Grid.init();
+					var itemHeight = jQuery(this).closest(".item").height();	    
+					$("#og-grid .item > a").css("height", itemHeight );
 				}
 			}
 	    }
