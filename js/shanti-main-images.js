@@ -4,8 +4,23 @@
 			if(context == document) {
 				if ($("#og-grid").length > 0) {
 					Grid.init();
-					var itemHeight = jQuery(this).closest(".item").height();	    
-					$("#og-grid .item > a").css("height", itemHeight );
+				}
+			}
+	    }
+	};
+}) (jQuery);
+
+(function ($) {
+	Drupal.behaviors.shantiImagesAdjust = {
+	    attach: function (context, settings) {
+			if(context == document) {
+				if ($("#og-grid").length > 0) {
+
+					jQuery('.og-grid .item > a').click(function(event) {						
+						var itemHeight = jQuery(this).closest(".item").height();	
+						$(this).css("height", itemHeight );
+					});					
+
 				}
 			}
 	    }
