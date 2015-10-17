@@ -14,7 +14,7 @@
 			if(context == document) {
 
 					
-					$(".og-grid > .item > a").parent(".item:not(.expanded)").click(function(event) {						
+					$(".og-grid > .item > a").click(function(e) {						
 						var itemHeight = $(this).closest(".item").height();	
 						$(this).css("height", itemHeight );
 					});				
