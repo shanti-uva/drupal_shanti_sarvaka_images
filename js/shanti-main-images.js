@@ -13,13 +13,12 @@
 	    attach: function (context, settings) {
 			if(context == document) {
 
-					var itemHeight = jQuery(this).closest(".item").height();	
-
-					$(".og-grid > .item:not(.expanded)").next("a").click(function(e) {						
-						$(".og-grid > .item:not(.expanded)").next("a").css("height", itemHeight );
+					
+					$(".og-grid > .item > a:not(.expanded)").click(function(event) {						
+						var itemHeight = $(this).closest(".item").height();	
+						$(this).css("height", itemHeight );
 					});				
 
-					$(".og-grid > .item:not(.expanded)").next("a").css("height", itemHeight );
 			}
 	    }
 	};
