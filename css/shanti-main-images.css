@@ -359,8 +359,12 @@ div.pdfextlink { float: right; }
     margin: 2rem auto;
   }
 
-  .page-file .main-col .file-image > .content:nth-of-type(1) {
+  .og-details{
+    padding-left: 2em;
+    width: 44%;
   }
+
+  .page-file .main-col .file-image > .content:nth-of-type(1) { }
 }
 
 @media screen and (max-width: 767px) {
@@ -368,6 +372,7 @@ div.pdfextlink { float: right; }
   .og-fullimg {
     padding: 0;
     margin-top: 1rem;
+    margin-left:0;
   }
 
   .og-fullimg, 
