@@ -16,7 +16,7 @@
 					var itemHeight = $(this).closest(".item").height();	
 					var targetAnchor = $(".og-grid > .item > a").not(".og-grid > .item.expanded > a");
 					
-					$(targetAnchor).click(function(event) {						
+					$targetAnchor.click(function(event) {						
 						
 						$(this).css("height", itemHeight );
 					});				
