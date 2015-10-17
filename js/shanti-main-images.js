@@ -18,7 +18,7 @@
 					
 					$(".og-grid > .item > a").not(".og-grid > .item.expanded > a").click(function(event) {						
 						
-						$(this).css("height", itemHeight ).once();
+						$(this).once().css("height", itemHeight );
 					});				
 
 			}
