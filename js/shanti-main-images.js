@@ -8,9 +8,7 @@
 			}
 	    }
 	};
-}) (jQuery);
 
-(function ($) {
 	Drupal.behaviors.shantiImagesAdjust = {
 	    attach: function (context, settings) {
 			if(context == document) {					
