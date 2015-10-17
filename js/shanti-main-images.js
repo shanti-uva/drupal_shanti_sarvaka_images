@@ -13,7 +13,7 @@
 	    attach: function (context, settings) {
 			if(context == document) {					
 				var itemHeight = jQuery(this).closest(".item").height();	
-				$(('.og-grid .item > a').css("height", itemHeight );				
+				$('.og-grid .item > a').css("height", itemHeight );				
 			}
 	    }
 	};
