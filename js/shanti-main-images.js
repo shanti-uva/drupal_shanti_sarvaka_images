@@ -16,9 +16,9 @@
 					var itemHeight = $(this).closest(".item").height();	
 					var targetAnchor = $(".og-grid > .item > a").not(".og-grid > .item.expanded > a");
 					
-					$targetAnchor.click(function(event) {						
+					$(".og-grid > .item > a").not(".og-grid > .item.expanded > a").click(function(event) {						
 						
-						$(this).css("height", itemHeight );
+						$(this).css("height", itemHeight ).once();
 					});				
 
 			}
