@@ -8,12 +8,18 @@
 			}
 	    }
 	};
+}) (jQuery);
 
+(function ($) {
 	Drupal.behaviors.shantiImagesAdjust = {
 	    attach: function (context, settings) {
-			if(context == document) {					
-				var itemHeight = jQuery(this).closest(".item").height();	
-				$('.og-grid .item > a').css("height", itemHeight );				
+			if(context == document) {
+
+					jQuery('.og-grid > .item > a:(.expanded)').click(function(event) {						
+						var itemHeight = jQuery(this).closest(".item").height();	
+						$(this).css("height", itemHeight );
+					});					
+
 			}
 	    }
 	};
