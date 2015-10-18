@@ -17,7 +17,7 @@
 					$(".og-grid > .item:not(.expanded)").click(function(e) {	
 
 						var itemHeight = $(this).closest(".item").height();	
-						$(this).closest("a").css("height", itemHeight );
+						$(".og-grid > .item:not(.expanded)").closest("a").css("height", itemHeight );
 
 					});				
 
