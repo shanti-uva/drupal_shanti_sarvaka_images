@@ -376,6 +376,12 @@ div.pdfextlink { float: right; }
     height:auto;
   }
 
+  .og-details{
+    padding-right: 2em;
+    padding-top: 2rem;
+    margin-top:0;
+  }
+
   .og-fullimg, 
     .og-details {
     display: block;
