@@ -13,9 +13,13 @@
 	    attach: function (context, settings) {
 			if(context == document) {
 
+					
+					$(".og-grid > .item > a").click(function(e) {	
 
 						var itemHeight = $(this).closest(".item").height();	
-						$(".og-grid > .item > a").css("height", itemHeight );			
+						$(this).css("height", itemHeight );
+
+					});				
 
 
 			}
