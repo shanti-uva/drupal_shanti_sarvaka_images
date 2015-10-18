@@ -14,10 +14,13 @@
 			if(context == document) {
 
 					
-					$(".og-grid > .item > a").click(function(e) {						
+					$(".og-grid > .item").click(function(e) {	
+
 						var itemHeight = $(this).closest(".item").height();	
-						$(this).css("height", itemHeight );
+						$(this).not(".expanded").find("a").css("height", itemHeight );
+
 					});				
+
 
 			}
 	    }
