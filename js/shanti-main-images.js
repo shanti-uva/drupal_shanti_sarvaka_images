@@ -14,10 +14,10 @@
 			if(context == document) {
 
 					
-					$(".og-grid > .item > a").click(function(e) {	
+					$(".og-grid > .item:not(.og-expanded)").click(function(e) {	
 
 						var itemHeight = $(this).closest(".item").height();	
-						$(this).css("height", itemHeight );
+						$(this).find("a").css("height", itemHeight );
 
 					});				
 
