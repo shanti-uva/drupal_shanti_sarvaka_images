@@ -13,9 +13,9 @@
 	    attach: function (context, settings) {
 			if(context == document) {
 
-					var test = $(".og-grid > .item > a:not(.og-expanded > a)");
+					// var test = $(".og-grid > .item > a:not(.og-expanded > a)");
 					
-					$(test).click(function(e) {	
+					$(".og-grid > .item > a").click(function(e) {	
 
 						var itemHeight = $(this).closest(".item").height();	
 						
