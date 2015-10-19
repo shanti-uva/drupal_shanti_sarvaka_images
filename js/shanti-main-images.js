@@ -15,11 +15,11 @@
 
 					// var test = $(".og-grid > .item > a").not(".og-grid > .item.og-expanded > a");
 					
-					$(".og-grid > .item > a").click(function(e) {	
+					$(".og-grid > .item > a:not(.item.og-expanded > a)").click(function(e) {	
 
 						var itemHeight = $(".og-grid > .item > a").closest(".item").height();	
 						
-						$(this).css( {"height" : itemHeight, "display" : "block" });
+						$(this).css( "height" : itemHeight );
 
 					});				
 
