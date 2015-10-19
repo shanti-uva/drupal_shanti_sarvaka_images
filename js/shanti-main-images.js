@@ -19,7 +19,7 @@
 
 						var itemHeight = $(".og-grid .item > a").closest(".item").height();	
 						
-						$(this).css( "height" : itemHeight );
+						$(this).css( {"height" : itemHeight, "display" : "block" } );
 
 					});				
 
