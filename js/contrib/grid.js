@@ -85,7 +85,11 @@ var Grid = (function($) {
 
 		imagesLoaded($grid, $.proxy(function() {
 			var res = $("#og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
-			console.log("result of rowGrid", res);
+			// iterate through grid children (= div.item) and set their <a> heights
+			res.children('.item').each(function() {  
+				var mya = $(this).children('a').eq(0);
+				mya.css( {"height" : $(this).height(), "display" : "block" } );
+			});
 			// save item´s size and offset
 			saveItemInfo( true );
 			// get window´s size
@@ -170,7 +174,7 @@ var Grid = (function($) {
 	}
 
 	function showPreview( $item ) {
-
+console.log('item in show preview', $item);
 		var preview = $.data( this, 'preview' ),
 			// item´s offset top
 			position = $item.data( 'offsetTop' );
