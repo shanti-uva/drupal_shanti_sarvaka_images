@@ -109,6 +109,10 @@ div.item.last-row{ clear:both;}
   z-index: 1;
 }
 
+.og-grid .item > a{
+  display:inline;
+}
+
 .og-fullimg img {
   margin: 0 0 0 1rem;
 }
