@@ -113,6 +113,10 @@ div.item.last-row{ clear:both;}
   display:inline;
 }
 
+.og-grid .item.og-expanded > a{
+  display:block;
+}
+
 .og-fullimg img {
   margin: 0 0 0 1rem;
 }
