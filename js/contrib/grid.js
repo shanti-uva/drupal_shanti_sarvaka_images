@@ -251,7 +251,7 @@ console.log('item in show preview', $item);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"><span class="btn-lightbox"><span class="icon glyphicon-fullscreen"></span></span></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			
 			this.$nextPreview = $( '<span class="next og-nav-arrow"><span class="icon"></span></span>' );
