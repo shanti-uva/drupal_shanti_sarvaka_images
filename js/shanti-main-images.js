@@ -21,7 +21,10 @@
 		    		// $thisPreview.hidePreview();
 		        	// $nextPreview.showPreview();
 
-		        	initItemsEvents( this );
+        			current = -1;
+					var preview = $.data( this, 'preview' );
+					preview.close();
+					$.removeData( this, 'preview' );
 		        });
 		    
 			}
