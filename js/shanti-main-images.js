@@ -14,7 +14,7 @@
 	    attach: function (context, settings) {
 			if(context == document) {
 						    
-			    $('.item').on( 'click', '.next', function() {
+			    $('.next').on( 'click', function() {
 		    		// var thisPreview = $(this).parent('.item');
 		    		// var nextPreview = $(this).parent('.item').next();
 
