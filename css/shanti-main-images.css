@@ -73,8 +73,8 @@ div.item.last-row{ clear:both;}
 
 .og-fullimg {
   padding: 0 2rem 0 0;
-  margin: 2rem 0 0 1rem;
-  width: 56%;
+  margin: 0 0 0 1rem;
+  width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
 }
 
