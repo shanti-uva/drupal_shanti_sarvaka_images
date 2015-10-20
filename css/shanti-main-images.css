@@ -72,15 +72,15 @@ ul.pager{ margin: 0 0 0.5rem;}
 div.item.last-row{ clear:both;}
 
 .og-fullimg {
-  padding: 0;
+  padding: 0 2rem 0 0;
   margin: 2rem 1rem 0 0;
-  width: 56%;
+  width: 100%;
   min-height: 200px; /* helps disply the img loading spinner */
 }
 
 .og-details {
-  padding: 0;
-  width: 42%;
+  padding: 0 2rem 0 1rem;
+  width: 100%;
   height: auto;
 }
 
@@ -416,6 +416,12 @@ div.pdfextlink { float: right; }
 
   .og-fullimg{
     margin:0 1rem;
+    padding-right:0;
+    width:56%;
+  }
+
+  .og-details{
+    width:42%;
   }
 
  } 
