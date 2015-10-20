@@ -426,17 +426,19 @@ var Grid = (function($) {
 	};
 
 
-	$('.item').on( 'click', '.next', function() {
+    function nextSlide() {
+	    $('.item').on( 'click', '.next', function() {
 
-    	// var thisPreview = $(this).parent('.item');
-    	// var nextPreview = $(this).parent('.item').next();
+    		// var thisPreview = $(this).parent('.item');
+    		// var nextPreview = $(this).parent('.item').next();
 
-    	// $thisPreview.hidePreview();
-        // $nextPreview.showPreview();
+    		// $thisPreview.hidePreview();
+        	// $nextPreview.showPreview();
 
-        initItemsEvents( this ).parent('.item');
+        	initItemsEvents( this ).parent('.item');
+        });
 
-    });
+    };
 
 
 
