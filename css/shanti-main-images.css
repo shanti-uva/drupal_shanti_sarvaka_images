@@ -57,6 +57,56 @@ table.pagerer {
 ul.pager{ margin: 0 0 0.5rem;}
 
 
+/*---scroll to top ---*/
+.btn-lightbox {
+  position: fixed;
+  top: 5em;
+  right: 5rem;
+  z-index: 1000;
+  height: 3.12em;
+  width: 3.12em;
+  color: #aaa;
+  background: #f0f0f0;
+  filter: alpha(opacity=20);
+  opacity: 0.2;
+  font-size: 1em;
+  border-radius: 50%;
+  border:1px solid #888;
+  background-clip: padding-box;
+  display: none;
+  text-align: center;
+}
+
+.btn-lightbox:hover,
+.btn-lightbox:active {
+  /*color: #fff;*/
+  background: #fff;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  text-decoration: none;
+  border-color:#aaa;
+}
+
+.btn-lightbox .icon {
+  color: #444;
+  font-size: 2em;
+  line-height: 1.38em;
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-lightbox:hover .icon,
+.btn-lightbox:active .icon {
+  color: #555;
+}
+
+.btn-lightbox .icon::before {
+  content: '\f077';
+}
+
+
 
 
 
