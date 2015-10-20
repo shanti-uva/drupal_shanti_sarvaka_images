@@ -251,7 +251,7 @@ console.log('item in show preview', $item);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"><span class="btn-lightbox"><span class="fa fa-expand"></span></span></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			
 			this.$nextPreview = $( '<span class="next og-nav-arrow"><span class="icon"></span></span>' );
@@ -314,7 +314,7 @@ console.log('item in show preview', $item);
 			// for smaller screens we don´t display the large image (the media query will hide the fullimage wrapper)
 			if( self.$fullimage.is( ':visible' ) ) {
 				this.$loading.show();
-				$( '<div/><img/>' ).load( function() {
+				$( '<img/>' ).load( function() {
 					var $img = $( this );
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
