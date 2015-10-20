@@ -73,7 +73,7 @@ div.item.last-row{ clear:both;}
 
 .og-fullimg {
   padding: 0;
-  margin: 0 1rem;
+  margin: 2rem 1rem 0 0;
   width: 56%;
   min-height: 200px; /* helps disply the img loading spinner */
 }
@@ -413,6 +413,10 @@ div.pdfextlink { float: right; }
 /*--------------------------*/
 
 @media screen and (min-width: 768px) {
+
+  .og-fullimg{
+    margin:0 1rem;
+  }
 
  } 
 
