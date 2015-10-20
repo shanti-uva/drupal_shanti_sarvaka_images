@@ -18,10 +18,14 @@
 function sarvaka_images_preprocess_views_view(&$vars) {
 	//dpm($vars, 'vars in view preprocess 2');
 	if ($vars['view']->name == 'media_sharedshelf_my_images') {
-		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9980));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe-ui-default.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
 		// drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/flex-images.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
+		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/photoswipe.css');
+		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/pswp-default-skin.css');
 		$view = $vars['view'];
 		$results = $view->result;
 		$rows = '<div id="og-grid" class="og-grid">';
@@ -31,9 +35,13 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
 			$thumb_path = image_style_url('media_thumbnail', $furi) ;
 			$large_path = image_style_url('media_large', $furi) ;
-	
-	    $info_bundle = array('bundle' => $file->type);
-	    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
+			$huge_path = image_style_url('media_lightbox_large', $furi) ;
+			$hugepts = explode('/sites/', $huge_path);
+		    watchdog('sarvaka images', $huge_path);
+			$huge_info = image_get_info('sites/' . $hugepts[1]);
+			$huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
+		    $info_bundle = array('bundle' => $file->type);
+		    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
 			$ftitle = $file->filename;
 			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
 			if(empty($creator)) {$creator = "Not available";}
@@ -52,12 +60,11 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			}
 			$furl = url('file/' . $file->fid);
 			$rows .= '<div class="item">
-		    <a href="' . $furl . '" data-largesrc="' . $large_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
-		    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
-		    >
-	          <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
-		    </a>
-	    </div>';
+		    		<a href="' . $furl . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
+			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
+			    > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
+			    </a>
+		    </div>';
 		}
 		$rows .= '</div>';
 		$vars['rows'] = $rows;

@@ -251,7 +251,7 @@ console.log('item in show preview', $item);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			
 			this.$nextPreview = $( '<span class="next og-nav-arrow"><span class="icon"></span></span>' );
@@ -289,6 +289,7 @@ console.log('item in show preview', $item);
 				eldata = {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
+					hugesrc : $itemEl.data( 'hugesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
 					creator : $itemEl.data( 'creator' ),
@@ -319,7 +320,10 @@ console.log('item in show preview', $item);
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
-						self.$largeImg = $img.fadeIn( 350 );
+						self.$largeImg = $('<div class="og-img-wrapper"></div>');
+						self.$largeImg.append($( '<a href="' + eldata.hugesrc + '" class="lightbox-link"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></a>' ), $img.fadeIn( 350 ));
+						console.log(self.$largeImg);
+						console.log('eldata', eldata);
 						self.$fullimage.append( self.$largeImg );
 					}
 				} ).attr( 'src', eldata.largesrc );	
