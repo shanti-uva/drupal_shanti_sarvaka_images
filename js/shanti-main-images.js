@@ -10,7 +10,7 @@
 	};
 
 
-	Drupal.behaviors.shantiImages = {
+	Drupal.behaviors.shantiImagesPreviewNav = {
 	    attach: function (context, settings) {
 			if(context == document) {
 				
