@@ -74,13 +74,13 @@ div.item.last-row{ clear:both;}
 .og-fullimg {
   padding: 0 2rem 0 0;
   margin: 2rem 0 0 1rem;
-  width: 100%;
+  width: 56%;
   min-height: 200px; /* helps disply the img loading spinner */
 }
 
 .og-details {
   padding: 0 1rem 0 1rem;
-  width: 100%;
+  width: 42%;
   height: auto;
 }
 
@@ -365,12 +365,14 @@ div.pdfextlink { float: right; }
     margin-top: 1rem;
     /* margin-left:0; */
     height:auto;
+    width:100%;
   }
 
   .og-details{
     padding-right: 2em;
     padding-top: 2rem;
     margin-top:0;
+    width:100%;
   }
 
   .og-fullimg, 
@@ -417,11 +419,10 @@ div.pdfextlink { float: right; }
   .og-fullimg{
     margin:0 1rem;
     padding-right:0;
-    width:56% !important;
   }
 
   .og-details{
-    width:42% !important;
+
   }
 
  } 
