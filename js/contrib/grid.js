@@ -431,7 +431,7 @@ var Grid = (function($) {
     	var thisPreview = $(this).parent('.item');
     	// var nextPreview = $(this).parent('.item').next();
 
-    	$thisPreview.hidePreview();
+    	$thisPreview.initEvents();
         // $nextPreview.showPreview();
 
     });
