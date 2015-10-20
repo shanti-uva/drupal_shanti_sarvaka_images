@@ -425,6 +425,21 @@ var Grid = (function($) {
 		}
 	};
 
+
+	$('.item').on( 'click', '.next', function() {
+
+    	var thisPreview = $(this).parent('.item');
+    	var nextPreview = $(this).parent('.item').next();
+
+    	$thisPreview.hidePreview();
+        $nextPreview.showPreview();
+
+    });
+
+
+
+
+
 	return { 
 		init : init,
 		addItems : addItems
