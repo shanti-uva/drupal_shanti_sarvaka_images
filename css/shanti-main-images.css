@@ -80,21 +80,21 @@ ul.pager{ margin: 0 0 0.5rem;}
 .btn-lightbox:hover,
 .btn-lightbox:active {
   text-decoration: none;
-  border-color:#aaa;
+  border-color:#ddd;
 }
 
 .btn-lightbox .icon {
   font-size: 1.62em;
-  line-height: 1.62em;
+  line-height: 1.83em;
   font-family: 'FontAwesome';
   font-weight: normal;
   margin: 0 auto;
   text-align: center;
 }
 
-.btn-lightbox:hover .icon,
-.btn-lightbox:active .icon {
-  color: #555;
+.btn-lightbox:hover .icon::before,
+.btn-lightbox:active .icon::before {
+  color:#fff;
 }
 
 .btn-lightbox .icon::before {
