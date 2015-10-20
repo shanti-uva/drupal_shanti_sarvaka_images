@@ -79,10 +79,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .btn-lightbox:hover,
 .btn-lightbox:active {
-  /*color: #fff;*/
   background: #f0f0f0;
-  filter: alpha(opacity=20);
-  opacity: 0.2;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
   text-decoration: none;
   border-color:#aaa;
 }
@@ -102,7 +101,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .btn-lightbox .icon::before {
-
+  content: "\f065";
+  font-size: 2.2rem;
+  line-height: 4rem;
 }
 
 
