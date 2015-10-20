@@ -426,13 +426,15 @@ var Grid = (function($) {
 	};
 
 
-	$('.next').on( 'click', function() {
+	$('.item').on( 'click', '.next', function() {
 
-    	var thisPreview = $(this).parent('.item');
+    	// var thisPreview = $(this).parent('.item');
     	// var nextPreview = $(this).parent('.item').next();
 
-    	$thisPreview.initEvents();
+    	// $thisPreview.hidePreview();
         // $nextPreview.showPreview();
+
+        initItemsEvents( this ).parent('.item');
 
     });
 
