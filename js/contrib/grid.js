@@ -425,21 +425,6 @@ var Grid = (function($) {
 		}
 	};
 
-
-
-	$items.on( 'click', '.next', function() {
-
-    	$(this).hidePreview();
-    	
-    	var nextPreview = $(this).parent('.og-expanded').next('.item');
-
-        $(nextPreview).showPreview();
-
-    });
-
-
-
-
 	return { 
 		init : init,
 		addItems : addItems

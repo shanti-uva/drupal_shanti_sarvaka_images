@@ -8,4 +8,24 @@
 			}
 	    }
 	};
+
+
+	Drupal.behaviors.shantiImages = {
+	    attach: function (context, settings) {
+			if(context == document) {
+				
+				$('.item').on( 'click', '.next', function() {
+
+			    	$(this).hidePreview();
+			    	
+			    	var nextPreview = $(this).parent('.item').next();
+
+			        $nextPreview.showPreview();
+
+			    });
+			}
+	    }
+	};
+
+
 }) (jQuery);
