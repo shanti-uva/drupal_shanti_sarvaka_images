@@ -174,7 +174,7 @@ var Grid = (function($) {
 	}
 
 	function showPreview( $item ) {
-console.log('item in show preview', $item);
+
 		var preview = $.data( this, 'preview' ),
 			// item´s offset top
 			position = $item.data( 'offsetTop' );
@@ -321,9 +321,9 @@ console.log('item in show preview', $item);
 						self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
 						self.$largeImg = $('<div class="og-img-wrapper"></div>');
-						self.$largeImg.append($( '<a href="' + eldata.hugesrc + '" class="lightbox-link"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></a>' ), $img.fadeIn( 350 ));
-						console.log(self.$largeImg);
-						console.log('eldata', eldata);
+						var span = $( '<a href="' + eldata.hugesrc + '" class="lightbox-link"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></a>' );
+						span = ''; // removing for production
+						self.$largeImg.append(span, $img.fadeIn( 350 ));
 						self.$fullimage.append( self.$largeImg );
 					}
 				} ).attr( 'src', eldata.largesrc );	
