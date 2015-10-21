@@ -123,6 +123,12 @@ div.item.last-row{ clear:both;}
   min-height: 200px; /* helps disply the img loading spinner */
 }
 
+.og-img-wrapper{
+  position:absolute;
+left:50%;
+top:50%;
+}
+
 .og-details {
   padding: 0 1rem 0 2rem;
   width: 42%;
