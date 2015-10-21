@@ -29,7 +29,7 @@
 
 
 
-
+/*
 
 	Drupal.behaviors.popupImageCentering = {
 	    attach: function (context, settings) {
@@ -37,19 +37,20 @@
 				$(".og-img-wrapper img").each(function(){
 					  //get height and width (unitless) and divide by 2
 					  var hWide = ($(this).width())/2; //half the image's width
-					  // var hTall = ($(this).height())/2; //half the image's height, etc.
+					  var hTall = ($(this).height())/2; //half the image's height, etc.
 
 					  // attach negative and pixel for CSS rule
 					  hWide = '-' + hWide + 'px';
-					  // hTall = '-' + hTall + 'px';
+					  hTall = '-' + hTall + 'px';
 
-					  $(".og-img-wrapper").addClass("js-fix");
 					  $(".og-img-wrapper").css("margin-left", hWide );
+					  $(".og-img-wrapper").css("margin-top", hTall );
 				});
 			}
 	    }
 	};
 
+*/
 
 
 
