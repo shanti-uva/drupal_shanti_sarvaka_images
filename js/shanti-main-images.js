@@ -14,17 +14,15 @@
 	    attach: function (context, settings) {
 			if(context == document) {
 						    
-			    $('.next').on( 'click', function() {
+			    $('.next').click ( function() {
 		    		// var thisPreview = $(this).parent('.item');
 		    		// var nextPreview = $(this).parent('.item').next();
 
 		    		// $thisPreview.hidePreview();
 		        	// $nextPreview.showPreview();
 
-        			current = -1;
-					var preview = $.data( this, 'preview' );
-					preview.close();
-					$.removeData( this, 'preview' );
+		        	$(this).parents('.item').close();
+
 		        });
 		    
 			}
