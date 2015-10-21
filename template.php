@@ -29,12 +29,13 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$file = file_load($res->fid);
 			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
 			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
-			$thumb_path = image_style_url('media_thumbnail', $furi) ;
-			$large_path = image_style_url('media_large', $furi) ;
-			$huge_path = image_style_url('media_lightbox_large', $furi) ;
+			$thumb_path = image_style_url('media_thumbnail', $furi) ; 		// Thumb path for grid
+			$large_path = image_style_url('media_large', $furi) ;					// Large path for popup
+			$huge_path = image_style_url('media_lightbox_large', $furi) ;	// Huge path for lightbox
+			// Get dimensions for huge image and append to url with "::" separators (url::width::height)
 			$hugepts = explode('/sites/', $huge_path);
-		    watchdog('sarvaka images', $huge_path);
-			$huge_info = image_get_info('sites/' . $hugepts[1]);
+			$hugepts = explode('?', $hugepts[1]);
+			$huge_info = image_get_info('sites/' . $hugepts[0]);
 			$huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
 		    $info_bundle = array('bundle' => $file->type);
 		    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);

@@ -90,6 +90,7 @@ var Grid = (function($) {
 				var mya = $(this).children('a').eq(0);
 				mya.css( {"height" : $(this).height(), "display" : "block" } );
 			});
+			initLightbox();
 			// save item´s size and offset
 			saveItemInfo( true );
 			// get window´s size
@@ -99,7 +100,25 @@ var Grid = (function($) {
 		}, this));
 
 	}
-
+	
+	// Initialization of lightbox by creating list of items.
+	function initLightbox() {
+		var items = [];
+		$("#og-grid .item a").each(function() {
+			var data = $(this).attr('data-hugesrc');
+			data = data.split("::");
+			var item = {
+				'src': data[0],
+				'w': data[1],
+				'h': data[2],
+			};
+			items.push(item);
+		});
+		
+		Drupal.settings.media_sharedshelf = {'lbitems' : items};
+		
+	}
+	
 	// add more items to the grid.
 	// the new items need to appended to the grid.
 	// after that call Grid.addItems(theItems);
@@ -337,10 +356,17 @@ var Grid = (function($) {
 						self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
 						self.$largeImg = $('<div class="og-img-wrapper"></div>');
-						var span = $( '<a href="' + eldata.hugesrc + '" class="lightbox-link"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></a>' );
-						span = ''; // removing for production
+						var span = $( '<a href="#" class="lightbox-link"><span class="btn-lightbox"><span class="icon fa-expand"></span></span></a>' );
 						self.$largeImg.append(span, $img.fadeIn( 350 ));
 						self.$fullimage.append( self.$largeImg );
+						// Find the lightbox icon and enable click to initiate gallery
+						self.$fullimage.find("a.lightbox-link").eq(0).click(function() {
+       						var pswpElement = document.querySelectorAll('.pswp')[0];
+							var options = {index: 0 };
+							Drupal.settings.media_sharedshelf.gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, Drupal.settings.media_sharedshelf.lbitems, options);
+							Drupal.settings.media_sharedshelf.gallery.init();
+							Drupal.settings.media_sharedshelf.gallery.goTo(self.$item.prevAll().length);
+						});
 					}
 				} ).attr( 'src', eldata.largesrc );	
 			}
