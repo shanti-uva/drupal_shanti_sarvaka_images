@@ -43,10 +43,8 @@
 					  hWide = '-' + hWide + 'px';
 					  // hTall = '-' + hTall + 'px';
 
-					  $('.og-img-wrapper').addClass("js-fix").css({
-					    "margin-left" : hWide
-					    // "margin-top" : hTall
-					  });
+					  $('.og-img-wrapper').addClass("js-fix");
+					  $('.og-img-wrapper').css("margin-left", hWide );
 				});
 			}
 	    }
@@ -56,3 +54,8 @@
 
 
 }) (jQuery);
+
+
+
+
+
