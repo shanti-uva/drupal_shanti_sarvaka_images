@@ -43,8 +43,8 @@
 					  hWide = '-' + hWide + 'px';
 					  // hTall = '-' + hTall + 'px';
 
-					  $('.og-img-wrapper').addClass("js-fix");
-					  $('.og-img-wrapper').css("margin-left", hWide );
+					  $(".og-img-wrapper").addClass("js-fix");
+					  $(".og-img-wrapper").css("margin-left", hWide );
 				});
 			}
 	    }
