@@ -58,7 +58,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 /*---scroll to top ---*/
-.btn-lightbox {
+a.btn-lightbox {
   position: absolute;
   top: 0.7em;
   right: 3rem;
@@ -77,8 +77,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-align: center;
 }
 
-.btn-lightbox:hover,
-.btn-lightbox:active {
+a.btn-lightbox:hover,
+a.btn-lightbox:active {
   text-decoration: none;
   border-color:#ddd !important;
 }
