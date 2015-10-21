@@ -460,7 +460,7 @@ div.pdfextlink { float: right; }
 @media screen and (min-width: 768px) {
 
   .og-fullimg{
-    margin:0 1rem;
+    margin: 1rem 1rem 0;
     padding-right:0;
   }
 

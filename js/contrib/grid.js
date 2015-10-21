@@ -224,6 +224,22 @@ var Grid = (function($) {
 		this.update();
 	}
 
+
+	function NextPrev( $items ) {
+		$items.on( 'click', 'span.next', function() {
+			hidePreview();
+			return false;
+		} ).children( 'a' ).on( 'click', function(e) {
+
+			var $item = $( this ).parent();
+			// check if item already opened
+			current === $item.index() ? hidePreview() : showPreview( $item );
+			return false;
+
+		} );
+	}		
+
+
 	Preview.prototype = {
 		create : function() {
 			// create Preview structure:
