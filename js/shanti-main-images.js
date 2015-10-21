@@ -44,7 +44,7 @@
 					  // hTall = '-' + hTall + 'px';
 
 					  $('.og-img-wrapper').addClass("js-fix").css({
-					    "margin-left" : hWide,
+					    "margin-left" : hWide
 					    // "margin-top" : hTall
 					  });
 				});
