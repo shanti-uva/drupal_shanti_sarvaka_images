@@ -275,14 +275,14 @@ var Grid = (function($) {
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
    			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
    			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
-   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$href);
+   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description);
    		//this.$photographer = $('<li class="photographer">Photographer</li>');
    		this.$date = $('<li class="date">Date</li>');
    		this.$place = $('<li class="place">Place</li>');
    		this.$creator = $('<li class="creator">Photographer</li>');
    		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
    		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
-   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
+   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -362,10 +362,13 @@ var Grid = (function($) {
 						// Find the lightbox icon and enable click to initiate gallery
 						self.$fullimage.find("a.lightbox-link").eq(0).click(function() {
        						var pswpElement = document.querySelectorAll('.pswp')[0];
-							var options = {index: 0 };
+       						var iind = self.$item.prevAll().length;
+							var options = { index: iind };
+							//console.log("options", options);
 							Drupal.settings.media_sharedshelf.gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, Drupal.settings.media_sharedshelf.lbitems, options);
 							Drupal.settings.media_sharedshelf.gallery.init();
-							Drupal.settings.media_sharedshelf.gallery.goTo(self.$item.prevAll().length);
+							Drupal.settings.media_sharedshelf.gallery.goTo(iind);
+							//console.log("Index new: " + iind);
 						});
 					}
 				} ).attr( 'src', eldata.largesrc );	
