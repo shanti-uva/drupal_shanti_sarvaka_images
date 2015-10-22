@@ -243,7 +243,7 @@ var Grid = (function($) {
 		this.update();
 	}
 
-
+/*
 	function NextPrev( $items ) {
 		$items.on( 'click', 'span.next', function() {
 			hidePreview();
@@ -257,7 +257,7 @@ var Grid = (function($) {
 
 		} );
 	}		
-
+*/
 
 	Preview.prototype = {
 		create : function() {
