@@ -5,6 +5,8 @@
 				if ($("#og-grid").length > 0) {
 					Grid.init();
 				}
+				
+				// Code to hide Admin menu when cursor not in upper right
 				setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 1000);
 				$('body').mousemove(function(event) { 
 					var x = event.pageX;
