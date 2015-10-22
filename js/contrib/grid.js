@@ -375,7 +375,7 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 					}
-				} ).attr( 'src', eldata.largesrc );	
+				}).attr( 'src', eldata.largesrc );	
 			}
 
 		},

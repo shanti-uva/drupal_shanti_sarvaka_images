@@ -13,14 +13,12 @@
 					var y = event.pageY; 
 					if (y < 50 && x < 200) { 
 						if ($('#admin-menu').is(":hidden")) {
-							console.log("showing admin menu");
 							$('#admin-menu').slideDown(); 
 							$('body').addClass('admin-menu');
 						}
 					} else if (y > 100) { 
 						if ($('#admin-menu').is(":visible")) {
-							console.log("hiding admin menu");
-							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 1500);
+							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 2500);
 						} 
 					} 
 				});
