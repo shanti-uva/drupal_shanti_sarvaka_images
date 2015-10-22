@@ -197,7 +197,7 @@ var Grid = (function($) {
 	}
 
 	function showPreview( $item ) {
-
+		
 		var preview = $.data( this, 'preview' ),
 			// item´s offset top
 			position = $item.data( 'offsetTop' );
@@ -209,6 +209,7 @@ var Grid = (function($) {
 
 			// not in the same row
 			if( previewPos !== position ) {
+				console.log('not same row', $item);
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
@@ -218,9 +219,9 @@ var Grid = (function($) {
 			// same row
 			else {
 				preview.update( $item );
+				prevNextButtons($item);
 				return false;
 			}
-			
 		}
 
 		// update previewPos
@@ -229,7 +230,7 @@ var Grid = (function($) {
 		preview = $.data( this, 'preview', new Preview( $item ) );
 		// expand preview overlay
 		preview.open();
-
+		prevNextButtons($item);
 	}
 
 	function hidePreview() {
@@ -246,22 +247,25 @@ var Grid = (function($) {
 		this.create();
 		this.update();
 	}
-
-/*
-	function NextPrev( $items ) {
-		$items.on( 'click', 'span.next', function() {
-			hidePreview();
-			return false;
-		} ).children( 'a' ).on( 'click', function(e) {
-
-			var $item = $( this ).parent();
-			// check if item already opened
-			current === $item.index() ? hidePreview() : showPreview( $item );
-			return false;
-
-		} );
-	}		
-*/
+	
+	// Enable the previews previous and next buttons
+	function prevNextButtons($item) {
+		var prevItem = $item.prev();
+		if (prevItem.length == 0) {
+			prevItem = $item.nextAll().last();
+			console.log(prevItem);
+		}
+		$('.og-expander .prev').unbind('click').click(function() {
+			showPreview(prevItem);
+		});
+		var nextItem = $item.next();
+		if (nextItem.length == 0) {
+			nextItem = $('.og-grid .item').eq(0);
+		}
+		$('.og-expander .next').unbind('click').click(function() {
+			showPreview(nextItem);
+		});
+	}
 
 	Preview.prototype = {
 		create : function() {
@@ -277,16 +281,16 @@ var Grid = (function($) {
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#">View</a>' );
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
-   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
-   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
-   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description);
-   		//this.$photographer = $('<li class="photographer">Photographer</li>');
-   		this.$date = $('<li class="date">Date</li>');
-   		this.$place = $('<li class="place">Place</li>');
-   		this.$creator = $('<li class="creator">Photographer</li>');
-   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
-   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
-   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
+	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Image</a></li>' +
+	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
+	   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description);
+	   		//this.$photographer = $('<li class="photographer">Photographer</li>');
+	   		this.$date = $('<li class="date">Date</li>');
+	   		this.$place = $('<li class="place">Place</li>');
+	   		this.$creator = $('<li class="creator">Photographer</li>');
+	   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
+	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
+	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$href);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -375,6 +379,18 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 					}
+					/*$(".og-img-wrapper img").each(function(){
+						  //get height and width (unitless) and divide by 2
+						  var hWide = ($(this).width())/2; //half the image's width
+						  var hTall = ($(this).height())/2; //half the image's height, etc.
+	
+						  // attach negative and pixel for CSS rule
+						  hWide = '-' + hWide + 'px';
+						  hTall = '-' + hTall + 'px';
+	
+						  $(".og-img-wrapper").css("margin-left", hWide );
+						  $(".og-img-wrapper").css("margin-top", hTall );
+					});*/
 				}).attr( 'src', eldata.largesrc );	
 			}
 
