@@ -403,7 +403,7 @@ div.pdfextlink { float: right; }
 
 
 
-/**** lightbox ****/
+/**** lightbox 
 .pswp__counter{
   display:none;
 }
@@ -415,6 +415,9 @@ div.pdfextlink { float: right; }
   height: 100%;
   width: 44px;
 }
+****/
+
+
 
 /*-------------------------*/
 /*=== max-width (first) ===*/
