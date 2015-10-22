@@ -18,19 +18,25 @@
 function sarvaka_images_preprocess_views_view(&$vars) {
 	//dpm($vars, 'vars in view preprocess 2');
 	if ($vars['view']->name == 'media_sharedshelf_my_images') {
+		// Load JavaScript
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9980));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe-ui-default.js', array('group'=>JS_LIBRARY, 'weight'=>9960));
-		// drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/flex-images.css');
+		// Load CSS
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/photoswipe.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/pswp-default-skin.css');
+		// Get View
 		$view = $vars['view'];
 		$results = $view->result;
 		$rows = '<div id="og-grid" class="og-grid">';
+		
+		// Iterate through results, get info about each file, and build item html 
 		foreach ($results as $res) {
-			$file = file_load($res->fid);
+			$file = file_load($res->fid); // Load file
+			$furl = url('file/' . $file->fid); // Url to file's page
+			// Get image paths for various sizes (thumb, large, huge)
 			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
 			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
 			$thumb_path = image_style_url('media_thumbnail', $furi) ; 		// Thumb path for grid
@@ -41,28 +47,36 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$hugepts = explode('?', $hugepts[1]);
 			$huge_info = image_get_info('sites/' . $hugepts[0]);
 			$huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
+			
+			// Get details about file from metadata_wrapper
 		    $info_bundle = array('bundle' => $file->type);
 		    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
 			$ftitle = $file->filename;
+			// Creator
 			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
 			if(empty($creator)) {$creator = "Not available";}
+			// Date
 			$date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
 			if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
 			$photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
+			// Photographer
 			if(empty($photographer)) {$photographer = "Not available";}
+			// Place
 			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
 			if(empty($place)) {$place = "Not available";}
-			
+			// Description
 			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
 			if (empty($fdesc)) {$fdesc = t("No description currently available.");}
 			if (strlen($fdesc) > 500) {
 				$fdesc = substr($fdesc, 0, 400);
 				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
 			}
-			$furl = url('file/' . $file->fid);
+			// Type of file (from mimetype)
+			$dtype = substr($file->filemime, strpos($file->filemime, '/') + 1); // Take last part of mimetype
+			// Create HTML
 			$rows .= '<div class="item">
 		    		<a href="' . $furl . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
-			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '"
+			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
 			    > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
 			    </a>
 		    </div>';
