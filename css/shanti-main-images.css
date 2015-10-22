@@ -403,6 +403,19 @@ div.pdfextlink { float: right; }
 
 
 
+/**** lightbox ****/
+.pswp__counter{
+  display:none;
+}
+
+.pswp__top-bar{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 44px;
+}
+
 /*-------------------------*/
 /*=== max-width (first) ===*/
 /*-------------------------*/
