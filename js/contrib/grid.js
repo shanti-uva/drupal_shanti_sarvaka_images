@@ -84,12 +84,7 @@ var Grid = (function($) {
 		settings = $.extend( true, {}, settings, config );
 
 		imagesLoaded($grid, $.proxy(function() {
-			var res = $("#og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
-			// iterate through grid children (= div.item) and set their <a> heights
-			res.children('.item').each(function() {  
-				var mya = $(this).children('a').eq(0);
-				mya.css( {"height" : $(this).height(), "display" : "block" } );
-			});
+			initGridLayout();
 			initLightbox();
 			// save item´s size and offset
 			saveItemInfo( true );
@@ -99,6 +94,16 @@ var Grid = (function($) {
 			initEvents();
 		}, this));
 
+	}
+	
+	// Initialize the row Grid layout called from init and on window resize
+	function initGridLayout() {
+		var res = $("#og-grid").rowGrid({itemSelector: ".item", minMargin: 10, maxMargin: 10, firstItemClass: "first-item"});
+		// iterate through grid children (= div.item) and set their <a> heights
+		res.children('.item').each(function() {  
+			var mya = $(this).children('a').eq(0);
+			mya.css( {"height" : $(this).height(), "display" : "block" } );
+		});
 	}
 	
 	// Initialization of lightbox by creating list of items.
@@ -159,7 +164,6 @@ var Grid = (function($) {
 		// on window resize get the window´s size again
 		// reset some values..
 		$window.on( 'debouncedresize', function() {
-			
 			scrollExtra = 0;
 			previewPos = -1;
 			// save item´s offset
@@ -169,7 +173,7 @@ var Grid = (function($) {
 			if( typeof preview != 'undefined' ) {
 				hidePreview();
 			}
-
+			initGridLayout();
 		} );
 
 	}
