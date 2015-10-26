@@ -144,6 +144,18 @@ function sarvaka_images_preprocess_field(&$vars) {
 }
 
 /**
+ * Implements hook breadcrumb alter
+ *    for search pages just make the breadcrumb search
+ */
+function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
+	if ($item['path'] == 'search/site/%') {
+		$active_trail = array($active_trail[1]); // trim breadcrumbs to just "search"
+		drupal_set_title(t("Search: @term", array('@term' => $item['page_arguments'][1])));
+		return;
+	}
+ }
+	
+/**
  * Implements preprocess search result
  * 		Removes snippet and info (for now) and adds thumb url
  */
@@ -151,6 +163,7 @@ function sarvaka_images_preprocess_field(&$vars) {
 $done = FALSE;
 
 function sarvaka_images_preprocess_search_result(&$vars) {
+	dpm($vars);
 	$vars['snippet'] = '';
 	$vars['info'] = '';
 	$vars['title_full'] = $vars['title'];
