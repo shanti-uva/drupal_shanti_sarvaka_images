@@ -149,8 +149,8 @@ function sarvaka_images_preprocess_field(&$vars) {
  */
 function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
 	if ($item['path'] == 'search/site/%') {
-		$active_trail = array($active_trail[1]); // trim breadcrumbs to just "search"
-		drupal_set_title(t("Search: @term", array('@term' => $item['page_arguments'][1])));
+		$active_trail = array(); // remove default breadcrumbs which are messed up
+		drupal_set_title(t("Search for “@term”", array('@term' => $item['page_arguments'][1])));
 		return;
 	}
  }
@@ -163,7 +163,6 @@ function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
 $done = FALSE;
 
 function sarvaka_images_preprocess_search_result(&$vars) {
-	dpm($vars);
 	$vars['snippet'] = '';
 	$vars['info'] = '';
 	$vars['title_full'] = $vars['title'];
@@ -174,3 +173,4 @@ function sarvaka_images_preprocess_search_result(&$vars) {
 	$turl = file_create_url($surl);
 	$vars['thumb_url'] = $turl;
 }
+
