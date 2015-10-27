@@ -18,7 +18,7 @@
 						}
 					} else if (y > 100) { 
 						if ($('#admin-menu').is(":visible")) {
-							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 2500);
+							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 5000);
 						} 
 					} 
 				});
