@@ -16,9 +16,9 @@
 							$('#admin-menu').slideDown(); 
 							$('body').addClass('admin-menu');
 						}
-					} else if (y > 100) { 
+					} else if (y > 200) { 
 						if ($('#admin-menu').is(":visible")) {
-							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 10000);
+							setTimeout(function() { $('#admin-menu').slideUp(); $('body').removeClass('admin-menu'); }, 15000);
 						} 
 					} 
 				});
