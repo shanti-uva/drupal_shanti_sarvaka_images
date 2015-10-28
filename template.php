@@ -154,13 +154,18 @@ function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
 		return;
 	}
  }
+
+/**
+ * Implements preprocess search results
+ */
+function sarvaka_images_preprocess_search_results(&$vars) {
+	$vars['query_params'] = $vars['query']->getParams();
+}
 	
 /**
  * Implements preprocess search result
  * 		Removes snippet and info (for now) and adds thumb url
  */
- 
-$done = FALSE;
 
 function sarvaka_images_preprocess_search_result(&$vars) {
 	$vars['snippet'] = '';
