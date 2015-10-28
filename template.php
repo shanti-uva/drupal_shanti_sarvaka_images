@@ -30,7 +30,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		// Get View
 		$view = $vars['view'];
 		$results = $view->result;
-		$rows = '<div id="og-grid" class="og-grid">';
+		$rows = '<div id="og-grid" class="og-grid clearfix">';
 		
 		// Iterate through results, get info about each file, and build item html 
 		foreach ($results as $res) {
