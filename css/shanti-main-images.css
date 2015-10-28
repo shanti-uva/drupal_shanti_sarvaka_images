@@ -50,10 +50,16 @@ table.pagerer {
   width:100%; 
   margin-top: -0.7rem;
 }
+
+.front .view-media-sharedshelf-my-images table.pagerer:first-of-type{
+  margin-top: -2.5rem;
+}
+
 .view-media-sharedshelf-my-images table.pagerer:last-child{ 
   margin-bottom: 5rem;
   margin-top: 1.5rem;
 }
+
 ul.pager{ margin: 0 0 0.5rem;}
 
 
@@ -103,7 +109,9 @@ a.btn-lightbox:active {
 
 
 
-
+.og-grid{
+  padding:0;
+}
 
 .og-expander{ 
   border-bottom:0.75rem double #eee;
