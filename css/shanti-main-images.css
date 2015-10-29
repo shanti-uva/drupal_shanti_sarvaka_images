@@ -63,6 +63,12 @@ table.pagerer {
 ul.pager{ margin: 0 0 0.5rem;}
 
 
+.front .contextual-links-region{
+  padding-top: 0.1rem;
+  margin-top: -1rem;
+}
+
+
 /*---scroll to top ---*/
 a.btn-lightbox {
   position: absolute;
