@@ -12,6 +12,10 @@
 	padding-left: 0.5rem;
 }
 
+.extruder .input-group .advanced-view .form-group{
+	border-top:none;
+}
+
 .extruder .input-section .input-group .btn.btn-default{
 	font-size: 1.65rem;
 }
