@@ -138,7 +138,7 @@ div.item.last-row{ clear:both;}
 }
 /*
 .og-img-wrapper{
-  position:absolute;
+  position:relative;
   left:50%;
   top:50%;
   width:100%;
