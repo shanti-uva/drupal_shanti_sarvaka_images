@@ -174,7 +174,7 @@ div.item.last-row{ clear:both;}
 
 .og-grid .item {
   margin:0 5px 10px 0;
-  /* display: -moz-inline-box; - mf8yk, this vendor prefix is not valid afik */
+  display: -moz-inline-box;
   display: inline-block;
   vertical-align: top;
   z-index: 1;
