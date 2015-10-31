@@ -63,11 +63,22 @@ table.pagerer {
 ul.pager{ margin: 0 0 0.5rem;}
 
 
-.front .contextual-links-region{
+.front.logged-in .contextual-links-region{
   padding-top: 0.1rem;
   margin-top: -1rem;
-  position: relative;
+  position: relative !important;
 }
+
+.front.logged-in .tab-pane .main-col > div{
+  max-width: 100% !important;
+  padding: 0;
+}
+
+.front.logged-in .contextual-links-region .content{ 
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+}
+
 
 
 /*---scroll to top ---*/
