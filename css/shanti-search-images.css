@@ -3,24 +3,24 @@
     overflow: hidden;
 }
 
-.extruder .input-group .form-type-textfield{
+.input-section .form-type-textfield{
 	margin-top:0;
 }
 
-.extruder .input-group .advanced-view{
+.input-section .advanced-view{
 	margin-top: -3.5rem;
 	padding-left: 0.5rem;
 }
 
-.extruder .input-group .advanced-view .form-group{
+.input-section .advanced-view .form-group{
 	border-top:none;
 }
 
-.extruder .input-section .input-group .btn.btn-default{
+.input-section .input-group .btn.btn-default{
 	font-size: 1.65rem;
 }
 
-.extruder .input-section .input-group .glyphicon-chevron-right{
+.input-section .input-group .glyphicon-chevron-right{
 	position: relative;
 	top: .3rem;
 }
