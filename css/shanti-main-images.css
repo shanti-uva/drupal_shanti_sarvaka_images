@@ -52,7 +52,7 @@ table.pagerer {
 }
 
 .front .view-media-sharedshelf-my-images table.pagerer:first-of-type{
-  margin-top: -2.3rem;
+  margin-top: -2.9rem;
 }
 
 .view-media-sharedshelf-my-images table.pagerer:last-child{ 
@@ -74,7 +74,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .front.logged-in .content-section .contextual-links-region .content{
-  padding: 1.7rem 0 4rem;
+  padding: 1rem 0 4rem;
 }
 
 .front.logged-in .tab-pane.main-col > div,
