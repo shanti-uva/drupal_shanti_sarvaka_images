@@ -78,7 +78,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .front.logged-in .tab-pane.main-col > div,
-.front.logged-in .content-section .main-col .block-views.contextual-links-region{
+.front.logged-in .main-col .block-views.contextual-links-region{
   width: 100% !important;
   max-width: 100% !important;
   padding: 1.7rem 0 4rem;
