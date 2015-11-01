@@ -166,15 +166,20 @@ div.item.last-row{ clear:both;}
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
 }
-/*
+
+
+/* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
   left:50%;
   top:50%;
   width:100%;
   height:100%;
+  float:left;
 }
-*/
+
+
+
 .og-details {
   padding: 0 1rem 0 2rem;
   width: 42%;
