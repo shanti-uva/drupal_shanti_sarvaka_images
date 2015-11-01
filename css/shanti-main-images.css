@@ -67,24 +67,24 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-.front.logged-in .main-col .contextual-links-region h2,
-.front.logged-in .main-col .contextual-links-region .content{ 
+.front.logged-in .content-section .contextual-links-region h2,
+.front.logged-in .content-section .contextual-links-region .content{ 
   max-width: 1050px !important;
   margin: 0 auto !important;
 }
 
-.front.logged-in .main-col .contextual-links-region .content{
+.front.logged-in .content-section .contextual-links-region .content{
   padding: 1.7rem 0 4rem;
 }
 
 .front.logged-in .tab-pane.main-col > div,
-.front.logged-in .main-col .main-col .block-views.contextual-links-region{
+.front.logged-in .content-section .main-col .block-views.contextual-links-region{
   width: 100% !important;
   max-width: 100% !important;
   padding: 1.7rem 0 4rem;
 }
 
-.front.logged-in .main-col .contextual-links-region{
+.front.logged-in .content-section .contextual-links-region{
   padding-top: 0.1rem;
   margin-top: -1rem;
   position: relative !important;
