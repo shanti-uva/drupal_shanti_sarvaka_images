@@ -165,6 +165,7 @@ div.item.last-row{ clear:both;}
 
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown
+*/
 .og-img-wrapper{
   position:relative;
   left:50%;
@@ -173,7 +174,6 @@ div.item.last-row{ clear:both;}
   height:100%;
   float:left;
 }
-*/
 
 
 .og-details {

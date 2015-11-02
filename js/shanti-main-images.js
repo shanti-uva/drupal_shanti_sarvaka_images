@@ -26,10 +26,8 @@
 	    }
 	};
 	
-
-
-
 /*
+
 
 	Drupal.behaviors.popupImageCentering = {
 	    attach: function (context, settings) {
@@ -42,7 +40,7 @@
 					  // attach negative and pixel for CSS rule
 					  hWide = '-' + hWide + 'px';
 					  hTall = '-' + hTall + 'px';
-
+					console.log('wide: ' + hWide + ' tall: ' + hTall);
 					  $(".og-img-wrapper").css("margin-left", hWide );
 					  $(".og-img-wrapper").css("margin-top", hTall );
 				});
@@ -50,9 +48,9 @@
 	    }
 	};
 
+
+
 */
-
-
 
 }) (jQuery);
 

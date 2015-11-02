@@ -209,7 +209,6 @@ var Grid = (function($) {
 
 			// not in the same row
 			if( previewPos !== position ) {
-				console.log('not same row', $item);
 				// if position > previewPos then we need to take te current preview´s height in consideration when scrolling the window
 				if( position > previewPos ) {
 					scrollExtra = preview.height;
@@ -379,18 +378,21 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 					}
-					/*$(".og-img-wrapper img").each(function(){
+					$(".og-img-wrapper img").each(function(){
 						  //get height and width (unitless) and divide by 2
+						  
+					console.log('img width: ' + $(this).width() + '  height: ' + $(this).width());
 						  var hWide = ($(this).width())/2; //half the image's width
 						  var hTall = ($(this).height())/2; //half the image's height, etc.
 	
 						  // attach negative and pixel for CSS rule
 						  hWide = '-' + hWide + 'px';
 						  hTall = '-' + hTall + 'px';
-	
+						
+					console.log('wide: ' + hWide + ' tall: ' + hTall);
 						  $(".og-img-wrapper").css("margin-left", hWide );
 						  $(".og-img-wrapper").css("margin-top", hTall );
-					});*/
+					});
 				}).attr( 'src', eldata.largesrc );	
 			}
 
