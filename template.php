@@ -23,6 +23,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9980));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe-ui-default.js', array('group'=>JS_LIBRARY, 'weight'=>9960));
+		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.actual.min.js', array('group'=>JS_LIBRARY, 'weight'=>9950));
 		// Load CSS
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/photoswipe.css');

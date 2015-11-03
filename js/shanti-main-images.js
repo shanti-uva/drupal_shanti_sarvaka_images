@@ -40,8 +40,17 @@
 					// Adjust vertical position of lightbox link
 					var os = $(this).prev('a').offset();
 					os.top = os.top +tmarg;
-					 $(this).prev('a').offset(os);
+					$(this).prev('a').offset(os);
 				}
+				// vertically align tabs based on taller tab's actual height
+				var infohgt = $( '.og-details #info' ).actual('height') ;
+				var deschgt =  $( '.og-details #desc' ).actual('height') ;
+				var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
+				 var detheight = panelhgt + 130; // account for tabs above and link below info tab
+				 if (detheight < cnthgt - 30) {
+				 	var tmarg = ((cnthgt - detheight) / 2);
+				 	$('.og-details').css('margin-top', tmarg + 'px');
+				 }
 			});
 	   };
 
