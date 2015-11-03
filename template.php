@@ -65,6 +65,9 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			// Place
 			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
 			if(empty($place)) {$place = "Not available";}
+			// SSID
+			$ssid = sarvaka_images_metadata_process($wrapper->field_sharedshelf_ssid->value());
+			
 			// Description
 			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
 			if (empty($fdesc)) {$fdesc = t("No description currently available.");}
@@ -78,7 +81,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$rows .= '<div class="item">
 		    		<a href="' . $furl . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
 			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
-			    > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
+			    	data-ssid="' . $ssid . '" > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
 			    </a>
 		    </div>';
 		}

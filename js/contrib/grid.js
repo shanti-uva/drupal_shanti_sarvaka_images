@@ -271,7 +271,7 @@ var Grid = (function($) {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#" class="og-details-more"><span>Read more...</span></a>' );
+			this.$href = $( '<a href="#" class="og-details-more"><span>Read more ...</span></a>' );
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
 	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
@@ -280,7 +280,9 @@ var Grid = (function($) {
 	   		this.$date = $('<li class="date">Date</li>');
 	   		this.$place = $('<li class="place">Place</li>');
 	   		this.$creator = $('<li class="creator">Photographer</li>');
-	   		this.$infolist = $('<ul></ul>').append(this.$date, this.$place,this.$photographer, this.$creator);
+	   		this.$dtype = $('<li class="dtype">Type</li>');
+	   		this.$ssid = $('<li class="dtype">Shared Shelf ID</li>');
+	   		this.$infolist = $('<ul></ul>').append(this.$creator, this.$date, this.$place, this.$dtype, this.$ssid);
 	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist, this.$href);
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
@@ -329,15 +331,23 @@ var Grid = (function($) {
 					description : $itemEl.data( 'description' ),
 					creator : $itemEl.data( 'creator' ),
 					date : $itemEl.data( 'date' ),
-					place : $itemEl.data( 'place' )
+					place : $itemEl.data( 'place' ), 
+					dtype: $itemEl.data('type'),
+					ssid: $itemEl.data('ssid'),
 				};
 
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
-			this.$href.attr( 'href', eldata.href );
+			
+			var lnktxt = (eldata.dtype == 'pdf') ? "View PDF" : "Read more ...";
+			this.$href.html('<span>' + lnktxt + '</span>').attr( 'href', eldata.href );
+			
 			this.$creator.html( "<label>Photographer:</label> " + eldata.creator );
 			this.$date.html( "<label>Date:</label> " + eldata.date );
 			this.$place.html( "<label>Location:</label> " + eldata.place );
+			this.$dtype.html("<label>Type:</label> " + eldata.dtype);
+			this.$ssid.html("<label>Shared Shelf ID:</label> " + eldata.ssid);
+
 
 			var self = this;
 			

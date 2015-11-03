@@ -46,7 +46,7 @@
 				var infohgt = $( '.og-details #info' ).actual('height') ;
 				var deschgt =  $( '.og-details #desc' ).actual('height') ;
 				var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
-				 var detheight = panelhgt + 130; // account for tabs above and link below info tab
+				 var detheight = panelhgt + 100; // account for tabs above and link below info tab
 				 if (detheight < cnthgt - 30) {
 				 	var tmarg = ((cnthgt - detheight) / 2);
 				 	$('.og-details').css('margin-top', tmarg + 'px');
