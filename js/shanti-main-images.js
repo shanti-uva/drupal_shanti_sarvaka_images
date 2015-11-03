@@ -26,61 +26,24 @@
 	    }
 	};
 	
-	
-	
+	/*
+	 * popupImageCenter: jQuery extension function called in grid.js when opening popup. Positions image and lightbox link centered vertically
+	 */
     $.fn.popupImageCentering = function() {
 		return this.each(function() {
-				console.log($(this));
-				console.log('img wide: ' + $(this).width() + ' tall: ' + $(this).height());
-				console.log('og fullimg height: ' + $('.og-fullimg').height());
-				var imgwd = $(this).width();
 				var imght = $(this).height();
-				var ogfimg = $(this).parents('.og-fullimg');
-				var cnthgt = ogfimg.height();
+				var cnthgt = $(this).parents('.og-fullimg').height();
 				if (imght < cnthgt - 30) {
-					var totalpad = cnthgt - imght;
-					var tmarg = (totalpad / 2) + "px";
-					console.log("top margin: " + tmarg);
-					$(this).css("margin-top", tmarg );
+					// Adjust top margin of image
+					var tmarg = ((cnthgt - imght) / 2);
+					$(this).css("margin-top", tmarg  + "px" );
+					// Adjust vertical position of lightbox link
+					var os = $(this).prev('a').offset();
+					os.top = os.top +tmarg;
+					 $(this).prev('a').offset(os);
 				}
-				
-				/*var hWide = ($(this).width())/2; //half the image's width
-				var hTall = ($(this).height())/2; //half the image's height, etc.
-				
-				// attach negative and pixel for CSS rule
-				hWide = '-' + hWide + 'px';
-				hTall = '-' + hTall + 'px';
-				console.log('wide: ' + hWide + ' tall: ' + hTall);
-				$(this).css("margin-left", hWide ); 
-				$(this).css("margin-top", hTall );*/
 			});
 	   };
-
-/*
-
-
-	Drupal.behaviors.popupImageCentering = {
-	    attach: function (context, settings) {
-			if(context == document) {
-				$(".og-img-wrapper img").each(function(){
-					  //get height and width (unitless) and divide by 2
-					  var hWide = ($(this).width())/2; //half the image's width
-					  var hTall = ($(this).height())/2; //half the image's height, etc.
-
-					  // attach negative and pixel for CSS rule
-					  hWide = '-' + hWide + 'px';
-					  hTall = '-' + hTall + 'px';
-					console.log('wide: ' + hWide + ' tall: ' + hTall);
-					  $(".og-img-wrapper").css("margin-left", hWide );
-					  $(".og-img-wrapper").css("margin-top", hTall );
-				});
-			}
-	    }
-	};
-
-
-
-*/
 
 }) (jQuery);
 

@@ -146,7 +146,7 @@ a.btn-lightbox:active {
 }
 
 .og-expander{ 
-  border-bottom:0.75rem double #eee;
+  border-bottom:0.75rem double #eee;z-index:100;
 }
 
 .og-expander-inner {
