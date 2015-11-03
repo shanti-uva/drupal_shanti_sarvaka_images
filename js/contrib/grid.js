@@ -271,7 +271,7 @@ var Grid = (function($) {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#"><span>Read more...</span></a>' );
+			this.$href = $( '<a href="#" class="og-details-more"><span>Read more...</span></a>' );
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
 	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
