@@ -38,7 +38,7 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			$furl = url('file/' . $file->fid); // Url to file's page
 			// Get image paths for various sizes (thumb, large, huge)
 			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
-			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
+			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . '.jpg';
 			$thumb_path = image_style_url('media_thumbnail', $furi) ; 		// Thumb path for grid
 			$large_path = image_style_url('media_large', $furi) ;					// Large path for popup
 			$huge_path = image_style_url('media_lightbox_large', $furi) ;	// Huge path for lightbox
