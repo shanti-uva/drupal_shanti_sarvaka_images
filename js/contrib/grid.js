@@ -377,22 +377,10 @@ var Grid = (function($) {
 							Drupal.settings.media_sharedshelf.gallery.goTo(iind);
 							//console.log("Index new: " + iind);
 						});
+						setTimeout(function() {
+							jQuery(".og-img-wrapper img").popupImageCentering();
+						}, 300);
 					}
-					$(".og-img-wrapper img").each(function(){
-						  //get height and width (unitless) and divide by 2
-						  
-					console.log('img width: ' + $(this).width() + '  height: ' + $(this).width());
-						  var hWide = ($(this).width())/2; //half the image's width
-						  var hTall = ($(this).height())/2; //half the image's height, etc.
-	
-						  // attach negative and pixel for CSS rule
-						  hWide = '-' + hWide + 'px';
-						  hTall = '-' + hTall + 'px';
-						
-					console.log('wide: ' + hWide + ' tall: ' + hTall);
-						  $(".og-img-wrapper").css("margin-left", hWide );
-						  $(".og-img-wrapper").css("margin-top", hTall );
-					});
 				}).attr( 'src', eldata.largesrc );	
 			}
 

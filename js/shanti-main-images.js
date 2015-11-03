@@ -26,6 +26,36 @@
 	    }
 	};
 	
+	
+	
+    $.fn.popupImageCentering = function() {
+		return this.each(function() {
+				console.log($(this));
+				console.log('img wide: ' + $(this).width() + ' tall: ' + $(this).height());
+				console.log('og fullimg height: ' + $('.og-fullimg').height());
+				var imgwd = $(this).width();
+				var imght = $(this).height();
+				var ogfimg = $(this).parents('.og-fullimg');
+				var cnthgt = ogfimg.height();
+				if (imght < cnthgt - 30) {
+					var totalpad = cnthgt - imght;
+					var tmarg = (totalpad / 2) + "px";
+					console.log("top margin: " + tmarg);
+					$(this).css("margin-top", tmarg );
+				}
+				
+				/*var hWide = ($(this).width())/2; //half the image's width
+				var hTall = ($(this).height())/2; //half the image's height, etc.
+				
+				// attach negative and pixel for CSS rule
+				hWide = '-' + hWide + 'px';
+				hTall = '-' + hTall + 'px';
+				console.log('wide: ' + hWide + ' tall: ' + hTall);
+				$(this).css("margin-left", hWide ); 
+				$(this).css("margin-top", hTall );*/
+			});
+	   };
+
 /*
 
 
