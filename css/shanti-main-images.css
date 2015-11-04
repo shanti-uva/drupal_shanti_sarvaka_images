@@ -96,7 +96,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 /*---scroll to top ---*/
-a.btn-lightbox {
+.btn-lightbox {
   position: absolute;
   top: 0.7em;
   right: 3rem;
@@ -114,15 +114,14 @@ a.btn-lightbox {
   text-align: center;
 }
 
-a.btn-lightbox:hover {
+.btn-lightbox:hover {
   text-decoration: none;
   border-color:#fff !important;
-  background-color:#c4be28;
 }
 
-a.btn-lightbox:active{
-  border-color:#fff !important;
+.btn-lightbox:active{
   background-color:#444;  
+  border: 1px solid #777 !important;
 }
 
 .btn-lightbox .icon {
@@ -229,7 +228,7 @@ div.item.last-row{ clear:both;}
 .og-details h3 {
   font-size: 1.25em;
   line-height:1.32em;
-  margin: 1.5rem 0 1.25rem;
+  margin: 1rem 0;
 }
 
 .og-close {
@@ -246,7 +245,7 @@ div.item.last-row{ clear:both;}
   background: #222;
 }
 
-.og-details #info ul {
+.og-details ul {
   margin: 0 0 0 0.75rem;
   padding: 0;
 }
@@ -257,14 +256,14 @@ div.item.last-row{ clear:both;}
   margin: 1.5rem 0 0 0;
   padding: 0;
 }
-
+/*
 .og-details #info li label {
   color: #999;
   display: block;
   font-size: 70%;
   margin-left: 0;
 }
-
+*/
 .og-details .nav-tabs {
   border-bottom: 1px solid #555;
 }
