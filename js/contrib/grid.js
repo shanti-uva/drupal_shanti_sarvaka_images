@@ -361,7 +361,7 @@ var Grid = (function($) {
 			if( self.$fullimage.is( ':visible' ) ) {
 				this.$loading.show();
 				$( '<img/>' ).load( function() {
-					var $img = $( this );
+					var $img = $( this ); 
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
