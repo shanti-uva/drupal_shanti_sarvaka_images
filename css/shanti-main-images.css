@@ -96,38 +96,42 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 /*---scroll to top ---*/
-a.btn-lightbox {
+.btn-lightbox {
   position: absolute;
-  top: 0.7em;
+  top: 1em;
   right: 3rem;
   z-index: 100;
   height: 4rem;
   width: 4rem;
-  color: #fff;
-  background: #444;
+  color: #ccc;
+  background: #000;
   filter: alpha(opacity=60);
-  opacity: 0.6;
   font-family: 'FontAwesome';
   border-radius: 50%;
-  border: 1px solid #888 !important;
+  border: 1px solid #777 !important;
   background-clip: padding-box;
   display: block;
   text-align: center;
 }
 
-a.btn-lightbox:hover,
-a.btn-lightbox:active {
+.btn-lightbox:hover {
   text-decoration: none;
-  border-color:#ddd !important;
+  border-color:#f0f0f0 !important;
+  color: #eee;
+}
+
+.btn-lightbox:active{
+  background-color:#444;  
+  border: 1px solid #777 !important;
+  border-bottom-color: #777 !important; /* override the .content-section anchor style */
 }
 
 .btn-lightbox .icon {
-  font-size: 1.62em;
-  line-height: 1.83em;
+  font-size: 1.9rem;
+  position: relative;
+  top: 1rem;
+  left: .05rem;
   font-family: 'FontAwesome';
-  font-weight: normal;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .btn-lightbox:hover .icon::before,
@@ -136,10 +140,8 @@ a.btn-lightbox:active {
 }
 
 .btn-lightbox .icon::before {
-  content: "\f065";
+  content: '\f065';
 }
-
-
 
 .og-grid{
   padding:0;
@@ -220,14 +222,14 @@ div.item.last-row{ clear:both;}
 }
 
 .og-details p {
-  font-size: 1em;
+  font-size: 0.93em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
 }
 
 .og-details h3 {
-  font-size: 1.32em;
+  font-size: 1.25em;
   line-height:1.32em;
-  margin: 1.5rem 0 1.25rem;
+  margin: 1rem 0;
 }
 
 .og-close {
@@ -244,7 +246,7 @@ div.item.last-row{ clear:both;}
   background: #222;
 }
 
-.og-details #info ul {
+.og-details ul {
   margin: 0 0 0 0.75rem;
   padding: 0;
 }
@@ -289,6 +291,7 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-pane {
   padding-top: 0rem;
+  min-height:200px;
 }
 
 .og-details .tab-pane ul {
