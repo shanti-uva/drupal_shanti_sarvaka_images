@@ -98,20 +98,17 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*---scroll to top ---*/
 .content-section .btn-lightbox {
   position: absolute;
-  top: 1em;
-  right: 3rem;
+  top: 0.5em;
+  right: 1rem;
   z-index: 100;
   height: 4rem;
   width: 4rem;
   color: #ccc;
   background: #000;
-  filter: alpha(opacity=60);
-  font-family: 'FontAwesome';
   border-radius: 50%;
   border: 1px solid #777 !important;
   background-clip: padding-box;
   display: block;
-  text-align: center;
 }
 
 .content-section .btn-lightbox:hover {
@@ -171,8 +168,6 @@ div.item.last-row{ clear:both;}
   position:relative;
   left:50%;
   top:50%;
-  width:100%;
-  height:100%;
   float:left;
 }
 
