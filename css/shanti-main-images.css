@@ -96,7 +96,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 /*---scroll to top ---*/
-.btn-lightbox {
+.content-section .btn-lightbox {
   position: absolute;
   top: 1em;
   right: 3rem;
@@ -114,19 +114,19 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-align: center;
 }
 
-.btn-lightbox:hover {
+.content-section .btn-lightbox:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
   color: #eee;
 }
 
-.btn-lightbox:active{
+.content-section .btn-lightbox:active{
   background-color:#444;  
   border: 1px solid #777 !important;
   border-bottom-color: #777 !important; /* override the .content-section anchor style */
 }
 
-.btn-lightbox .icon {
+.content-section .btn-lightbox .icon {
   font-size: 1.9rem;
   position: relative;
   top: 1rem;
@@ -134,12 +134,12 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'FontAwesome';
 }
 
-.btn-lightbox:hover .icon::before,
-.btn-lightbox:active .icon::before {
+.content-section .btn-lightbox:hover .icon::before,
+.content-section .btn-lightbox:active .icon::before {
   color:#fff;
 }
 
-.btn-lightbox .icon::before {
+.content-section .btn-lightbox .icon::before {
   content: '\f065';
 }
 
@@ -244,6 +244,14 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-content {
   background: #222;
+}
+
+.og-details #info{
+  padding-left:1rem;
+}
+
+.og-details #desc{
+  padding-left:0.7rem;
 }
 
 .og-details ul {
