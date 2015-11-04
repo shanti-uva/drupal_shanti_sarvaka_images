@@ -104,21 +104,25 @@ a.btn-lightbox {
   height: 4rem;
   width: 4rem;
   color: #fff;
-  background: #444;
+  background: #000;
   filter: alpha(opacity=60);
-  opacity: 0.6;
   font-family: 'FontAwesome';
   border-radius: 50%;
-  border: 1px solid #888 !important;
+  border: 1px solid #777 !important;
   background-clip: padding-box;
   display: block;
   text-align: center;
 }
 
-a.btn-lightbox:hover,
-a.btn-lightbox:active {
+a.btn-lightbox:hover {
   text-decoration: none;
-  border-color:#ddd !important;
+  border-color:#fff !important;
+  background-color:#c4be28;
+}
+
+a.btn-lightbox:active{
+  border-color:#fff !important;
+  background-color:#444;  
 }
 
 .btn-lightbox .icon {
@@ -136,10 +140,8 @@ a.btn-lightbox:active {
 }
 
 .btn-lightbox .icon::before {
-  content: "\f065";
+  content: '\f065';
 }
-
-
 
 .og-grid{
   padding:0;
