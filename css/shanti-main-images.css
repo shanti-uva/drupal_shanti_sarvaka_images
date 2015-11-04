@@ -247,11 +247,11 @@ div.item.last-row{ clear:both;}
 }
 
 .og-details #info{
-  padding-left:1rem;
+  padding-left:0.6rem;
 }
 
 .og-details #desc{
-  padding-left:0.7rem;
+  padding-left:1.2rem;
 }
 
 .og-details ul {
@@ -261,7 +261,7 @@ div.item.last-row{ clear:both;}
 
 .og-details #info li {
   list-style-type: none;
-  color: #c0c0c0;
+  color: #eee;
   margin: 1.5rem 0 0 0;
   padding: 0;
 }
