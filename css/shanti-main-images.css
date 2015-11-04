@@ -282,23 +282,23 @@ div.item.last-row{ clear:both;}
   margin: 1rem 0 0 1rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
+  text-align:center;
 }
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
-  position:relative;
+  /* position:relative;
   left:50%;
   top:50%;
   float:left;
-  /*width:100%;
+  width:100%;
   height:100%;*/
 }
-/*
+
 .og-fullimg img {
   margin: 0 auto;
-  float:left;
 }
-*/
+
 .og-details {
   padding: 0 1rem 0 2rem;
   width: 42%;
