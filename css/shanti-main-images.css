@@ -243,7 +243,6 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-content {
   background: #222;
-  min-height:400px;
 }
 
 .og-details ul {
@@ -291,6 +290,7 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-pane {
   padding-top: 0rem;
+    min-height:400px;
 }
 
 .og-details .tab-pane ul {
