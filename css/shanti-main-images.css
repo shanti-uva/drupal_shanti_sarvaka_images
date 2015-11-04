@@ -243,6 +243,7 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-content {
   background: #222;
+  min-height:250px;
 }
 
 .og-details ul {
