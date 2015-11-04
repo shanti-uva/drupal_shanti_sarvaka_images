@@ -281,11 +281,16 @@ div.item.last-row{ clear:both;}
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
-  left:50%;
-  top:50%;
-  float:left;
-  width:100%;
-  height:100%;
+  padding-bottom:40%;
+  overflow: hidden;
+}
+
+.og-fullimg img {
+  position:absolute;
+  top:-50%; bottom:-50%;
+  margin:auto;
+  width: 100%;
+  height: auto;
 }
 
 .og-details {
@@ -323,10 +328,7 @@ div.item.last-row{ clear:both;}
   z-index: 1;
 }
 
-.og-fullimg img {
-  margin: 0 auto;
-  float:left;
-}
+
 
 .og-details .nav-tabs>li:first-of-type{
   margin-left: 0.75rem;
