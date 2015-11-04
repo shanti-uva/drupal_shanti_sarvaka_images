@@ -98,7 +98,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*---scroll to top ---*/
 .btn-lightbox {
   position: absolute;
-  top: 0.7em;
+  top: 1em;
   right: 3rem;
   z-index: 100;
   height: 4rem;
@@ -126,12 +126,11 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .btn-lightbox .icon {
-  font-size: 1.62em;
-  line-height: 1.83em;
+  font-size: 1.9rem;
+  position: relative;
+  top: 1rem;
+  left: .05rem;
   font-family: 'FontAwesome';
-  font-weight: normal;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .btn-lightbox:hover .icon::before,
