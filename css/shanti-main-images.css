@@ -103,7 +103,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   z-index: 100;
   height: 4rem;
   width: 4rem;
-  color: #fff;
+  color: #ccc;
   background: #000;
   filter: alpha(opacity=60);
   font-family: 'FontAwesome';
@@ -116,7 +116,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .btn-lightbox:hover {
   text-decoration: none;
-  border-color:#fff !important;
+  border-color:#f0f0f0 !important;
+  color: #eee;
 }
 
 .btn-lightbox:active{
@@ -290,7 +291,7 @@ div.item.last-row{ clear:both;}
 
 .og-details .tab-pane {
   padding-top: 0rem;
-    min-height:400px;
+  min-height:60%;
 }
 
 .og-details .tab-pane ul {
