@@ -32,7 +32,7 @@
     $.fn.popupImageCentering = function() {
 		return this.each(function() {
 				var imght = $(this).height();
-				var cnthgt = $(this).parents('.og-fullimg').height();
+				var cnthgt = $(this).parents('.og-fullimg-wrapper').height();
 				if (imght < cnthgt - 30) {
 					// Adjust top margin of image
 					var tmarg = ((cnthgt - imght) / 2);
