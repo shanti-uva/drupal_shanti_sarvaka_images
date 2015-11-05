@@ -275,13 +275,14 @@ div.item.last-row{ clear:both;}
   margin: 1rem 0 0 1rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
+  text-align:normal;
 }
 
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
-  padding-bottom:40%;
+  padding-bottom:70%;
   overflow: hidden;
 }
 
@@ -291,6 +292,7 @@ div.item.last-row{ clear:both;}
   margin:auto;
   width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 .og-details {
@@ -662,8 +664,8 @@ div.pdfextlink { float: right; }
 @media screen and (min-width: 768px) {
 
   .og-fullimg{
-    margin: 0;
-    padding-right:0;
+    /*margin: 0;
+    padding-right:0;*/
   }
 
   .og-details{
