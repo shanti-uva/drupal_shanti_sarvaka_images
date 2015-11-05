@@ -282,7 +282,7 @@ div.item.last-row{ clear:both;}
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
-  padding-bottom:70%;
+  padding-bottom:75%;
   overflow: hidden;
 }
 
