@@ -140,7 +140,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 
-.content-section .lightbox-img-link{ 
+.lightbox-img-link{ 
   position: relative;
   display: inline-block;
 }
@@ -286,7 +286,7 @@ div.item.last-row{ clear:both;}
   position:relative;
   padding-bottom:75%;
   overflow: hidden;
-  display:inline-block
+  display:inline-block;
 }
 
 .og-fullimg img {
@@ -365,11 +365,11 @@ div.item.last-row{ clear:both;}
   background: #222;
 }
 
-.og-details #info{
+.og-details .tab-content #info{
   padding-left:0.6rem;
 }
 
-.og-details #desc{
+.og-details .tab-content #desc{
   padding-left:1.2rem;
 }
 
