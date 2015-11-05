@@ -288,13 +288,14 @@ var Grid = (function($) {
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div> <a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
+			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
 			
 			this.$nextPreview = $( '<span class="next og-nav-arrow"><span class="icon"></span></span>' );
 			this.$prevPreview = $( '<span class="prev og-nav-arrow"><span class="icon"></span></span>' );
 
-			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$nextPreview, this.$prevPreview, this.$fullimage, this.$details );
+			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$lightboxLink, this.$closePreview, this.$nextPreview, this.$prevPreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
 			// append preview element to the item
 			this.$item.append( this.getEl() );
