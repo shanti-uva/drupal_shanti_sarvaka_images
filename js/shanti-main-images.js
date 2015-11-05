@@ -31,6 +31,7 @@
 	 
     $.fn.popupImageCentering = function() {
 		return this.each(function() {
+			/*
 			// Adjust top margin
 			var 	wrapper = $(this).parents('.og-img-wrapper'), // get wrapper
 				 	imght = $(this).height(),
@@ -44,11 +45,11 @@
 					cntwdt = $(this).parents('.og-fullimg').width(),
 					lmarg = (cntwdt > imgwdt) ? -imgwdt / 2 : -cntwdt / 2;
 			wrapper.css("margin-left",  lmarg  + "px" );
-
-			// vertically align tabs based on taller tab's actual height
-			var infohgt = $( '.og-details #info' ).actual('height') ;
-			var deschgt =  $( '.og-details #desc' ).actual('height') ;
-			var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
+*/
+			 // vertically align tabs based on taller tab's actual height
+			 var infohgt = $( '.og-details #info' ).actual('height') ;
+			 var deschgt =  $( '.og-details #desc' ).actual('height') ;
+			 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
 			 var detheight = panelhgt + 100; // account for tabs above and link below info tab
 			 if (detheight < cnthgt - 30) {
 			 	var tmarg = ((cnthgt - detheight) / 2);
