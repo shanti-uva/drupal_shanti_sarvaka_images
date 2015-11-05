@@ -98,9 +98,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*---scroll to top ---*/
 .content-section .btn-lightbox {
   position: absolute;
-  top: 0.5em;
+  bottom: 0.5em;
   right: 1rem;
-  z-index: 100;
   height: 4rem;
   width: 4rem;
   color: #ccc;
@@ -141,7 +140,10 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 
-
+.lightbox-img-link{ 
+  position: relative;
+  display: inline-block;
+}
 
 
 
@@ -272,20 +274,29 @@ div.item.last-row{ clear:both;}
 
 .og-fullimg {
   padding: 0 2rem 0 0;
-  margin: 1rem 0 0 1rem;
+  margin: 0 0 0 1rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
+  text-align:left;
 }
 
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
-  left:50%;
-  top:50%;
-  float:left;
-  width:100%;
-  height:100%;
+  padding-bottom:75%;
+  overflow: hidden;
+  display:inline-block;
+}
+
+.og-fullimg img {
+  position:absolute;
+  top:-50%; bottom:-50%;
+  left:-50%; right:-50%;
+  margin:auto;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
 }
 
 .og-details {
@@ -323,10 +334,7 @@ div.item.last-row{ clear:both;}
   z-index: 1;
 }
 
-.og-fullimg img {
-  margin: 0;
-  float:left;
-}
+
 
 .og-details .nav-tabs>li:first-of-type{
   margin-left: 0.75rem;
@@ -357,11 +365,11 @@ div.item.last-row{ clear:both;}
   background: #222;
 }
 
-.og-details #info{
+.og-details .tab-content #info{
   padding-left:0.6rem;
 }
 
-.og-details #desc{
+.og-details .tab-content #desc{
   padding-left:1.2rem;
 }
 
@@ -392,7 +400,7 @@ div.item.last-row{ clear:both;}
   border: none;
   color: #999;
   background: transparent;
-  font-size: 0.88em;
+  font-size: 1.06em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
 }
 
@@ -660,8 +668,8 @@ div.pdfextlink { float: right; }
 @media screen and (min-width: 768px) {
 
   .og-fullimg{
-    margin: 0 1rem;
-    padding-right:0;
+    /*margin: 0;
+    padding-right:0;*/
   }
 
   .og-details{
