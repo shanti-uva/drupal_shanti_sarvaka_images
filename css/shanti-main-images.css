@@ -272,7 +272,7 @@ div.item.last-row{ clear:both;}
 
 .og-fullimg {
   padding: 0 2rem 0 0;
-  margin: 1rem 0 0 1rem;
+  margin: 0 0 0 1rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
   text-align:left;
@@ -289,6 +289,7 @@ div.item.last-row{ clear:both;}
 .og-fullimg img {
   position:absolute;
   top:-50%; bottom:-50%;
+  left:-50%; right:-50%;
   margin:auto;
   width: 100%;
   height: auto;
