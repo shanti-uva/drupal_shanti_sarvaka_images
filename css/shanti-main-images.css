@@ -286,6 +286,7 @@ div.item.last-row{ clear:both;}
   position:relative;
   padding-bottom:75%;
   overflow: hidden;
+  display:inline-block
 }
 
 .og-fullimg img {
