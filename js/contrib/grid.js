@@ -371,10 +371,12 @@ var Grid = (function($) {
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
 						
-						self.$largeImg.append($img.fadeIn( 100 ));
-						self.$fullimage.append( self.$largeImgDiv );
+						var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+						self.$largeImg.append( $img.fadeIn( 100 ));
+						self.$fullimage.append( span, self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
-						self.$fullimage.find("a.lightbox-link, a.lightbox-img-link").eq(0).click(function() {
+						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
+							event.preventDefault();
        						var pswpElement = document.querySelectorAll('.pswp')[0];
        						var iind = self.$item.prevAll().length;
 							var options = { index: iind };
@@ -385,7 +387,7 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 						setTimeout(function() {
-							 jQuery(".og-img-wrapper img").popupImageCentering();
+							 // jQuery(".og-img-wrapper img").popupImageCentering();
 						}, 300);
 					}
 				}).attr( 'src', eldata.largesrc );	
