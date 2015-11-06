@@ -287,12 +287,9 @@ var Grid = (function($) {
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
-
 			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-			this.$largeImgLink = $( '<a href="#" class="lightbox-img-link"></a>' ).append( this.$lightboxLink );
-
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading, this.$lightboxLink );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			// this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
 			
