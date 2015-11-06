@@ -290,6 +290,7 @@ var Grid = (function($) {
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
+			// this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
 			
 			this.$nextPreview = $( '<span class="next og-nav-arrow"><span class="icon"></span></span>' );
 			this.$prevPreview = $( '<span class="prev og-nav-arrow"><span class="icon"></span></span>' );
@@ -368,10 +369,10 @@ var Grid = (function($) {
 						self.$fullimage.find('.og-img-wrapper').remove();
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
+						
 						var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-						self.$largeImgDiv.append(span, self.$largeImg);
-						self.$largeImg.append($img.fadeIn( 100 ));
-						self.$fullimage.append( self.$largeImgDiv );
+						self.$largeImg.append( $img.fadeIn( 100 ));
+						self.$fullimage.append( span, self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
 						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
 							event.preventDefault();
