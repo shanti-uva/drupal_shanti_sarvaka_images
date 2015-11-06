@@ -367,15 +367,14 @@ var Grid = (function($) {
 						//self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
 						self.$fullimage.find('.og-img-wrapper').remove();
-						
-						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
-						self.$largeImg.append($img.fadeIn( 100 ));
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
-						self.$largeImgDiv.append(self.$largeImg);
-
+						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
+						// var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+						self.$largeImgDiv.append(span, self.$largeImg);
+						self.$largeImg.append($img.fadeIn( 100 ));
 						self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
-						self.$fullimage.find("a.lightbox-link, a.lightbox-img-link").click(function() {
+						self.$fullimage.find("a.lightbox-link, a.lightbox-img-link").eq(0).click(function() {
        						var pswpElement = document.querySelectorAll('.pswp')[0];
        						var iind = self.$item.prevAll().length;
 							var options = { index: iind };
