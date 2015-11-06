@@ -287,7 +287,6 @@ var Grid = (function($) {
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
-			// this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -387,7 +386,7 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 						setTimeout(function() {
-							 // jQuery(".og-img-wrapper img").popupImageCentering();
+							  jQuery(".og-img-wrapper img").popupImageCentering();
 						}, 300);
 					}
 				}).attr( 'src', eldata.largesrc );	
