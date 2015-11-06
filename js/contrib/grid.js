@@ -372,7 +372,7 @@ var Grid = (function($) {
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
 						
 						self.$largeImg.append($img.fadeIn( 100 ));
-						// self.$fullimage.append( self.$largeImgDiv );
+						self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
 						self.$fullimage.find("a.lightbox-link, a.lightbox-img-link").eq(0).click(function() {
        						var pswpElement = document.querySelectorAll('.pswp')[0];
