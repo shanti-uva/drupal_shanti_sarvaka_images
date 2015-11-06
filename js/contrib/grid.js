@@ -287,6 +287,10 @@ var Grid = (function($) {
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
+
+			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+			this.$largeImgLink = $( '<a href="#" class="lightbox-img-link"></a>' ).append( this.$lightboxLink );
+
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
@@ -369,11 +373,9 @@ var Grid = (function($) {
 						self.$fullimage.find('.og-img-wrapper').remove();
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
-						self.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-
-						self.$largeImg.append( self.$lightboxLink );
+						
 						self.$largeImg.append($img.fadeIn( 100 ));
-						self.$fullimage.append( self.$largeImgDiv );
+						// self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
 						self.$fullimage.find("a.lightbox-link, a.lightbox-img-link").eq(0).click(function() {
        						var pswpElement = document.querySelectorAll('.pswp')[0];
