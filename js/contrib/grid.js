@@ -352,8 +352,8 @@ var Grid = (function($) {
 			var self = this;
 			
 			// remove the current image in the preview
-			if( typeof self.$largeImg != 'undefined' ) {
-				self.$largeImg.remove();
+			if( typeof self.$largeImgLink != 'undefined' ) {
+				self.$largeImgLink.remove();
 			}
 
 			// preload large image and add it to the preview
@@ -369,9 +369,9 @@ var Grid = (function($) {
 						// self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImgLink = $( '<a href="#" class="lightbox-img-link"></a>' );
 						self.$lighboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-						self.$largeImg.append( self.$lighboxLink );
-						self.$largeImg.append( $img.fadeIn( 100 ) );
-						self.$fullimage.append( self.$largeImgDiv );
+						self.$largeImgLink.append( self.$lighboxLink, $img.fadeIn( 100 ) );
+						// self.$largeImgLink.append( $img.fadeIn( 100 ) );
+						self.$fullimage.append( self.$largeImgLink );
 						// Find the lightbox icon and enable click to initiate gallery
 						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
 							event.preventDefault();
