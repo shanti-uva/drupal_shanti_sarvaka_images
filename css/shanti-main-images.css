@@ -95,7 +95,45 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-/*---scroll to top ---*/
+
+.og-fullimg {
+  padding: 0 0 0 2rem;
+  margin: 0;
+  width: 55%;
+  min-height: 200px; /* helps disply the img loading spinner */
+  text-align:left;
+}
+
+
+/* Coordinate these rules with the script for centering the image in the gallery dropdown */
+.og-img-wrapper{
+  position:relative;
+  padding-bottom:80%;
+  overflow: hidden;
+  display:inline-block;
+}
+
+
+.lightbox-img-link{
+  position:relative;
+  display:inline-block;
+}
+
+
+.og-fullimg img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  position:absolute;
+  top:-50%; bottom:-50%;
+  left:-50%; right:-50%;
+  margin:auto;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+
+
 .content-section .btn-lightbox {
   position: absolute;
   bottom: 0.5em;
@@ -142,11 +180,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-.lightbox-img-link{
-  position:relative;
-  padding-bottom:75%;
-  display:inline-block;
-}
 
 
 
@@ -164,37 +197,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 div.item.last-row{ clear:both;}
-
-.og-fullimg {
-  padding: 0 0 0 2rem;
-  margin: 0;
-  width: 55%;
-  min-height: 200px; /* helps disply the img loading spinner */
-  text-align:left;
-}
-
-
-/* Coordinate these rules with the script for centering the image in the gallery dropdown */
-.og-img-wrapper{
-  position:relative;
-  padding-bottom:80%;
-  overflow: hidden;
-  display:inline-block;
-}
-
-.og-fullimg img {
-  display: inline-block;
-  max-height: 100%;
-  max-width: 100%;
-  position:absolute;
-  top:-50%; bottom:-50%;
-  left:-50%; right:-50%;
-  margin:auto;
-  width: auto;
-  height: auto;
-  vertical-align: middle;
-}
-
 
 
 
