@@ -100,6 +100,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: absolute;
   bottom: 0.5em;
   right: 1rem;
+  z-index:1;
   height: 4rem;
   width: 4rem;
   color: #ccc;
@@ -144,7 +145,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 .lightbox-img-link{
   position:relative;
   padding-bottom:75%;
-  overflow: hidden;
   display:inline-block;
 }
 
@@ -166,8 +166,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 div.item.last-row{ clear:both;}
 
 .og-fullimg {
-  padding: 0 2rem 0 0;
-  margin: 0 0 0 1rem;
+  padding: 0 0 0 2rem;
+  margin: 0;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
   text-align:left;
@@ -177,7 +177,7 @@ div.item.last-row{ clear:both;}
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
   position:relative;
-  padding-bottom:75%;
+  padding-bottom:80%;
   overflow: hidden;
   display:inline-block;
 }
