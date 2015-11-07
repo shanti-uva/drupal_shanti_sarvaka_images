@@ -365,13 +365,13 @@ var Grid = (function($) {
 					if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
 						//self.$loading.hide();
 						self.$fullimage.find( 'img' ).remove();
-						self.$fullimage.find('.og-img-wrapper').remove();
-						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
-						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
-						var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-						self.$largeImgDiv.append(span, self.$largeImg);
-						self.$largeImg.append($img.fadeIn( 100 ));
-						self.$fullimage.append( self.$largeImgDiv );
+						self.$fullimage.find('.lightbox-img-link').remove();
+						// self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
+						self.$largeImgLink = $( '<a href="#" class="lightbox-img-link"></a>' );
+						self.$lighboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+						self.$largeImg.append( self.$lighboxLink, $img.fadeIn( 100 ) );
+						// self.$largeImg.append( $img.fadeIn( 100 ));
+						self.$fullimage.append( self.$largeImgLink );
 						// Find the lightbox icon and enable click to initiate gallery
 						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
 							event.preventDefault();
@@ -385,7 +385,7 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 						setTimeout(function() {
-							jQuery(".og-img-wrapper img").popupImageCentering();
+							jQuery(".lightbox-img-link img").popupImageCentering();
 						}, 300);
 					}
 				}).attr( 'src', eldata.largesrc );	
