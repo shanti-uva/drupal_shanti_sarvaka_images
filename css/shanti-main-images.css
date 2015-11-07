@@ -97,8 +97,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 .og-fullimg {
-  padding: 0 0 0 2rem;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 0 2rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
   text-align:left;
@@ -107,16 +107,17 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
-  position:relative;
+  /*position:relative;*/
   padding-bottom:80%;
-  /*overflow: hidden;*/
-  display:inline-block;
+  overflow: hidden;
+  display:block;
 }
 
 
 .lightbox-img-link{
   /*position:relative;
   display:inline-block;*/
+  display:none;
 }
 
 
@@ -326,7 +327,7 @@ div.item.last-row{ clear:both;}
   border: none;
   color: #999;
   background: transparent;
-  font-size: 1.06em;
+  font-size: 0.88em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
 }
 
