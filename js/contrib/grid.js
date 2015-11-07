@@ -385,7 +385,7 @@ var Grid = (function($) {
 							//console.log("Index new: " + iind);
 						});
 						setTimeout(function() {
-							// jQuery(".og-img-wrapper img").popupImageCentering();
+							 jQuery(".og-img-wrapper img").popupImageCentering();
 						}, 300);
 					}
 				}).attr( 'src', eldata.largesrc );	
