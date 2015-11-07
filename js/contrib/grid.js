@@ -369,8 +369,8 @@ var Grid = (function($) {
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
 						var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
-						self.$largeImgDiv.append(span, self.$largeImg);
-						self.$largeImg.append($img.fadeIn( 100 ));
+						self.$largeImgDiv.append(self.$largeImg);
+						self.$largeImg.append(span, $img.fadeIn( 100 ));
 						self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
 						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
