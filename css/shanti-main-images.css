@@ -140,11 +140,13 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 
-.lightbox-img-link{ 
-  position: relative;
-  display: inline-block;
-}
 
+.lightbox-img-link{
+  position:relative;
+  padding-bottom:75%;
+  overflow: hidden;
+  display:inline-block;
+}
 
 
 
@@ -253,6 +255,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   color: #f0f0f0;
   border-color:#444;
 }
+
+
 
 
 
