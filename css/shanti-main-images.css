@@ -109,7 +109,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-img-wrapper{
   /*position:relative;*/
   padding-bottom:80%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   display:block;
 }
 
@@ -117,7 +117,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 .lightbox-img-link{
   /*position:relative;
   display:inline-block;*/
-  display:none;
 }
 
 
