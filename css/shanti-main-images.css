@@ -124,10 +124,10 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .content-section .btn-lightbox .icon {
-  font-size: 1.9rem;
+  font-size: 2rem;
   position: relative;
-  top: 1rem;
-  left: .05rem;
+  top: 0.9rem;
+  left: 1rem;
   font-family: 'FontAwesome';
 }
 
