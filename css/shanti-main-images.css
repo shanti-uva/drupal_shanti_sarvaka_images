@@ -187,6 +187,14 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding:0;
 }
 
+.og-grid .item {
+  margin:0 5px 10px 0;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: top;
+  z-index: 1;
+}
+
 .og-expander{ 
   border-bottom:0.75rem double #eee;z-index:100;
 }
@@ -196,7 +204,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding: 2.5rem 5rem;
 }
 
-div.item.last-row{ clear:both;}
+div.item.last-row{ 
+  clear:both;
+}
 
 
 
@@ -207,7 +217,7 @@ div.item.last-row{ clear:both;}
   width: 42%;
 }
 
-.content-section .og-details a {
+.og-grid .og-details a.og-details-more {
   border: none;
   color: #999;
   font-size: 13px;
@@ -217,17 +227,18 @@ div.item.last-row{ clear:both;}
   margin: 30px 0 0;
 }
 
-.content-section .og-details a:hover {
+.og-grid .og-details a.og-details-more:hover {
   color: #ccc;
 }
 
-.content-section .og-details a:active {
+.og-grid .og-details a.og-details-more:active {
   color: #eee;
 }
 
-.content-section .og-details a:last-child {
-  margin-top: 1rem;
+.og-grid .og-expanded > a::after{
+  border-bottom-color:#222;
 }
+
 
 .og-details .nav-tabs>li:first-of-type{
   margin-left: 0.75rem;
@@ -251,17 +262,8 @@ div.item.last-row{ clear:both;}
   margin: 1rem 0;
 }
 
-.og-grid .og-expanded > a::after{
-  border-bottom-color:#222;
-}
 
-.og-grid .item {
-  margin:0 5px 10px 0;
-  display: -moz-inline-box;
-  display: inline-block;
-  vertical-align: top;
-  z-index: 1;
-}
+
 
 
 
