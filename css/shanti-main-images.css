@@ -169,18 +169,22 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'FontAwesome';
 }
 
+.content-section .btn-lightbox .icon::before {
+  content: '\f065';
+  display: inline;
+  margin-right: 0;
+}
+
 .content-section .btn-lightbox:hover .icon::before,
 .content-section .btn-lightbox:active .icon::before {
   color:#fff;
 }
 
-.content-section .btn-lightbox{
+.content-section .btn-lightbox::before{
   content:'';
 }
 
-.content-section .btn-lightbox .icon::before {
-  content: '\f065';
-}
+
 
 
 
