@@ -174,6 +174,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   color:#fff;
 }
 
+.content-section .btn-lightbox{
+  content:'';
+}
+
 .content-section .btn-lightbox .icon::before {
   content: '\f065';
 }
