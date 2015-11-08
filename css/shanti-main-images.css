@@ -278,7 +278,7 @@ div.item.last-row{ clear:both;}
 .og-close {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  right: 2rem;
   z-index: 10;
   width: 30px;
   height: 30px;
@@ -405,7 +405,7 @@ div.item.last-row{ clear:both;}
 
 .next.og-nav-arrow .icon::before{
   content: '\e607';
-  right: -0.7rem;
+  right: -0.4rem;
 }
 
 .prev.og-nav-arrow .icon::before{

@@ -272,6 +272,8 @@ var Grid = (function($) {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#" class="og-details-more"><span>Read more ...</span></a>' );
+			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
 	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
@@ -284,7 +286,7 @@ var Grid = (function($) {
 	   		this.$ssid = $('<li class="dtype">Shared Shelf ID</li>');
 	   		this.$infolist = $('<ul></ul>').append(this.$creator, this.$date, this.$place, this.$dtype, this.$ssid);
 	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist, this.$href);
-	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
+	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab, this.$lightboxLink);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -368,9 +370,9 @@ var Grid = (function($) {
 						self.$fullimage.find('.og-img-wrapper').remove();
 						self.$largeImgDiv = $('<div class="og-img-wrapper"></div>');
 						self.$largeImg = $( '<a href="#" class="lightbox-img-link"></a>' );
-						var span = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+						
 						self.$largeImgDiv.append(self.$largeImg);
-						self.$largeImg.append(span, $img.fadeIn( 100 ));
+						self.$largeImg.append( $img.fadeIn( 100 ));
 						self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
 						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
