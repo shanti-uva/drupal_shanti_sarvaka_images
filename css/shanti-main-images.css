@@ -235,6 +235,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom: 1px solid #555;
 }
 
+.og-details .nav-tabs>li.active{
+  margin-bottom: -2px
+}
+
 .og-details .nav-tabs>li>a {
   border: 1px solid #555;
   border-width: 2px 1px 1px;
@@ -441,7 +445,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .btn-lightbox .icon {
   font-size: 1.7rem;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   margin-right: 2.2rem;
@@ -452,7 +456,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\f065';
   display: inline;
   margin-right: 0;
-  position: absolute;
+  position: relative;
   top: 0.55rem;
   left: 0.65rem;
 }
