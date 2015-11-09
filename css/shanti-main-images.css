@@ -236,11 +236,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .nav-tabs>li>a {
-  /*border: 1px solid #555;
-  border-bottom: 1px solid #555;
-  border-top: 2px solid #909090;
-  border-radius: 0.2rem;*/
-  border-bottom: 1px solid #555;
+  border: 1px solid #555;
+  border-width: 2px 1px 1px;
   border-radius:0;
   color: #ccc;
   background: #222;
@@ -263,7 +260,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .nav-tabs>li.active>a,  
 .nav-tabs>li.active>a:hover,
-.nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:active {
   background: #222;
   color: #ccc;
@@ -271,6 +267,11 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom: none;
   border-top: 2px solid #909090;
   border-radius: 0.2rem;
+}
+
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:active{
+  border-bottom: none;
 }
 
 .og-details .nav-tabs>li:first-of-type{
@@ -322,8 +323,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details p {
-  font-size: 0.93em;
-  line-height:1.12em;
+  font-size: 1em;
+  line-height:1.32em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
   letter-spacing: 0.05rem;
   color: #c0c0c0;
