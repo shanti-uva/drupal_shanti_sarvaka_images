@@ -508,6 +508,10 @@ div.pdfextlink { float: right; }
   z-index:10500
 }
 
+.pswp__button{
+  margin-right:1.5rem;
+}
+
 /**** lightbox 
 .pswp__counter{
   display:none;
