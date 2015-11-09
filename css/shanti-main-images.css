@@ -258,19 +258,19 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: none;
 }
 
-.nav-tabs>li.active>a,  
-.nav-tabs>li.active>a:hover,
-.nav-tabs>li.active>a:active {
+.og-details .nav-tabs>li.active>a,  
+.og-details .nav-tabs>li.active>a:hover,
+.og-details .nav-tabs>li.active>a:active {
   background: #222;
   color: #ccc;
-  border: 1px solid #555;
+  border-width: 2px 1px 0px;
   border-bottom: none;
-  border-top: 2px solid #909090;
-  border-radius: 0.2rem;
+  border-color-top: #909090;
+  /*border-radius: 0.2rem;*/
 }
 
-.nav-tabs>li.active>a:hover,
-.nav-tabs>li.active>a:active{
+.og-details .nav-tabs>li.active>a:hover,
+.og-details .nav-tabs>li.active>a:active{
   border-bottom: none;
 }
 
