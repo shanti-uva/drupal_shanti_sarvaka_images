@@ -209,6 +209,7 @@ outline: none;
   border-top: 2px solid #909090;
   border-radius: 0.2rem;*/
   border-bottom: 1px solid #555;
+  border-radius:0;
   color: #ccc;
   background: #222;
   font-size: 0.88em;
@@ -218,6 +219,8 @@ outline: none;
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:active {
   color: #eee;
+  border: 1px solid #555;
+  border-top: 2px solid #909090;
 }
 
 .og-details .nav-tabs>li>a::before {
