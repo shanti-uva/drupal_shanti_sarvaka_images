@@ -70,9 +70,10 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 			
 			// Description
 			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
-			if (empty($fdesc)) {$fdesc = t("No description currently available.");}
-			if (strlen($fdesc) > 500) {
-				$fdesc = substr($fdesc, 0, 400);
+			if (empty($fdesc)) {$fdesc = t("No description currently available.");} 
+				// Trim Description 
+			if (strlen($fdesc) > 750) { // Trim to 750 characters
+				$fdesc = substr($fdesc, 0, 750);
 				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
 			}
 			// Type of file (from mimetype)
