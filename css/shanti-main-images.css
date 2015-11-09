@@ -366,10 +366,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*-----------------------------*/
 /*--- BEGIN Lightbox button ---*/
 .og-details .btn-lightbox {
-  position: relative;
-  bottom: 0.5em;
-  right: 1rem;
-  z-index:1;
+  float: left;
   height: 4rem;
   width: 4rem;
   color: #ccc;
@@ -394,9 +391,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .btn-lightbox .icon {
   font-size: 2rem;
-  position: absolute;
-  top: 0.9rem;
-  left: 1rem;
+  position: relative;
+  bottom: 2.2rem;
+  right: 0.8rem;
   font-family: 'FontAwesome';
 }
 
