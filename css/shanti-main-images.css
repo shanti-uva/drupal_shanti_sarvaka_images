@@ -46,7 +46,7 @@
 
 /* Pagerer clear both (should this be in shanti-main.css?) */
 table.pagerer { 
-  clear: both; 
+  /* clear: both; this is not requied so I'm removing it */
   width:100%; 
   margin-top: -0.7rem;
 }
@@ -95,7 +95,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-
+/***** BEGIN gallery grid, dropdown, lightbox *****/
 .og-grid{
   padding:0;
 }
@@ -121,23 +121,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding: 2.5rem 5rem;
 }
 
-
-
-
-
 .og-fullimg {
   padding: 0;
   margin: 0 0 0 2rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
-  text-align:left;
+  text-align:center;
 }
-
-.og-details {
-  padding: 0 1rem 0 2rem;
-  width: 42%;
-}
-
 
 /* Coordinate these rules with the script for centering the image in the gallery dropdown */
 .og-img-wrapper{
@@ -165,65 +155,57 @@ ul.pager{ margin: 0 0 0.5rem;}
   display:inline-block;*/
 }
 
-
-
-
-.og-details .btn-lightbox {
-  position: relative;
-  bottom: 0.5em;
-  right: 1rem;
-  z-index:1;
-  height: 4rem;
-  width: 4rem;
-  color: #ccc;
-  background: #000;
-  border-radius: 50%;
-  border: 1px solid #777 !important;
-  background-clip: padding-box;
-  display: inline-block;
+.og-details {
+  padding: 0 1rem 0 2rem;
+  width: 42%;
 }
 
-.og-details .btn-lightbox:hover {
-  text-decoration: none;
-  border-color:#f0f0f0 !important;
+.og-details .tab-content {
+  background: #222;
+}
+
+.og-details .tab-content #info{
+  padding-left:0.6rem;
+}
+
+.og-details .tab-content #desc{
+  padding-left:1.2rem;
+}
+
+.og-details .tab-pane {
+  padding-top: 0rem;
+  min-height:200px;
+}
+
+/* gallery dropdown right metadata tabs */
+.og-details .nav-tabs {
+  border-bottom: 1px solid #555;
+}
+
+.og-details .nav-tabs>li>a {
+  border: 1px solid #555;
+  border-bottom: none;
+  border-top: 2px solid #909090;
+  border-radius: 0.2rem;
+  color: #ccc;
+  background: #222;
+  font-size: 0.88em;
+  font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
+}
+
+.og-details .nav-tabs>li>a:hover,
+.og-details .nav-tabs>li>a:active {
+  border: none;
   color: #eee;
 }
 
-.og-details .btn-lightbox:active{
-  background-color:#444;  
-  border: 1px solid #777 !important;
-  border-bottom-color: #777 !important; /* override the .content-section anchor style */
+.og-details .nav-tabs>li>a::before {
+  content: '';
+  display: none;
 }
 
-.og-details .btn-lightbox .icon {
-  font-size: 2rem;
-  position: absolute;
-  top: 0.9rem;
-  left: 1rem;
-  font-family: 'FontAwesome';
-}
-
-.og-details .btn-lightbox .icon::before {
-  content: '\f065';
-  display: inline;
-  margin-right: 0;
-}
-
-.og-details .btn-lightbox:hover .icon::before,
-.og-details .btn-lightbox:active .icon::before {
-  color:#fff;
-}
-
-.og-details .btn-lightbox::before{
-  content:'';
-}
-
-
-
-
-
-
-.og-grid .og-details a.og-details-more {
+/*--- Details Tab read more Link to full reference page page -----*/
+.og-details a.og-details-more {
   border: none;
   color: #999;
   font-size: 13px;
@@ -233,18 +215,40 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 30px 0 0;
 }
 
-.og-grid .og-details a.og-details-more:hover {
+.og-details a.og-details-more:hover {
   color: #ccc;
 }
 
-.og-grid .og-details a.og-details-more:active {
+.og-details a.og-details-more:active {
   color: #eee;
 }
 
-.og-grid .og-expanded > a::after{
+.og-expanded > a::after{
   border-bottom-color:#222;
 }
 
+.og-details #info ul {
+  font-size: 1.06em;
+}
+
+.og-details #info ul {
+  margin: 0 0 0 0.75rem;
+  padding: 0;
+}
+
+.og-details #info li {
+  list-style-type: none;
+  color: #eee;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+}
+
+.og-details #info li label {
+  color: #999;
+  display: block;
+  font-size: 70%;
+  margin-left: 0;
+}
 
 .og-details .nav-tabs>li:first-of-type{
   margin-left: 0.75rem;
@@ -268,99 +272,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 1rem 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.og-close {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  color:#aaa;
-}
-
-
-.og-details .tab-content {
-  background: #222;
-}
-
-.og-details .tab-content #info{
-  padding-left:0.6rem;
-}
-
-.og-details .tab-content #desc{
-  padding-left:1.2rem;
-}
-
-.og-details ul {
-  margin: 0 0 0 0.75rem;
-  padding: 0;
-}
-
-.og-details #info li {
-  list-style-type: none;
-  color: #eee;
-  margin: 1.5rem 0 0 0;
-  padding: 0;
-}
-
-.og-details #info li label {
-  color: #999;
-  display: block;
-  font-size: 70%;
-  margin-left: 0;
-}
-
-.og-details .nav-tabs {
-  border-bottom: 1px solid #555;
-}
-
-.og-details .nav-tabs>li>a {
-  border: none;
-  color: #999;
-  background: transparent;
-  font-size: 0.88em;
-  font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
-}
-
-.og-details .nav-tabs>li>a:hover,
-.og-details .nav-tabs>li>a:focus,
-.og-details .nav-tabs>li>a:active {
-  border: none;
-  color: #eee;
-}
-
-.og-details .nav-tabs>li>a::before {
-  content: '';
-  display: none;
-}
-
-.og-details .tab-pane {
-  padding-top: 0rem;
-  min-height:200px;
-}
-
-.og-details .tab-pane ul {
-  font-size: 1.06em;
-}
-
-/**** nav-arrow buttons ****/
-
+/**** gallery dropdown paging arrow buttons ****/
 .og-nav-arrow{
   position: absolute;
   top: 50%;
@@ -384,13 +296,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   background:#202020;
 }
 
-.next.og-nav-arrow{
+.og-nav-arrow.next{
   position: absolute;
   right:-1rem;
   text-shadow: 0.2rem 0 0.5rem #111;
 }
 
-.prev.og-nav-arrow{
+.og-nav-arrow.prev{
   position: absolute;
   left: -1rem;
   text-shadow: 0 0.2rem 0.5rem #111;
@@ -430,23 +342,76 @@ ul.pager{ margin: 0 0 0.5rem;}
   color:#aaa;
   background:transparent !important;
 }
-
-
-
-
-.nav-tabs>li.active>a,  
-.nav-tabs>li.active>a:hover,
-.nav-tabs>li.active>a:focus,
-.nav-tabs>li.active>a:active {
-  background: #222;
+/*--- BEGIN Lightbox button ---*/
+.og-details .btn-lightbox {
+  position: relative;
+  bottom: 0.5em;
+  right: 1rem;
+  z-index:1;
+  height: 4rem;
+  width: 4rem;
   color: #ccc;
-  border: 1px solid #555;
-  border-bottom: none;
-  border-top: 2px solid #909090;
-  border-radius: 0.2rem;
+  background: #000;
+  border-radius: 50%;
+  border: 1px solid #777 !important;
+  background-clip: padding-box;
+  display: inline-block;
 }
 
-/* .last-row ~ .item:last-of-type{ border:2px solid red;} .last-row ~ .item:last-of-type::after{ height:100px;display:inline-block;min-width:100%;width:100%;} */
+.og-details .btn-lightbox:hover {
+  text-decoration: none;
+  border-color:#f0f0f0 !important;
+  color: #eee;
+}
+
+.og-details .btn-lightbox:active{
+  background-color:#444;  
+  border: 1px solid #777 !important;
+  border-bottom-color: #777 !important;
+}
+
+.og-details .btn-lightbox .icon {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.9rem;
+  left: 1rem;
+  font-family: 'FontAwesome';
+}
+
+.og-details .btn-lightbox .icon::before {
+  content: '\f065';
+  display: inline;
+  margin-right: 0;
+}
+
+.og-details .btn-lightbox:hover .icon::before,
+.og-details .btn-lightbox:active .icon::before {
+  color:#fff;
+}
+
+.og-details .btn-lightbox::before{
+  content:'';
+}
+
+.og-details .og-close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  color:#aaa;
+}
+
+/**** END gallery grid, lightbox ****/
+
+
+
+
+
+
+
 
 /* single image page */
 .page-file .file-image {
@@ -563,7 +528,7 @@ div.pdfextlink { float: right; }
   }
 
   .og-fullimg, 
-    .og-details {
+  .og-details {
     display: block;
     width: 100%;
     border: none;
