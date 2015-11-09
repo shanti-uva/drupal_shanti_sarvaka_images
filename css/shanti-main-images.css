@@ -375,6 +375,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   border: 1px solid #777 !important;
   background-clip: padding-box;
   display: inline-block;
+  white-space:nowrap;
 }
 
 .og-details .btn-lightbox:hover {
