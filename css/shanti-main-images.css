@@ -109,6 +109,14 @@ ul.pager{ margin: 0 0 0.5rem;}
   z-index: 1;
 }
 
+.og-grid .item > a,
+.og-grid .item > a img {
+  border: none;
+  outline: none;
+  display: block;
+  position: relative;
+}
+
 .og-grid .item.last-row{ 
   clear:both;
 }
@@ -120,6 +128,16 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-expander-inner {
   background: #222;
   padding: 2.5rem 5rem;
+}
+
+.og-expander .og-close {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color:#aaa;
 }
 
 .og-fullimg {
@@ -178,7 +196,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   min-height:150px;
 }
 
-
 .og-details a{
 font-weight: 700;
 font-size: 16px;
@@ -221,6 +238,7 @@ outline: none;
   color: #eee;
   border: 1px solid #555;
   border-top: 2px solid #909090;
+  border-radius:0;
 }
 
 .og-details .nav-tabs>li>a::before {
@@ -431,16 +449,6 @@ outline: none;
 
 .og-details .btn-lightbox::before{
   content:'';
-}
-
-.og-expander .og-close {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  top: 1.5rem;
-  right: 2rem;
-  cursor: pointer;
-  color:#aaa;
 }
 
 /**** END gallery grid, lightbox ****/
