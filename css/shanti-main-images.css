@@ -235,6 +235,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom: 1px solid #555;
 }
 
+.og-details .nav-tabs>li.active a{
+  border-bottom-color: transparent !important;
+}
+
 .og-details .nav-tabs>li>a {
   border: 1px solid #555;
   border-width: 2px 1px 1px;
@@ -272,10 +276,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li.active>a:hover,
 .og-details .nav-tabs>li.active>a:active{
   border-bottom: none;
-}
-/* active tab hiding bottom-border */
-.og-details .nav-tabs>li.active a{
-  margin-bottom: -2px
 }
 
 .og-details .nav-tabs>li:first-of-type{
