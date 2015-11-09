@@ -122,6 +122,16 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding: 2.5rem 5rem;
 }
 
+.og-expander .og-close {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color:#aaa;
+}
+
 .og-fullimg {
   padding: 0;
   margin: 0 0 0 2rem;
@@ -178,7 +188,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   min-height:150px;
 }
 
-
 .og-details a{
 font-weight: 700;
 font-size: 16px;
@@ -221,6 +230,7 @@ outline: none;
   color: #eee;
   border: 1px solid #555;
   border-top: 2px solid #909090;
+  border-radius:0;
 }
 
 .og-details .nav-tabs>li>a::before {
@@ -431,17 +441,6 @@ outline: none;
 
 .og-details .btn-lightbox::before{
   content:'';
-}
-
-.og-details .og-close {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  color:#aaa;
 }
 
 /**** END gallery grid, lightbox ****/
