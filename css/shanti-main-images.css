@@ -265,7 +265,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   color: #ccc;
   border-width: 2px 1px 0px;
   border-bottom: none;
-  border-color-top: #909090;
+  border-top-color: #909090;
   /*border-radius: 0.2rem;*/
 }
 
