@@ -109,44 +109,17 @@ ul.pager{ margin: 0 0 0.5rem;}
   z-index: 1;
 }
 
-.og-grid .item > a,
-.og-grid .item > a img {
-  border: none;
-  outline: none;
-}
-
 .og-grid .item.last-row{ 
   clear:both;
 }
 
 .og-expander{ 
-  border-bottom:0.75rem double #eee;
-  background: #111;
-  /*z-index:100;
-  position: absolute !important;*/
+  border-bottom:0.75rem double #eee;z-index:100;
 }
 
 .og-expander-inner {
   background: #222;
   padding: 2.5rem 5rem;
-}
-
-.og-expander .og-close {
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  top: 1.5rem;
-  right: 2rem;
-  color:#aaa;
-}
-
-.og-close::before,
-.og-close::after{
-  background: #aaa;
-}
-.og-close:hover::before,
-.og-close:hover::after{
-  background: #eee;
 }
 
 .og-fullimg {
@@ -205,28 +178,25 @@ ul.pager{ margin: 0 0 0.5rem;}
   min-height:150px;
 }
 
-.og-details a{
-  font-size: 1em;
-  color: #d6d6d6;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  margin: 0;
-  padding:0;
-}
 
-.og-details a:hover{
-  color: #f0f0f0;
-  border:none;
+.og-details a{
+font-weight: 700;
+font-size: 16px;
+color: #d6d6d6;
+border: 5px double #303030;
+text-transform: uppercase;
+letter-spacing: 2px;
+padding: 10px 20px;
+display: inline-block;
+margin: 30px 0 0;
+outline: none;
 }
 
 .og-details a::before{
   margin:0;
 }
 
-.og-expanded > a::after{
-  border-bottom-color:#222;
-}
+
 
 /* gallery dropdown right metadata tabs */
 .og-details .nav-tabs {
@@ -251,7 +221,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   color: #eee;
   border: 1px solid #555;
   border-top: 2px solid #909090;
-  border-radius:0;
 }
 
 .og-details .nav-tabs>li>a::before {
@@ -293,6 +262,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   color: #eee;
 }
 
+.og-expanded > a::after{
+  border-bottom-color:#222;
+}
+
 /*-------------------------*/
 /*--- tab #info content ---*/
 /*-------------------------*/
@@ -321,19 +294,19 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details p {
   font-size: 0.93em;
-  line-height:1.12em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
   letter-spacing:normal;
   color: #c0c0c0;
+  font-weight:normal;
 }
 
 .og-details h3 {
   color:#d6d6d6;
-  font-size: 1.25em;
   font-weight:normal;
-  line-height:1.32em;
   font-family:'museo-sans-500',arial,sans-serif;
   padding:0;
+  font-size: 1.25em;
+  line-height:1.32em;
   margin: 1rem 0;
 }
 
@@ -458,6 +431,16 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .btn-lightbox::before{
   content:'';
+}
+
+.og-expander .og-close {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color:#aaa;
 }
 
 /**** END gallery grid, lightbox ****/
