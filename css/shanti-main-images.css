@@ -100,7 +100,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-grid{
   padding:0;
 }
-
+/*
 .og-grid:before,
 .og-grid:after {
   content: "";
@@ -110,7 +110,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-grid:after {
   clear: both;
 }
-
+*/
 .og-grid .item {
   float: left;
   margin:0 5px 10px 0;
