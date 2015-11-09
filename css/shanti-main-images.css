@@ -325,7 +325,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 0.93em;
   line-height:1.12em;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
-  letter-spacing:normal;
+  letter-spacing: 0.05rem;
   color: #c0c0c0;
 }
 
@@ -414,9 +414,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*-----------------------------*/
 /*--- BEGIN Lightbox button ---*/
 .og-details .btn-lightbox {
-  float: left;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   color: #ccc;
   background: #000;
   border-radius: 50%;
@@ -424,6 +423,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
+  margin:3rem 0 0;
 }
 
 .og-details .btn-lightbox:hover {
@@ -439,11 +439,11 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .btn-lightbox .icon {
-  font-size: 2rem;
+  font-size: 1.7rem;
   position: relative;
   top: 0;
-  right: 0.8rem;
-  margin-right: 1.2rem;
+  left: 0;
+  margin-right: 2.2rem;
   font-family: 'FontAwesome';
 }
 
@@ -451,6 +451,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\f065';
   display: inline;
   margin-right: 0;
+  position: absolute;
+  top: 0.55rem;
+  left: 0.65rem;
 }
 
 .og-details .btn-lightbox:hover .icon::before,
