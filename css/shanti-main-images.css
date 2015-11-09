@@ -452,11 +452,11 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .btn-lightbox .icon {
   font-size: 1.55rem;
   position: relative;
-  top: 0;
-  left: 0;
+  bottom: 0.5rem;
+  right: 0.05rem;
   margin-right: 2.2rem;
   font-family: 'FontAwesome';
-  line-height:2.7rem;
+  line-height: 2rem;
 }
 
 .og-details .btn-lightbox .icon::before {
