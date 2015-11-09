@@ -94,8 +94,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-
+/*------------------------------------------------*/
 /***** BEGIN gallery grid, dropdown, lightbox *****/
+/*------------------------------------------------*/
 .og-grid{
   padding:0;
 }
@@ -129,7 +130,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-align:center;
 }
 
-/* Coordinate these rules with the script for centering the image in the gallery dropdown */
+/* coordinate og-fullimg img, and img wrapper */
 .og-img-wrapper{
   /*position:relative;*/
   padding-bottom:80%;
@@ -204,7 +205,22 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: none;
 }
 
-/*--- Details Tab read more Link to full reference page page -----*/
+.og-details a::before{
+  margin:0;
+}
+
+.nav-tabs>li.active>a,  
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:active {
+  background: #222;
+  color: #ccc;
+  border: 1px solid #555;
+  border-bottom: none;
+  border-top: 2px solid #909090;
+  border-radius: 0.2rem;
+}
+
 .og-details a.og-details-more {
   border: none;
   color: #999;
@@ -227,6 +243,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom-color:#222;
 }
 
+/*-------------------------*/
+/*--- tab #info content ---*/
+/*-------------------------*/
 .og-details #info ul {
   font-size: 1.06em;
 }
@@ -272,6 +291,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 1rem 0;
 }
 
+/*----------------------------------------------*/
 /**** gallery dropdown paging arrow buttons ****/
 .og-nav-arrow{
   position: absolute;
@@ -342,6 +362,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   color:#aaa;
   background:transparent !important;
 }
+
+/*-----------------------------*/
 /*--- BEGIN Lightbox button ---*/
 .og-details .btn-lightbox {
   position: relative;
@@ -409,7 +431,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 
 
-
+/*------------------------------------------*/
+/*--- Dropdown details tab #info content ---*/
+/*------------------------------------------*/
 
 
 
