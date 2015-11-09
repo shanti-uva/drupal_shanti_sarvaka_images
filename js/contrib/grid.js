@@ -272,7 +272,7 @@ var Grid = (function($) {
 			this.$title = $( '<h3></h3>' );
 			this.$description = $( '<p></p>' );
 			this.$href = $( '<a href="#" class="og-details-more"><span>Read more ...</span></a>' );
-			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span></a>' );
+			this.$lightboxLink = $( '<a href="#" class="lightbox-link btn-lightbox"><span class="icon fa-expand"></span>View Larger</a>' );
 
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
