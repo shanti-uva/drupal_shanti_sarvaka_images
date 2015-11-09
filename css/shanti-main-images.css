@@ -129,7 +129,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 0 0 0 2rem;
   width: 55%;
   min-height: 200px; /* helps disply the img loading spinner */
-  text-align:left;
+  text-align:center;
 }
 
 .og-details {
@@ -154,8 +154,32 @@ ul.pager{ margin: 0 0 0.5rem;}
   min-height:200px;
 }
 
+/* gallery dropdown right metadata tabs */
+.og-details .nav-tabs {
+  border-bottom: 1px solid #555;
+}
 
+.og-details .nav-tabs>li>a {
+  border: 1px solid #555;
+  border-bottom: none;
+  border-top: 2px solid #909090;
+  border-radius: 0.2rem;
+  color: #ccc;
+  background: #222;
+  font-size: 0.88em;
+  font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
+}
 
+.og-details .nav-tabs>li>a:hover,
+.og-details .nav-tabs>li>a:active {
+  border: none;
+  color: #eee;
+}
+
+.og-details .nav-tabs>li>a::before {
+  content: '';
+  display: none;
+}
 
 /*--- Details Tab read more Link to full reference page page -----*/
 .og-details a.og-details-more {
@@ -226,42 +250,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 
-
-
-.og-details .nav-tabs {
-  border-bottom: 1px solid #555;
-}
-
-.og-details .nav-tabs>li>a {
-  border: 1px solid #555;
-  border-bottom: none;
-  border-top: 2px solid #909090;
-  border-radius: 0.2rem;
-  color: #ccc;
-  background: #222;
-  font-size: 0.88em;
-  font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
-}
-
-.og-details .nav-tabs>li>a:hover,
-.og-details .nav-tabs>li>a:active {
-  border: none;
-  color: #eee;
-}
-
-.og-details .nav-tabs>li>a::before {
-  content: '';
-  display: none;
-}
-
-
-
-
-
-
-
-/**** nav-arrow buttons ****/
-
+/**** gallery dropdown paging arrow buttons ****/
 .og-nav-arrow{
   position: absolute;
   top: 50%;
@@ -285,13 +274,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   background:#202020;
 }
 
-.next.og-nav-arrow{
+.og-nav-arrow.next{
   position: absolute;
   right:-1rem;
   text-shadow: 0.2rem 0 0.5rem #111;
 }
 
-.prev.og-nav-arrow{
+.og-nav-arrow.prev{
   position: absolute;
   left: -1rem;
   text-shadow: 0 0.2rem 0.5rem #111;
@@ -331,12 +320,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   color:#aaa;
   background:transparent !important;
 }
-
-
-
-
-
-
+/*--- BEGIN Lightbox button ---*/
 .og-details .btn-lightbox {
   position: relative;
   bottom: 0.5em;
@@ -361,7 +345,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .btn-lightbox:active{
   background-color:#444;  
   border: 1px solid #777 !important;
-  border-bottom-color: #777 !important; /* override the .content-section anchor style */
+  border-bottom-color: #777 !important;
 }
 
 .og-details .btn-lightbox .icon {
@@ -387,11 +371,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   content:'';
 }
 
-
-
-
-
-.og-close {
+.og-details .og-close {
   position: absolute;
   top: 1rem;
   right: 2rem;
@@ -526,7 +506,7 @@ div.pdfextlink { float: right; }
   }
 
   .og-fullimg, 
-    .og-details {
+  .og-details {
     display: block;
     width: 100%;
     border: none;
