@@ -461,7 +461,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 
-
+/*
 .container:before,
 .container:after {
     content: "";
@@ -469,7 +469,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 .container:after {
     clear: both;
-}
+}*/
 .item {
   float: left;
   margin-bottom: 15px; 
