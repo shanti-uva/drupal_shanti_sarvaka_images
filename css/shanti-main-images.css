@@ -419,7 +419,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline-block;
   white-space:nowrap;
   margin:2rem 0 0;
-  position:absolute;
+  text-indent:3.5rem;
 }
 .og-details .og-view-more:hover {
   text-decoration: none;
@@ -450,19 +450,16 @@ ul.pager{ margin: 0 0 0.5rem;}
   top: 0.63rem;
   left: 0.6rem;
   font-family: 'FontAwesome';
+  color:#fff;
 }
 
 .og-details .og-details-more .icon{
-  padding-left:3.5rem !important;
+  text-indent:3.5rem;
 }
 
 .og-details .og-details-more .icon::before{
   content: '\e61f' !important; /* unique icon for Read more... */
   font-family: 'shanticon';
-}
-
-.og-details .og-view-more .icon::before {
-  color:#fff;
 }
 
 .og-details .og-view-more::before{
