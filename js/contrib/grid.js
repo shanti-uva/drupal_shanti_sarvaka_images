@@ -382,16 +382,22 @@ var Grid = (function($) {
 							Drupal.settings.media_sharedshelf.gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, Drupal.settings.media_sharedshelf.lbitems, options);
 							Drupal.settings.media_sharedshelf.gallery.init();
 							Drupal.settings.media_sharedshelf.gallery.goTo(iind);
-							
-							// Adjust current item number based on pagination after image markup is loaded
-							Drupal.settings.media_sharedshelf.gallery.listen('imageLoadComplete', function(index, item) { 
-								var iteminfo = Drupal.settings.sarvaka_image_gallery,
+							var iteminfo = Drupal.settings.sarvaka_image_gallery,
 									  incr = parseInt(iteminfo.items_per_page) * parseInt(iteminfo.page_number),
 								 	  pts = $('.pswp__counter').text().split(' / ');
-								pts[0] = parseInt(pts[0]) + incr;
+							pts[0] = iind + incr + 1;
+							$('.pswp__counter').text(pts.join(' / '));
+								
+							// Adjust current item number based on pagination after markup change
+							Drupal.settings.media_sharedshelf.gallery.listen('afterChange', function() {
+								var iteminfo = Drupal.settings.sarvaka_image_gallery,
+									  incr = parseInt(iteminfo.items_per_page) * parseInt(iteminfo.page_number),
+								 	  pts = $('.pswp__counter').text().split(' / '),
+									  index = this.items.indexOf(this.currItem) + 1;
+								pts[0] = index + incr;
 								$('.pswp__counter').text(pts.join(' / '));
+								
 							});
-							
 						});
 						setTimeout(function() {
 							 jQuery(".og-img-wrapper img").popupImageCentering();
