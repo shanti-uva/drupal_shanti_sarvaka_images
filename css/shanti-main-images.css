@@ -442,8 +442,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 1.55rem;
   position: relative;
   bottom: 0.6rem;
-  right: 0;
-  margin-right: 2.2rem;
+  left: 0;
   line-height: 2rem;
 }
 
