@@ -16,20 +16,35 @@
  * Used to adjust markup and add js/css for the image grid on the home page.
  */
 function sarvaka_images_preprocess_views_view(&$vars) {
-	//dpm($vars, 'vars in view preprocess 2');
-	if ($vars['view']->name == 'media_sharedshelf_my_images') {
+
+	$view = $vars['view']; // Get the view
+	
+	if ($view->name == 'media_sharedshelf_my_images') {
+		
 		// Load JavaScript
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/grid.js', array('group'=>JS_LIBRARY, 'weight'=>9990));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.row-grid.js', array('group'=>JS_LIBRARY, 'weight'=>9980));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe.js', array('group'=>JS_LIBRARY, 'weight'=>9970));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/photoswipe-ui-default.js', array('group'=>JS_LIBRARY, 'weight'=>9960));
 		drupal_add_js(drupal_get_path('theme', 'sarvaka_images') . '/js/contrib/jquery.actual.min.js', array('group'=>JS_LIBRARY, 'weight'=>9950));
+		
+		// Load Page JS Settings
+		$countsettings = array(
+			'sarvaka_image_gallery' => array(
+				'total_items' => $view->query->pager->total_items,
+				'items_per_page' => $view->query->pager->options['items_per_page'],
+				'page_number' => $view->query->pager->current_page,
+				'item_count' => count($view->result),
+			),
+		);
+		drupal_add_js($countsettings, 'setting');
+		
 		// Load CSS
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/grid-components.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/photoswipe.css');
 		drupal_add_css(drupal_get_path('theme', 'sarvaka_images') . '/css/pswp-default-skin.css');
-		// Get View
-		$view = $vars['view'];
+		
+		// Process Results
 		$results = $view->result;
 		$rows = '<div id="og-grid" class="og-grid clearfix">';
 		
