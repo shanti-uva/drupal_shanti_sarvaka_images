@@ -500,6 +500,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-indent: 0 !important;
   font-family: 'shanticon';
   font-size:1.35rem;
+  font-weight: bold;
 }
 
 .og-details .og-view-more span::before {
@@ -521,7 +522,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'shanticon';
   position: relative;
   top: 0.1rem;
-  right: 1.65rem;
+  right: 1.6rem;
 }
 
 .og-loading{
