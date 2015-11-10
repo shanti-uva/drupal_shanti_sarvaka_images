@@ -419,6 +419,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   white-space:nowrap;
   margin:2rem 0 0;
   text-indent:2.5rem;
+  position: relative;
+  left: 1rem
 }
 
 .og-details .og-view-more.btn-lightbox{
