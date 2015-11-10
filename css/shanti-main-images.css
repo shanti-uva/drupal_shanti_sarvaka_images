@@ -236,7 +236,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-content {
-  background: #222;
+  background: #1a1a1a;
+  border-bottom: 1px solid #555;
+  padding: 1rem;
 }
 
 .og-details .tab-content #info{
@@ -291,6 +293,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 /* gallery dropdown right metadata tabs */
 .og-details .nav-tabs {
   border-bottom: 1px solid #555;
+  margin-bottom:0;
 }
 
 .og-details .nav-tabs>li{
@@ -376,7 +379,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 1.25em;
   font-weight:normal;
   line-height:1.32em;
-  padding:0;
+  padding: 1rem 0 0;
   margin: 1.5rem 0 .5em;
 }
 
@@ -465,7 +468,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin:2rem 0 0 1rem;
+  margin: 2rem 0 2rem 1rem;
   text-indent:2.45rem;
   text-transform: uppercase;
 }
