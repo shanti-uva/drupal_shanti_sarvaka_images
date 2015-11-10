@@ -499,6 +499,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more.og-details-more > span{
   text-indent: 0 !important;
   font-family: 'shanticon';
+  font-size:1.35rem;
 }
 
 .og-details .og-view-more span::before {
