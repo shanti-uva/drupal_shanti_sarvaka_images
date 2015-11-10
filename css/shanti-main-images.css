@@ -452,7 +452,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more {
   height: 3.2rem;
   width: 3.2rem;
-  line-height: 3rem;
+  line-height: 4.5rem;
   color: #ddd;
   background: #000;
   border-radius: 50%;
@@ -461,16 +461,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline-block;
   white-space:nowrap;
   margin:2rem 0 0 1rem;
-  text-indent:2.8rem;
+  text-indent:2.45rem;
   text-transform: uppercase;
-}
-
-.og-details .og-view-more.og-details-more{
-
-}
-
-.og-details .og-view-more.btn-lightbox{
-  line-height: 4.5rem;
 }
 
 .og-details .og-view-more:hover {
@@ -523,7 +515,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\e61f'; /* unique icon for Read more... */
   font-family: 'shanticon';
   position: relative;
-  top: 0rem;
+  top: 0.1rem;
   right: 1.975rem;
 }
 
