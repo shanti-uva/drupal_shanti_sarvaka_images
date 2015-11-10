@@ -510,8 +510,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\f065'; /* icon for full-screen */
   font-family: 'FontAwesome';
   position: relative;
-  top: -0.17rem;
-  left: -1.62rem;
+  top: 0;
+  left: -1.6rem;
 }
 
 
