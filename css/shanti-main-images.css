@@ -96,18 +96,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*------------------------------------------------*/
 /***** BEGIN gallery grid, dropdown, lightbox *****/
 /*------------------------------------------------*/
-
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before, .clearfix:after {
-  content: " ";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
-    
 .og-grid{
   float: left;
   padding:0;
