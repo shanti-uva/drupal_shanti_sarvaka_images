@@ -421,6 +421,11 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin:2rem 0 0;
   text-indent:3.5rem;
 }
+
+.og-details .og-view-more.og-details-more{
+  text-indent: 0;
+}
+
 .og-details .og-view-more:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
@@ -453,23 +458,23 @@ ul.pager{ margin: 0 0 0.5rem;}
   color:#fff;
 }
 
-.og-details .og-details-more .icon{
-  text-indent: 3.5rem !important;
-  font-family: 'shanticon';
+.og-details .og-view-more::before{
+  content:'';
 }
 
-.og-details .btn-lightbox .icon{
+.og-details .og-view-more.btn-lightbox .icon{
   text-indent: 0 !important;
   font-family: 'FontAwesome';
 }
 
-.og-details .og-details-more .icon::before{
-  content: '\e61f' !important; /* unique icon for Read more... */
+.og-details .og-view-more.og-details-more .icon{
+  text-indent: 3.5rem !important;
   font-family: 'shanticon';
 }
 
-.og-details .og-view-more::before{
-  content:'';
+.og-details .og-view-more.og-details-more .icon::before{
+  content: '\e61f' !important; /* unique icon for Read more... */
+  font-family: 'shanticon';
 }
 
 /**** END gallery grid, lightbox ****/
