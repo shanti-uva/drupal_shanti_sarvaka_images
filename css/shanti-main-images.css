@@ -236,7 +236,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-content {
-  background: #1a1a1a;
+  background: #1e1e1e;
   border-bottom: 1px solid #555;
   padding: 1rem;
 }
@@ -306,7 +306,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-width: 2px 1px 1px;
   border-radius:0;
   color: #999;
-  background: #1a1a1a;
+  background: #1e1e1e;
   text-transform: uppercase;
   font-size: 1em;
   font-weight:bold;
@@ -379,7 +379,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 1.25em;
   font-weight:normal;
   line-height:1.32em;
-  padding: 1rem 0 0;
+  padding: 0;
   margin: 1.5rem 0 .5em;
 }
 
