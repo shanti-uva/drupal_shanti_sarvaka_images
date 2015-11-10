@@ -305,7 +305,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:active {
   color: #eee;
-  border-color: #909090 #555 #555 #555;
+  border-color: #909090 #555 transparent #555;
+  border-width: 2px 1px 1px;
 }
 /*
 .og-details .nav-tabs>li>a::before {
