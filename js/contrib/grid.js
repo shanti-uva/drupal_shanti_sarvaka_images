@@ -252,7 +252,6 @@ var Grid = (function($) {
 		var prevItem = $item.prev();
 		if (prevItem.length == 0) {
 			prevItem = $item.nextAll().last();
-			console.log(prevItem);
 		}
 		$('.og-expander .prev').unbind('click').click(function() {
 			showPreview(prevItem);
@@ -379,12 +378,20 @@ var Grid = (function($) {
 							event.preventDefault();
        						var pswpElement = document.querySelectorAll('.pswp')[0];
        						var iind = self.$item.prevAll().length;
-							var options = { index: iind };
-							//console.log("options", options);
+							var options = { index: iind, getNumItemsFn: function() { return Drupal.settings.sarvaka_image_gallery.total_items; }};
 							Drupal.settings.media_sharedshelf.gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, Drupal.settings.media_sharedshelf.lbitems, options);
 							Drupal.settings.media_sharedshelf.gallery.init();
 							Drupal.settings.media_sharedshelf.gallery.goTo(iind);
-							//console.log("Index new: " + iind);
+							
+							// Adjust current item number based on pagination after image markup is loaded
+							Drupal.settings.media_sharedshelf.gallery.listen('imageLoadComplete', function(index, item) { 
+								var iteminfo = Drupal.settings.sarvaka_image_gallery,
+									  incr = parseInt(iteminfo.items_per_page) * parseInt(iteminfo.page_number),
+								 	  pts = $('.pswp__counter').text().split(' / ');
+								pts[0] = parseInt(pts[0]) + incr;
+								$('.pswp__counter').text(pts.join(' / '));
+							});
+							
 						});
 						setTimeout(function() {
 							 jQuery(".og-img-wrapper img").popupImageCentering();
