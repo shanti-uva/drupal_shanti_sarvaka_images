@@ -305,7 +305,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:active {
   color: #eee;
-  border-color: #909090 #555 transparent #555;
+  border-color: #909090 #555 #555 #555;
   border-width: 2px 1px 1px;
 }
 /*
@@ -463,8 +463,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-transform: uppercase;
 }
 
-.og-details .og-view-more.btn-lightbox{
+.og-details .og-view-more.og-details-more{
 
+}
+
+.og-details .og-view-more.btn-lightbox{
+  line-height: 3rem;
+  text-indent: 4rem;
 }
 
 .og-details .og-view-more:hover {
@@ -492,7 +497,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'FontAwesome';
 }
 
-.og-details .og-details-more > span{
+.og-details .og-view-more.og-details-more > span{
   text-indent: 0 !important;
   font-family: 'shanticon';
 }
@@ -507,7 +512,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   color: #fff;
 }
 
-.og-details .og-details-more .icon::before{
+.og-details .og-view-more.og-details-more > span::before{
   content: '\e61f'; /* unique icon for Read more... */
   font-family: 'shanticon';
   position: relative;
