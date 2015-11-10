@@ -447,9 +447,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline;
   margin-right: 0;
   position: relative;
-  top: 0.55rem;
-  left: 0.65rem;
+  top: 0.63rem;
+  left: 0.6rem;
   font-family: 'FontAwesome';
+}
+
+.og-details .og-details-more .icon{
+  padding-left:3.5rem;
 }
 
 .og-details .og-details-more .icon::before{
