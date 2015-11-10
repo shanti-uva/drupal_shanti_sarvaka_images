@@ -442,7 +442,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 1.55rem;
   position: relative;
   bottom: 0.6rem;
-  left: 0;
+  right: 0;
+  margin-right: 2.2rem;
   line-height: 2rem;
 }
 
@@ -462,7 +463,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-view-more.btn-lightbox .icon{
-  text-indent: 3.5rem !important;
+  text-indent: 0 !important;
   font-family: 'FontAwesome';
 }
 
