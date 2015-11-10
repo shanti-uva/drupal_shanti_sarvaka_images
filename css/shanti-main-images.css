@@ -454,7 +454,13 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-details-more .icon{
-  text-indent:3.5rem;
+  text-indent: 3.5rem !important;
+  font-family: 'shanticon';
+}
+
+.og-details .btn-lightbox .icon{
+  text-indent: 0 !important;
+  font-family: 'FontAwesome';
 }
 
 .og-details .og-details-more .icon::before{
@@ -474,9 +480,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*------------------------------------------*/
 /*--- Dropdown details tab #info content ---*/
 /*------------------------------------------*/
-
-
-
 /* single image page */
 .page-file .file-image {
   border-left: 3rem dotted #e3e3e3;
