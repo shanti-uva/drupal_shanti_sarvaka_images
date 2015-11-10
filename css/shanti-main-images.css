@@ -99,7 +99,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 /***** BEGIN gallery grid, dropdown, lightbox *****/
 /*------------------------------------------------*/
 .og-grid{
-  float: left;
+  list-style: none;
   padding:0;
   margin: 0 auto;
   text-align: center;
@@ -107,11 +107,10 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-grid .item {
+  float: left;
   margin:0 5px 10px 0;
-  display: -moz-inline-box;
   display: inline-block;
   vertical-align: top;
-  z-index: 1;
 }
 
 .og-grid .item > a,
@@ -122,15 +121,19 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: relative;
 }
 
-.og-grid .item.first-item {
-  clear: both;
-}
-
-.og-grid .item.last-row{ 
+.og-grid .item.last-row,
+.og-grid .item.first-item{ 
   clear:both;
 }
 
+/* remove margin bottom on last row */
+.last-row, 
+.last-row ~ .item {
+  margin-bottom: 0;
+}
+
 .og-expander{ 
+  position: absolute !important;
   border-bottom:0.75rem double #eee;
   background: #111;
   top: auto;
@@ -373,9 +376,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-size: 1.25em;
   font-weight:normal;
   line-height:1.32em;
-  font-family:'museo-sans-500',arial,sans-serif;
   padding:0;
-  margin: 1rem 0;
+  margin: 1.5rem 0 .5em;
 }
 
 /*----------------------------------------------*/
@@ -485,7 +487,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: relative;
   bottom: 0.6rem;
   right: 0;
-  line-height: 4rem;
+  line-height: 4.2rem;
   text-transform: uppercase;
 }
 
@@ -518,7 +520,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'shanticon';
   position: relative;
   top: 0.1rem;
-  right: 1.975rem;
+  right: 2rem;
 }
 
 .og-loading{
@@ -566,6 +568,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   .og-fullimg { display: none;}
   .og-details { float: none; width: 100%;}
 }
+
 /**** END gallery grid, lightbox ****/
 
 
