@@ -236,8 +236,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-content {
-  background: #1a1a1a;
-  border-bottom: 1px solid #555;
+  background: #222;
+  /*border-bottom: 1px solid #555;*/
   padding: 1rem;
 }
 
