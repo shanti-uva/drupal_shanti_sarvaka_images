@@ -285,20 +285,27 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom: 1px solid #555;
 }
 
+.og-details .nav-tabs>li{
+  margin-right: 0.2rem
+}
+
 .og-details .nav-tabs>li>a {
   border: 1px solid #555;
-  border-width: 2px 1px 0;
+  border-color: #555 #555 #555 #555;
+  border-width: 2px 1px 1px;
   border-radius:0;
-  color: #ccc;
+  color: #999;
   background: #222;
-  font-size: 0.88em;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight:bold;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
 }
 
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:active {
   color: #eee;
-  border-top-color: #909090;
+  border-color: #909090 #555 #555 #555;
 }
 /*
 .og-details .nav-tabs>li>a::before {
@@ -309,12 +316,10 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li.active>a,  
 .og-details .nav-tabs>li.active>a:hover,
 .og-details .nav-tabs>li.active>a:active {
+  color: #c0c0c0;
   background: #222;
-  color: #ccc;
-  border-width: 2px 1px 0;
-  border-top-color: #909090;
-  position:relative;
-  bottom:-0.1rem;
+  border-width: 2px 1px 1px;
+  border-color: #909090 #555 transparent #555;
 }
 
 .og-details .nav-tabs>li:first-of-type{
@@ -442,9 +447,9 @@ ul.pager{ margin: 0 0 0.5rem;}
 /*-----------------------------*/
 /*--- BEGIN Lightbox button ---*/
 .og-details .og-view-more {
-  height: 2.75rem;
-  width: 2.75rem;
-  line-height: 2.7rem;
+  height: 3.2rem;
+  width: 3.2rem;
+  line-height: 4.5rem;
   color: #ddd;
   background: #000;
   border-radius: 50%;
@@ -452,10 +457,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin:2rem 0 0;
+  margin:2rem 0 0 1rem;
   text-indent:2.5rem;
-  position: relative;
-  left: 1rem
+  text-transform: uppercase;
 }
 
 .og-details .og-view-more.btn-lightbox{
@@ -464,7 +468,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .og-view-more:hover {
   text-decoration: none;
-  border-color:#f0f0f0 !important;
+  border-color:#aaa !important;
   color: #fff;
 }
 
@@ -479,7 +483,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: relative;
   bottom: 0.6rem;
   right: 0;
-  line-height: 2rem;
+  line-height: 4rem;
 }
 
 .og-details .btn-lightbox .icon{
@@ -487,7 +491,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'FontAwesome';
 }
 
-.og-details .og-details-more .icon{
+.og-details .og-details-more > span{
   text-indent: 0 !important;
   font-family: 'shanticon';
 }
@@ -495,16 +499,15 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more .icon::before {
   content: '\f065'; /* icon for full-screen */
   display: inline-block;
-  margin-right: 0;
   position: relative;
-  top: 0.1rem;
-  right: 1.85rem;
+  top: 0rem;
+  left: -1.65rem;
   font-family: 'FontAwesome';
   color: #fff;
 }
 
 .og-details .og-details-more .icon::before{
-  content: '\e61f' !important; /* unique icon for Read more... */
+  content: '\e61f'; /* unique icon for Read more... */
   font-family: 'shanticon';
   position: relative;
   top: 0rem;
