@@ -485,15 +485,16 @@ ul.pager{ margin: 0 0 0.5rem;}
   border-bottom-color: #777 !important;
 }
 
-.og-details .og-view-more .icon {
+.og-details .og-view-more > span {
   font-size: 1.55rem;
   position: relative;
   bottom: 0.6rem;
   right: 0;
   line-height: 4rem;
+  text-transform: uppercase;
 }
 
-.og-details .btn-lightbox .icon{
+.og-details .btn-lightbox > span{
   text-indent: 0 !important;
   font-family: 'FontAwesome';
 }
