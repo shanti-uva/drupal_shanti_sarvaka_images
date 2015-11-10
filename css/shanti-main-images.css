@@ -419,7 +419,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline-block;
   white-space:nowrap;
   margin:2rem 0 0;
-  text-indent:3.5rem;
+  text-indent:2.5rem;
 }
 
 .og-details .og-view-more.og-details-more{
@@ -443,7 +443,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: relative;
   bottom: 0.6rem;
   right: 0;
-  margin-right: 2.2rem;
   line-height: 2rem;
 }
 
@@ -452,10 +451,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline;
   margin-right: 0;
   position: relative;
-  top: 0.63rem;
-  left: 0.6rem;
+  top: 0.1rem;
+  right: 1.85rem;
   font-family: 'FontAwesome';
-  color:#fff;
+  color: #fff;
 }
 
 .og-details .og-view-more::before{
