@@ -116,6 +116,7 @@ var Grid = (function($) {
 				'src': data[0],
 				'w': data[1],
 				'h': data[2],
+				'title': $(this).attr('data-title'),
 			};
 			items.push(item);
 		});
