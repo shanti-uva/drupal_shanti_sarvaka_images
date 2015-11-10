@@ -470,7 +470,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-view-more.btn-lightbox{
-
+  line-height: 4.5rem;
 }
 
 .og-details .og-view-more:hover {
@@ -504,7 +504,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'shanticon';
 }
 
-.og-details .og-view-more .icon::before {
+.og-details .og-view-more span::before {
   content: '\f065'; /* icon for full-screen */
   display: inline-block;
   position: relative;
@@ -513,6 +513,11 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'FontAwesome';
   color: #fff;
 }
+
+.og-details .og-view-more.btn-lightbox > span::before{
+  line-height: 4.5rem;
+}
+
 
 .og-details .og-view-more.og-details-more > span::before{
   content: '\e61f'; /* unique icon for Read more... */
