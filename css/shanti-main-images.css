@@ -286,23 +286,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin-left: 0.75rem;
 }
 
-.og-details a.og-details-more {
-  border: none;
-  color: #999;
-  font-size: 13px;
-  color: #d6d6d6;
-  padding: 10px 20px;
-  display: inline-block;
-  margin: 30px 0 0;
-}
-
-.og-details a.og-details-more:hover {
-  color: #ccc;
-}
-
-.og-details a.og-details-more:active {
-  color: #eee;
-}
 
 /*-------------------------*/
 /*--- tab #info content ---*/
@@ -423,8 +406,29 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 /*-----------------------------*/
+
+
+.og-details a.og-details-more {
+  border: none;
+  color: #999;
+  font-size: 13px;
+  color: #d6d6d6;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 30px 0 0;
+}
+
+.og-details a.og-details-more:hover {
+  color: #ccc;
+}
+
+.og-details a.og-details-more:active {
+  color: #eee;
+}
+
 /*--- BEGIN Lightbox button ---*/
-.og-details .btn-lightbox {
+.og-details .btn-lightbox,
+.og-details .og-details-more {
   height: 2.75rem;
   width: 2.75rem;
   line-height: 2.7rem;
@@ -438,20 +442,22 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin:2rem 0 0;
   position:absolute;
 }
-
-.og-details .btn-lightbox:hover {
+.og-details .btn-lightbox:hover
+.og-details .og-details-more:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
   color: #fff;
 }
 
-.og-details .btn-lightbox:active{
+.og-details .btn-lightbox:active,
+.og-details .og-details-more:active{
   background-color:#444;  
   border: 1px solid #777 !important;
   border-bottom-color: #777 !important;
 }
 
-.og-details .btn-lightbox .icon {
+.og-details .btn-lightbox .icon,
+.og-details .og-details-more .icon {
   font-size: 1.55rem;
   position: relative;
   bottom: 0.6rem;
@@ -461,13 +467,18 @@ ul.pager{ margin: 0 0 0.5rem;}
   line-height: 2rem;
 }
 
-.og-details .btn-lightbox .icon::before {
-  content: '\f065';
+.og-details .btn-lightbox .icon::before,
+.og-details .og-details-more .icon::before {
+  content: '\f065'; /* icon for full-screen */
   display: inline;
   margin-right: 0;
   position: relative;
   top: 0.55rem;
   left: 0.65rem;
+}
+
+.og-details .og-details-more .icon::before{
+  content: '\e61f'; /* unique icon for Read more... */
 }
 
 .og-details .btn-lightbox:hover .icon::before,
