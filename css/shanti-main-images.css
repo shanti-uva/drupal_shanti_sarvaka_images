@@ -287,8 +287,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .nav-tabs>li>a {
   border: 1px solid #555;
-  border-color: #909090 #555 #555;
-  border-width: 2px 1px 0;
+  border-color: #909090 #555 #555 #555;
+  border-width: 2px 1px 1px;
   border-radius:0;
   color: #ccc;
   background: #222;
@@ -300,7 +300,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li>a:hover,
 .og-details .nav-tabs>li>a:active {
   color: #eee;
-  border-color: #909090 #555 #555;
+  border-color: #909090 #555 #555 #555;
 }
 /*
 .og-details .nav-tabs>li>a::before {
@@ -311,10 +311,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li.active>a,  
 .og-details .nav-tabs>li.active>a:hover,
 .og-details .nav-tabs>li.active>a:active {
-  background: #222;
   color: #ccc;
-  border-width: 2px 1px 0;
-  border-color: #909090 #555 #555;
+  border-color: #909090 #555 transparent #555;
   position:relative;
   bottom:-0.1rem;
 }
@@ -446,7 +444,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more {
   height: 3.2rem;
   width: 3.2rem;
-  line-height: 2.7rem;
+  line-height: 4.5rem;
   color: #ddd;
   background: #000;
   border-radius: 50%;
@@ -454,10 +452,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin:2rem 0 0;
+  margin:2rem 0 0 1rem;
   text-indent:2.5rem;
-  position: relative;
-  left: 1rem
 }
 
 .og-details .og-view-more.btn-lightbox{
@@ -498,8 +494,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\f065'; /* icon for full-screen */
   display: inline-block;
   position: relative;
-  top: 0.05rem;
-  left:-1.65rem;
+top: 0rem;
+left: -1.65rem;
   font-family: 'FontAwesome';
   color: #fff;
 }
