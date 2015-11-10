@@ -162,7 +162,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 /* coordinate og-fullimg img, and img wrapper */
 .og-img-wrapper{
   position:relative;
-  padding-bottom:80%;
+  padding-bottom:70%;
   overflow: hidden;
   display:block;
 }
