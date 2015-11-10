@@ -62,7 +62,9 @@ table.pagerer {
 
 ul.pager{ margin: 0 0 0.5rem;}
 
-
+.contextual-links-region > h2{
+  white-space:nowrap;
+}
 
 
 
@@ -459,7 +461,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   display: inline-block;
   white-space:nowrap;
   margin:2rem 0 0 1rem;
-  text-indent:3rem;
+  text-indent:2.8rem;
   text-transform: uppercase;
 }
 
@@ -468,8 +470,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-view-more.btn-lightbox{
-  line-height: 3rem;
-  text-indent: 4rem;
+
 }
 
 .og-details .og-view-more:hover {
