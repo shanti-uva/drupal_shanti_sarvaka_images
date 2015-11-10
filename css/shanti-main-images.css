@@ -426,7 +426,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   height: 2.75rem;
   width: 2.75rem;
   line-height: 2.7rem;
-  color: #ccc;
+  color: #ddd;
   background: #000;
   border-radius: 50%;
   border: 1px solid #777 !important;
@@ -440,7 +440,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .btn-lightbox:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
-  color: #eee;
+  color: #fff;
 }
 
 .og-details .btn-lightbox:active{
@@ -452,8 +452,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .btn-lightbox .icon {
   font-size: 1.55rem;
   position: relative;
-  bottom: 0.5rem;
-  right: 0.05rem;
+  bottom: 0.6rem;
+  right: 0;
   margin-right: 2.2rem;
   font-family: 'FontAwesome';
   line-height: 2rem;
