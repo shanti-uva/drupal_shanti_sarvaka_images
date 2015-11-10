@@ -406,29 +406,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 /*-----------------------------*/
-
-.og-details a.btn-lightbox,
-.og-details a.og-details-more {
-  border: none;
-  color: #999;
-  font-size: 13px;
-  color: #d6d6d6;
-  padding: 0;
-  display: inline-block;
-  margin: 30px 0 0;
-}
-.og-details a.btn-lightbox:hover,
-.og-details a.og-details-more:hover {
-  color: #ccc;
-}
-.og-details a.btn-lightbox:active,
-.og-details a.og-details-more:active {
-  color: #eee;
-}
-
 /*--- BEGIN Lightbox button ---*/
-.og-details .btn-lightbox,
-.og-details .og-details-more {
+.og-details .og-view-more {
   height: 2.75rem;
   width: 2.75rem;
   line-height: 2.7rem;
@@ -442,54 +421,47 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin:2rem 0 0;
   position:absolute;
 }
-.og-details .btn-lightbox:hover,
-.og-details .og-details-more:hover {
+.og-details .og-view-more:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
   color: #fff;
 }
 
-.og-details .btn-lightbox:active,
-.og-details .og-details-more:active{
+.og-details .og-view-more:active{
   background-color:#444;  
   border: 1px solid #777 !important;
   border-bottom-color: #777 !important;
 }
 
-.og-details .btn-lightbox .icon,
-.og-details .og-details-more .icon {
+.og-details .og-view-more .icon {
   font-size: 1.55rem;
   position: relative;
   bottom: 0.6rem;
   right: 0;
   margin-right: 2.2rem;
-  font-family: 'FontAwesome';
   line-height: 2rem;
 }
 
-.og-details .btn-lightbox .icon::before,
-.og-details .og-details-more .icon::before {
+.og-details .og-view-more .icon::before {
   content: '\f065'; /* icon for full-screen */
   display: inline;
   margin-right: 0;
   position: relative;
   top: 0.55rem;
   left: 0.65rem;
+  font-family: 'FontAwesome';
 }
 
 .og-details .og-details-more .icon::before{
-  content: '\e61f'; /* unique icon for Read more... */
+  content: '\e61f' !important; /* unique icon for Read more... */
+  font-family: 'shanticon';
 }
 
-.og-details .btn-lightbox:hover .icon::before,
-.og-details .btn-lightbox:active .icon::before,
-.og-details .og-details-more:hover .icon::before,
-.og-details .og-details-more:active .icon::before {
+.og-details .og-view-more .icon::before {
   color:#fff;
 }
 
-.og-details .btn-lightbox::before,
-.og-details .og-details-more::before{
+.og-details .og-view-more::before{
   content:'';
 }
 
