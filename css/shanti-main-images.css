@@ -463,12 +463,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-view-more.btn-lightbox .icon{
-  text-indent: 0 !important;
+  text-indent: 3.5rem !important;
   font-family: 'FontAwesome';
 }
 
 .og-details .og-view-more.og-details-more .icon{
-  text-indent: 3.5rem !important;
+  text-indent: 0 !important;
   font-family: 'shanticon';
 }
 
