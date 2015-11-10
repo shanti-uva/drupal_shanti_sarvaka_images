@@ -517,8 +517,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\e61f'; /* unique icon for Read more... */
   font-family: 'shanticon';
   position: relative;
-top: 0rem;
-right: 2.2rem;
+  top: 0rem;
+  right: 1.975rem;
 }
 
 .og-loading{
