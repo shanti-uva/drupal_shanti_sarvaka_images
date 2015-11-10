@@ -407,21 +407,21 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 /*-----------------------------*/
 
-
+.og-details a.btn-lightbox,
 .og-details a.og-details-more {
   border: none;
   color: #999;
   font-size: 13px;
   color: #d6d6d6;
-  padding: 10px 20px;
+  padding: 0;
   display: inline-block;
   margin: 30px 0 0;
 }
-
+.og-details a.btn-lightbox:hover,
 .og-details a.og-details-more:hover {
   color: #ccc;
 }
-
+.og-details a.btn-lightbox:active,
 .og-details a.og-details-more:active {
   color: #eee;
 }
@@ -442,7 +442,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin:2rem 0 0;
   position:absolute;
 }
-.og-details .btn-lightbox:hover
+.og-details .btn-lightbox:hover,
 .og-details .og-details-more:hover {
   text-decoration: none;
   border-color:#f0f0f0 !important;
@@ -482,11 +482,14 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .btn-lightbox:hover .icon::before,
-.og-details .btn-lightbox:active .icon::before {
+.og-details .btn-lightbox:active .icon::before,
+.og-details .og-details-more:hover .icon::before,
+.og-details .og-details-more:active .icon::before {
   color:#fff;
 }
 
-.og-details .btn-lightbox::before{
+.og-details .btn-lightbox::before,
+.og-details .og-details-more::before{
   content:'';
 }
 
