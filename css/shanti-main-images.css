@@ -254,7 +254,6 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li>a:active {
   color: #eee;
   border-color: #909090 #555 transparent #555;
-  border-bottom-color:transparent;
   border-radius:0;
 }
 
