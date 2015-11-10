@@ -453,7 +453,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .og-details-more .icon{
-  padding-left:3.5rem;
+  padding-left:3.5rem !important;
 }
 
 .og-details .og-details-more .icon::before{
