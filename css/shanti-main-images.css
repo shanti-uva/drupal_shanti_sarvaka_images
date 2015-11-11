@@ -193,7 +193,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   float: left;
   height: 100%;
   overflow: hidden;
-  position: relative;
+  /*position: relative;*/
 }
 
 .og-fullimg {
@@ -201,6 +201,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin-left:2rem;
   width: 55%;
   text-align:center;
+  position: relative;
 }
 
 /* coordinate og-fullimg img, and img wrapper */
