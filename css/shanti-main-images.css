@@ -198,7 +198,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-fullimg {
   padding: 0;
-  margin-left:2rem;
+  margin-left:1rem;
   width: 55%;
   text-align:center;
   position: relative;
@@ -472,6 +472,12 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 1rem;
   text-indent:2.45rem;
   text-transform: uppercase;
+  position:absolute;
+  right:12%;
+}
+
+.og-details .og-view-more.btn-lightbox{
+  right:18%;
 }
 
 .og-details .og-view-more:hover {
@@ -538,7 +544,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -25px 0 0 -27px;
+  margin: -25px 0 0 -25px;
   -webkit-animation: loader 0.5s infinite ease-in-out both;
   -moz-animation: loader 0.5s infinite ease-in-out both;
   animation: loader 0.5s infinite ease-in-out both;
@@ -657,6 +663,10 @@ div.pdfextlink { float: right;}
 
 .pswp__button{
   margin-right:1.5rem;
+}
+
+.pswp__caption__center{
+  font-family: 'museo-sans-500',helvetica,arial,sans-serif;
 }
 
 /**** lightbox 
