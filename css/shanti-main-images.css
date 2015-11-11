@@ -370,6 +370,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   letter-spacing: 0.05rem;
   color: #c0c0c0;
   max-height: 300px;
+  min-height: 150px;
   overflow-y: auto;
   padding-right: 2rem
 }
