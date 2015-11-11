@@ -478,7 +478,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .og-view-more.btn-lightbox{
   position: absolute;
-  top: 0.7rem;
+  top: 0.5rem;
   right: 18%;
 }
 
@@ -521,7 +521,11 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .og-view-more span::before {
   display: inline-block;
-  color: #fff;
+  color: #aaa;
+}
+
+.og-details .og-view-more:hover span::before {
+  color: #ccc;
 }
 
 .og-details .og-view-more.btn-lightbox > span::before{
