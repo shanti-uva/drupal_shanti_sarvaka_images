@@ -247,7 +247,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .tab-pane {
   padding: 0 0 0 1rem;
   max-height: 450px;
-  min-height:270px;
+  min-height:300px;
 }
 
 .og-details a{
