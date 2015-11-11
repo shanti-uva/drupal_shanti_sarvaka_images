@@ -149,9 +149,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   background: #222;
   padding: 2.5rem 5.5rem;
   height: 100%;
-  -webkit-box-shadow: inset 0 0 100px 40px rgba(0,0,1,0);
-  -moz-box-shadow: inset 0 0 100px 40px rgba(0,0,1,0);
-  box-shadow: inset 0 0 100px 40px rgba(0,0,0,1.0);
+  -webkit-box-shadow: inset 0 0 150px 60px rgba(0,0,1,0);
+  -moz-box-shadow: inset 0 0 150px 60px rgba(0,0,1,0);
+  box-shadow: inset 0 0 150px 60px rgba(0,0,0,1.0);
 }
 
 .og-close {
@@ -468,16 +468,18 @@ ul.pager{ margin: 0 0 0.5rem;}
   border: 1px solid #777 !important;
   background-clip: padding-box;
   display: inline-block;
-  white-space:nowrap;
-  margin: 1rem 0 0;
-  text-indent:2.45rem;
+  white-space: nowrap;
+  margin: 2rem 0 0 0.5rem;
+  text-indent: 2.45rem;
   text-transform: uppercase;
-  position:absolute;
-  right:20%;
+  position: relative;
+  letter-spacing: 0.07rem;
 }
 
 .og-details .og-view-more.btn-lightbox{
-  right:25%;
+  position: absolute;
+  top: 0.7rem;
+  right: 18%;
 }
 
 .og-details .og-view-more:hover {
@@ -526,8 +528,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   content: '\f065'; /* icon for full-screen */
   font-family: 'FontAwesome';
   position: relative;
-  top: -0.05rem;
-  left: -1.6rem;
+  top: -0.04rem;
+  left: -1.62rem;
 }
 
 
