@@ -135,7 +135,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-expander{ 
   position: absolute !important;
   border-bottom:0.75rem double #eee;
-  background: #111;
+  background: #222;
   top: auto;
   left: 0;
   width: 100%;
@@ -146,12 +146,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-expander-inner {
-  background: #333;
+  background: #222;
   padding: 2.5rem 5.5rem;
   height: 100%;
-  -webkit-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
+ /* -webkit-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
   -moz-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
-  box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,0.7);
+  box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,0.7);*/
 }
 
 .og-close {
@@ -199,7 +199,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-fullimg {
   padding: 0;
   margin-left:2rem;
-  width: 55%;
+  width: 56%;
   text-align:center;
 }
 
