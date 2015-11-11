@@ -341,7 +341,7 @@ var Grid = (function($) {
 			this.$title.html( eldata.title );
 			this.$description.html( eldata.description );
 			
-			var lnktxt = (eldata.dtype == 'pdf') ? "View PDF" : "Read more ...";
+			var lnktxt = (eldata.dtype == 'pdf') ? "View PDF" : "Read more";
 			this.$href.html('<span>' + lnktxt + '</span>').attr( 'href', eldata.href );
 			
 			this.$creator.html( "<label>Photographer:</label> " + eldata.creator );
