@@ -146,12 +146,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-expander-inner {
-  background: #222;
+  background: #333;
   padding: 2.5rem 5.5rem;
   height: 100%;
   -webkit-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
   -moz-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
-  box-shadow: inset 0px 0px 70px 30px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,0.7);
 }
 
 .og-close {
@@ -199,7 +199,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-fullimg {
   padding: 0;
   margin-left:2rem;
-  width: 56%;
+  width: 55%;
   text-align:center;
 }
 
@@ -247,7 +247,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .tab-pane {
   padding: 0 0 0 1rem;
   max-height: 450px;
-  min-height:300px;
+  min-height:240px;
 }
 
 .og-details a{
