@@ -199,14 +199,14 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-fullimg {
   padding: 0;
   margin-left:2rem;
-  width: 56%;
+  width: 55%;
   text-align:center;
 }
 
 /* coordinate og-fullimg img, and img wrapper */
 .og-img-wrapper{
   position:relative;
-  padding-bottom:81%;
+  padding-bottom:72%;
   overflow: hidden;
   display:block;
 }
