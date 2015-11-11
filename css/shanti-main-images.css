@@ -149,6 +149,9 @@ ul.pager{ margin: 0 0 0.5rem;}
   background: #222;
   padding: 2.5rem 5rem;
   height: 100%;
+  /*-webkit-box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);
+  box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);*/
 }
 
 .og-close {
@@ -255,7 +258,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .tab-pane {
   padding-top: 0rem;
-  max-height: 350px;
+  max-height: 450px;
   min-height:270px;
 }
 
