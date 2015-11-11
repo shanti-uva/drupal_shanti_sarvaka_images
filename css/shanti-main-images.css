@@ -255,7 +255,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .tab-pane {
   padding-top: 0rem;
-  min-height:250px;
+  max-height: 350px;
 }
 
 .og-details a{
@@ -372,6 +372,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
   letter-spacing: 0.05rem;
   color: #c0c0c0;
+
+max-height: 310px;
+overflow-y: auto;
+padding-right: 2rem
 }
 
 .og-details h3 {
