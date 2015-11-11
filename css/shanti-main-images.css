@@ -199,7 +199,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-fullimg {
   padding: 0;
   margin-left:2rem;
-  width: 55%;
+  width: 56%;
   text-align:center;
 }
 
@@ -248,6 +248,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding: 0 0 0 1rem;
   max-height: 450px;
   min-height:240px;
+}
+
+.row-offcanvas > section.content-section .og-details .tab-content:nth-of-type(1){
+  padding-bottom: 0 !important
 }
 
 .og-details a{
