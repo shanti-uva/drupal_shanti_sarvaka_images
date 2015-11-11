@@ -760,7 +760,7 @@ div.pdfextlink { float: right;}
 @media screen and (min-width: 992px) {
 
   .og-details {
-    padding: 0.3em 0 0 2rem;
+    padding: 0.3em 0 0 1rem;
   }
 }
 
