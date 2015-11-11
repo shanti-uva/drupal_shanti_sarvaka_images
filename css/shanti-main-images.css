@@ -473,11 +473,11 @@ ul.pager{ margin: 0 0 0.5rem;}
   text-indent:2.45rem;
   text-transform: uppercase;
   position:absolute;
-  right:17%;
+  right:20%;
 }
 
 .og-details .og-view-more.btn-lightbox{
-  right:20%;
+  right:25%;
 }
 
 .og-details .og-view-more:hover {
