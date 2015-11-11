@@ -146,12 +146,12 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-expander-inner {
-  background: #222;
-  padding: 2.5rem 5rem;
+  background: #333;
+  padding: 2.5rem 5.5rem;
   height: 100%;
-  /*-webkit-box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);
-  -moz-box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);
-  box-shadow: inset 0px 0px 137px 33px rgba(0,0,0,1);*/
+  -webkit-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
+  -moz-box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,1);
+  box-shadow: inset 0px 0px 170px 60px rgba(0,0,0,0.7);
 }
 
 .og-close {
@@ -244,20 +244,8 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding: 1rem;
 }
 
-.og-details .tab-content #info{
-  padding-left:0.6rem;
-}
-
-.og-details .tab-content #desc{
-  padding-left:1.2rem;
-}
-
-.row-offcanvas > section.content-section .og-details .tab-content:nth-of-type(1){
-  padding-bottom: 0 !important
-}
-
 .og-details .tab-pane {
-  padding-top: 0rem;
+  padding: 0 0 0 1rem;
   max-height: 450px;
   min-height:270px;
 }
