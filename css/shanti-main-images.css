@@ -240,7 +240,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-content {
-  background: #1e1e1e;
+  background: #1c1c1c;
   border-bottom: 1px solid #555;
   padding: 1rem;
 }
@@ -326,7 +326,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .nav-tabs>li.active>a:hover,
 .og-details .nav-tabs>li.active>a:active {
   color: #c0c0c0;
-  background: #1e1e1e;
+  background: #1c1c1c;
   border-width: 2px 1px 1px;
   border-color: #909090 #555 transparent #555;
 }
@@ -469,15 +469,15 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin: 0;
+  margin: 1rem 0 0;
   text-indent:2.45rem;
   text-transform: uppercase;
   position:absolute;
-  right:12%;
+  right:15%;
 }
 
 .og-details .og-view-more.btn-lightbox{
-  right:18%;
+  right:20%;
 }
 
 .og-details .og-view-more:hover {
