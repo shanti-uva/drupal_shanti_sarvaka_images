@@ -246,7 +246,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-pane {
-  padding: 0 0 0 1rem;
+  padding: 0 0 5rem 1rem;
   max-height: 450px;
   min-height:240px;
 }
@@ -469,7 +469,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin: 1rem;
+  margin: 0;
   text-indent:2.45rem;
   text-transform: uppercase;
   position:absolute;
@@ -494,11 +494,17 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .og-view-more > span {
   font-size: 1.55rem;
+  color: #999;
   position: relative;
   bottom: 0.6rem;
   right: 0;
   line-height: 4.2rem;
   text-transform: uppercase;
+}
+
+.og-details .og-view-more:hover > span,
+.og-details .og-view-more:active > span {
+  color: #ddd;
 }
 
 .og-details .btn-lightbox > span{
