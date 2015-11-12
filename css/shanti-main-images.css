@@ -231,8 +231,8 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details {
-  padding: 0 1rem 0 0;
-  width: 43%;
+  padding: 0;
+  width: 45%;
   float:left;
   margin:0;
   -webkit-transition: margin .3s ease-out;
