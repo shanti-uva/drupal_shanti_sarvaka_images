@@ -469,13 +469,13 @@ ul.pager{ margin: 0 0 0.5rem;}
   background-clip: padding-box;
   display: inline-block;
   white-space:nowrap;
-  margin: 1.7rem 0 1rem 0.7rem;
+  margin: 2rem 0 1rem 1.5rem;
   text-indent:2.45rem;
   text-transform: uppercase;
 }
 
 .og-details .og-view-more.btn-lightbox{
-  margin-left:0;
+  margin-left:1rem;
 }
 
 .og-details .og-view-more:hover {
