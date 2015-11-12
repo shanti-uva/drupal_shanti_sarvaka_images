@@ -462,7 +462,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   height: 3.2rem;
   width: 3.2rem;
   line-height: 4.5rem;
-  color: #ddd;
+  color: #aaa;
   background: #000;
   border-radius: 50%;
   border: 1px solid #777 !important;
@@ -483,7 +483,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more:hover {
   text-decoration: none;
   border-color:#aaa !important;
-  color: #fff;
+  color: #ddd;
 }
 
 .og-details .og-view-more:active{
@@ -500,6 +500,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   right: 0;
   line-height: 4.2rem;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .og-details .og-view-more:hover > span,
@@ -519,7 +520,11 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-details .og-view-more span::before {
   display: inline-block;
-  color: #fff;
+  color: #aaa;
+}
+
+.og-details .og-view-more:hover span::before {
+  color: #ddd;
 }
 
 .og-details .og-view-more.btn-lightbox > span::before{
