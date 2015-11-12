@@ -375,11 +375,13 @@ var Grid = (function($) {
 						self.$largeImg.append( $img.fadeIn( 100 ));
 						self.$fullimage.append( self.$largeImgDiv );
 						// Find the lightbox icon and enable click to initiate gallery
-						$("a.lightbox-link, a.lightbox-img-link").click(function(event) {
+						$("a.lightbox-link, a.lightbox-img-link").unbind('click').click(function(event) {
 							event.preventDefault();
        						var pswpElement = document.querySelectorAll('.pswp')[0];
        						var iind = self.$item.prevAll().length;
-							var options = { index: iind, getNumItemsFn: function() { return Drupal.settings.sarvaka_image_gallery.total_items; }};
+							var options = { 
+								index: iind, 
+								getNumItemsFn: function() { return Drupal.settings.sarvaka_image_gallery.total_items; }};
 							Drupal.settings.media_sharedshelf.gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, Drupal.settings.media_sharedshelf.lbitems, options);
 							Drupal.settings.media_sharedshelf.gallery.init();
 							Drupal.settings.media_sharedshelf.gallery.goTo(iind);
