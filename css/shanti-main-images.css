@@ -369,8 +369,7 @@ ul.pager{ margin: 0 0 0.5rem;}
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
   letter-spacing: 0.05rem;
   color: #c0c0c0;
-  max-height: 260px;
-  min-height: 150px;
+  max-height: 260px; min-height: 150px;
   overflow-y: auto;
   padding-right: 2rem
 }
@@ -758,7 +757,22 @@ div.pdfextlink { float: right;}
 
 @media screen and (min-width: 768px) {
 
- } 
+.og-img-wrapper{
+  position:relative;
+  /*padding-bottom:81%;*/
+  overflow: hidden;
+  display:block;
+}
+
+.og-fullimg img{
+  position:relative;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+
+}
 
 @media screen and (min-width: 992px) {
 
