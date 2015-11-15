@@ -740,7 +740,9 @@ div.pdfextlink { float: right;}
   }
 
 
-
+  .og-details{
+    padding-right: 0;
+  }
 
   .og-img-wrapper{
     position: relative;

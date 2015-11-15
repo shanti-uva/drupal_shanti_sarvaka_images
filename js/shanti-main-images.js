@@ -31,6 +31,7 @@
 	 
     $.fn.popupImageCentering = function() {
 		return this.each(function() {
+			
 			// Adjust top margin
 			/*
 			var 	wrapper = $(this).parents('.og-img-wrapper'), // get wrapper
@@ -53,20 +54,25 @@
 			//console.log("cntwdt: " + cntwdt);
 			//console.log("lmarg: " + lmarg);*
 
-             var imght = $(this).height(),
-				 cnthgt = $(this).parents('.og-fullimg').height(),
-				 tmarg = (cnthgt > imght) ? -imght / 2 : -cnthgt / 2;
+			if ($(".og-img-wrapper").css("padding-bottom") == "0" ){
 
-			 // vertically align tabs based on taller tab's actual height
-			 var infohgt = $( '.og-details #info' ).actual('height') ;
-			 var deschgt =  $( '.og-details #desc' ).actual('height') ;
-			 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
-			 var detheight = panelhgt + 70; // account for tabs above and link below info tab
-			 
-			 if (detheight < cnthgt - 30) {
-			 	var tmarg = ((cnthgt - detheight) / 2);
-			 	$('.og-details').css('margin-top', tmarg + 'px');
-			 }
+	             var imght = $(this).height(),
+					 cnthgt = $(this).parents('.og-fullimg').height(),
+					 tmarg = (cnthgt > imght) ? -imght / 2 : -cnthgt / 2;
+
+				 // vertically align tabs based on taller tab's actual height
+				 var infohgt = $( '.og-details #info' ).actual('height') ;
+				 var deschgt =  $( '.og-details #desc' ).actual('height') ;
+				 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
+				 var detheight = panelhgt + 70; // account for tabs above and link below info tab
+				 
+				if (detheight < cnthgt - 30) {
+				 	var tmarg = ((cnthgt - detheight) / 2);
+				 	$('.og-details').css('margin-top', tmarg + 'px');
+				}
+
+			}
+
 		});
    };
 
