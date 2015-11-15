@@ -743,21 +743,19 @@ div.pdfextlink { float: right;}
 
 
   .og-img-wrapper{
-    position:relative;
-    /*padding-bottom:81%;*/
+    position: relative;
+    padding-bottom: 0;
     overflow: hidden;
-    display:block;
+    display: block;
   }
 
   .og-fullimg img{
-    position:relative;
-    top:0;
-    right:0;
-    left:0;
-    bottom:0;
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
