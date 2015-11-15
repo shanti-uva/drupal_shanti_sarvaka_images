@@ -715,6 +715,7 @@ div.pdfextlink { float: right;}
   .og-details{
     padding-right: 0;
     padding-top: 2.5rem;
+    padding-left: 1rem;
     margin-top:0;
     width:100%;
   }
@@ -734,6 +735,7 @@ div.pdfextlink { float: right;}
 
   .og-img-wrapper{
     position: relative;
+    right: 0.7rem;
     padding-bottom: 0;
     overflow: hidden;
     display: block;
