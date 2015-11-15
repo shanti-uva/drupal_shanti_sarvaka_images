@@ -54,7 +54,7 @@
 			//console.log("cntwdt: " + cntwdt);
 			//console.log("lmarg: " + lmarg);*
 
-			if ($(".og-img-wrapper").css("padding-bottom") == "0" ){
+			// if ($(".og-img-wrapper").css("padding-bottom") == "0" ){
 
 	             var imght = $(this).height(),
 					 cnthgt = $(this).parents('.og-fullimg').height(),
@@ -71,7 +71,7 @@
 				 	$('.og-details').css('margin-top', tmarg + 'px');
 				}
 
-			}
+			// }
 
 		});
    };
