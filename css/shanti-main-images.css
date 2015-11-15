@@ -709,10 +709,11 @@ div.pdfextlink { float: right;}
   .og-fullimg {
     height:auto;
     width:100%;
+    padding-left:0;
   }
 
   .og-details{
-    padding-right: 1em;
+    padding-right: 0;
     padding-top: 2.5rem;
     margin-top:0;
     width:100%;
@@ -725,23 +726,10 @@ div.pdfextlink { float: right;}
     border: none;
   }
 
-  .og-details h3 {
-    margin: 1rem 0.5rem 1.25rem;
-  }
-
   .og-expander-inner {
     overflow-x: auto;
     padding-bottom: 5rem;
     padding-top: 2rem;
-  }
-
-  .og-fullimg img {
-    margin: 0;
-  }
-
-
-  .og-details{
-    padding-right: 0;
   }
 
   .og-img-wrapper{
@@ -757,6 +745,12 @@ div.pdfextlink { float: right;}
     right: auto;
     left: auto;
     bottom: auto;
+    margin: 0 auto;
+  }
+
+  .og-details h3 {
+    font-size:1.5em;
+    margin: 1rem 0.5rem 1.25rem;
   }
 }
 
