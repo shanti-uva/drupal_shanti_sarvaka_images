@@ -738,6 +738,26 @@ div.pdfextlink { float: right;}
   .og-fullimg img {
     margin: 0;
   }
+
+
+
+
+  .og-img-wrapper{
+    position:relative;
+    /*padding-bottom:81%;*/
+    overflow: hidden;
+    display:block;
+  }
+
+  .og-fullimg img{
+    position:relative;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -757,20 +777,7 @@ div.pdfextlink { float: right;}
 
 @media screen and (min-width: 768px) {
 
-.og-img-wrapper{
-  position:relative;
-  /*padding-bottom:81%;*/
-  overflow: hidden;
-  display:block;
-}
 
-.og-fullimg img{
-  position:relative;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
-}
 
 }
 
