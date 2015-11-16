@@ -56,20 +56,22 @@
 
 			// if ($(".og-img-wrapper").css("padding-bottom") == "0" ){
 
-	             var imght = $(this).height(),
-					 cnthgt = $(this).parents('.og-fullimg').height(),
-					 tmarg = (cnthgt > imght) ? -imght / 2 : -cnthgt / 2;
+
+
+//	             var imght = $(this).height(),
+//					 cnthgt = $(this).parents('.og-fullimg').height(),
+//					 tmarg = (cnthgt > imght) ? -imght / 2 : -cnthgt / 2;
 
 				 // vertically align tabs based on taller tab's actual height
-				 var infohgt = $( '.og-details #info' ).actual('height') ;
-				 var deschgt =  $( '.og-details #desc' ).actual('height') ;
-				 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
-				 var detheight = panelhgt + 70; // account for tabs above and link below info tab
+//				 var infohgt = $( '.og-details #info' ).actual('height') ;
+//				 var deschgt =  $( '.og-details #desc' ).actual('height') ;
+//				 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
+//				 var detheight = panelhgt + 70; // account for tabs above and link below info tab
 				 
-				if (detheight < cnthgt - 30) {
-				 	var tmarg = ((cnthgt - detheight) / 2);
-				 	$('.og-details').css('margin-top', tmarg + 'px');
-				}
+//				if (detheight < cnthgt - 30) {
+//				 	var tmarg = ((cnthgt - detheight) / 2);
+//				 	$('.og-details').css('margin-top', tmarg + 'px');
+//				}
 
 			// }
 
