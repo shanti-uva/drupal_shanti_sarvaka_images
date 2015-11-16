@@ -199,7 +199,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-fullimg {
   padding: 0 0 0 1rem;
   margin:0 1rem;
-  width: 52%;
+  width: 52.5%;
   text-align:center;
   position: relative;
 }
@@ -240,7 +240,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-details .tab-content {
-  background: #171717;
+  background: #1b1b1b;
   border-bottom: 1px solid #555;
   padding: 1rem 0 1rem 1rem;
 }
