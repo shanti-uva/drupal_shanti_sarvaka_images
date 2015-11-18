@@ -194,7 +194,7 @@ var Grid = (function($) {
 	}
 
 	function getWinSize() {
-		return this.each(function() {
+
 			if ($(window).width() <= 768){
 
 				winsize = { width : $window.width(), height : $window.height() };
@@ -204,7 +204,6 @@ var Grid = (function($) {
 				winsize = { width : $window.width(), height : $window.height() - 30 };
 
 			}
-		});
 	}
 
 	function showPreview( $item ) {
