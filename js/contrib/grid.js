@@ -204,8 +204,6 @@ var Grid = (function($) {
 				winsize = { width : $window.width(), height : $window.height() - 30 };
 
 			}
-
-			$(window).bind('load orientationchange resize', getWinSize );
 	}
 
 	function showPreview( $item ) {
