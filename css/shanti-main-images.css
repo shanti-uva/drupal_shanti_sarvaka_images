@@ -462,7 +462,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 .og-details .og-view-more {
   height: 3.2rem;
   width: 3.2rem;
-  line-height: 4.5rem;
+  /*line-height: 4.5rem;*/
   color: #aaa;
   background: #000;
   border-radius: 50%;
@@ -473,10 +473,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin: 1rem 0 1rem 1.5rem;
   text-indent:2.45rem;
   text-transform: uppercase;
-}
-
-.og-details .og-view-more.btn-lightbox{
-  margin-left:1rem;
 }
 
 .og-details .og-view-more:hover {

@@ -194,7 +194,16 @@ var Grid = (function($) {
 	}
 
 	function getWinSize() {
-		winsize = { width : $window.width(), height : $window.height() - 30 };
+
+		if ($(window).width() <= 768){
+
+			winsize = { width : $window.width(), height : $window.height() };
+
+		} else {
+
+			winsize = { width : $window.width(), height : $window.height() - 30 };
+			
+		}
 	}
 
 	function showPreview( $item ) {
