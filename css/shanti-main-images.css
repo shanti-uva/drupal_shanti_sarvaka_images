@@ -92,7 +92,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   position: relative !important;
 }
 
-
+.front .main-wrapper{
+  padding-right:0;
+  padding-left:0;
+}
 
 
 /*------------------------------------------------*/
