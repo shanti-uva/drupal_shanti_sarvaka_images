@@ -201,6 +201,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 .og-fullimg {
   padding: 0 0 0 1rem;
+  padding: 0; /* test */
   margin:0 1rem;
   width: 52.5%;
   text-align:center;
@@ -209,7 +210,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 
 /* coordinate og-fullimg img, and img wrapper */
 .og-img-wrapper{
-  /*position:relative;*/
+  position:relative; /* test */
   padding-bottom:81%;
   overflow: hidden;
   display:block;
