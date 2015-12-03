@@ -286,7 +286,7 @@ var Grid = (function($) {
 			this.$tabs = $('<ul class="nav nav-tabs" role="tablist">' +
 	   			'<li role="presentation" class="active"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Description</a></li>' +
 	   			'<li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Details</a></li></ul>');
-	   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$lightboxLink);
+	   		this.$desctab = $('<div role="tabpanel" class="tab-pane active" id="desc"></div>').append( this.$title, this.$description, this.$lightboxLink, this.$href);
 	   		//this.$photographer = $('<li class="photographer">Photographer</li>');
 	   		this.$date = $('<li class="date">Date</li>');
 	   		this.$place = $('<li class="place">Place</li>');
@@ -294,7 +294,7 @@ var Grid = (function($) {
 	   		this.$dtype = $('<li class="dtype">Type</li>');
 	   		this.$ssid = $('<li class="dtype">Shared Shelf ID</li>');
 	   		this.$infolist = $('<ul></ul>').append(this.$creator, this.$date, this.$place, this.$dtype, this.$ssid);
-	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist, this.$href);
+	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist);
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
 			
