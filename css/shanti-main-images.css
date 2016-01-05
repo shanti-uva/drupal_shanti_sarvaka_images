@@ -66,8 +66,6 @@ ul.pager{ margin: 0 0 0.5rem;}
   white-space:nowrap;
 }
 
-
-
 .front.logged-in .tab-pane.main-col > div > .block-system,
 .front.logged-in .content-section .contextual-links-region h2,
 .front.logged-in .content-section .contextual-links-region .content{ 
@@ -773,6 +771,12 @@ div.pdfextlink { float: right;}
 }
 
 
+@media screen and (max-width: 991px) {
+  .front .content-section .tab-content:nth-of-type(1){
+    padding-left:25px;
+    padding-right: 25px;
+  }
+}
 
 
 /*--------------------------*/
