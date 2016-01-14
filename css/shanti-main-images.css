@@ -57,6 +57,7 @@ table.pagerer {
 
 .front.logged-in .view-media-sharedshelf-my-images table.pagerer:first-of-type{
   margin-top: 1rem;
+  margin-bottom: -0.5rem;
 }
 
 .view-media-sharedshelf-my-images table.pagerer:last-child{ 
