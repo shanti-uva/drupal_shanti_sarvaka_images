@@ -197,11 +197,11 @@ var Grid = (function($) {
 
 			if ($(window).width() <= 768){
 
-				winsize = { width : $window.width(), height : $window.height() };
+				winsize = { width : $window.width(), height : $window.height() - 0 };
 
 			} else {
 
-				winsize = { width : $window.width(), height : $window.height() - 0 };
+				winsize = { width : $window.width(), height : $window.height() - 30 };
 
 			}
 	}
