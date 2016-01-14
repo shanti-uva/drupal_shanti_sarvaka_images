@@ -709,13 +709,19 @@ div.pdfextlink { float: right;}
   }
 }
 
+@media screen and (max-width: 750px) {
+  
+  .og-fullimg {
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
 
   .og-fullimg {
     height:auto;
     width:100%;
-    padding-left:0;
-    padding: 0 1rem;
+    /*padding-left:0;*/
   }
 
   .og-details{
