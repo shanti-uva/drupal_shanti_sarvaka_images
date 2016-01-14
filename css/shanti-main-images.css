@@ -89,12 +89,12 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin-top: -1rem;
   position: relative !important;
 }
-
+/*
 .front .main-wrapper{
   padding-right:0;
   padding-left:0;
 }
-
+*/
 
 /*------------------------------------------------*/
 /***** BEGIN gallery grid, dropdown, lightbox *****/
