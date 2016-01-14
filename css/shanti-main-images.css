@@ -55,6 +55,10 @@ table.pagerer {
   margin-top: -2.4rem;
 }
 
+.front.logged-in .view-media-sharedshelf-my-images table.pagerer:first-of-type{
+  margin-top: -4rem;
+}
+
 .view-media-sharedshelf-my-images table.pagerer:last-child{ 
   margin-bottom: 5rem;
   margin-top: 1.5rem;
