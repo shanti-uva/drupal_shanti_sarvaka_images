@@ -201,7 +201,7 @@ var Grid = (function($) {
 
 			} else {
 
-				winsize = { width : $window.width(), height : $window.height() - 30 };
+				winsize = { width : $window.width(), height : $window.height() - 0 };
 
 			}
 	}
