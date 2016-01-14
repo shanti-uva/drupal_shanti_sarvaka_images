@@ -56,7 +56,7 @@ table.pagerer {
 }
 
 .front.logged-in .view-media-sharedshelf-my-images table.pagerer:first-of-type{
-  margin-top: -4rem;
+  margin-top: 1rem;
 }
 
 .view-media-sharedshelf-my-images table.pagerer:last-child{ 
@@ -82,7 +82,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .front.logged-in .content-section .contextual-links-region .content{
-  padding: 1rem 0 4rem;
+  padding: 0 0 4rem;
 }
 
 .front.logged-in .tab-pane.main-col > div,
@@ -97,6 +97,11 @@ ul.pager{ margin: 0 0 0.5rem;}
   margin-top: -1rem;
   position: relative !important;
 }
+
+.front.logged-in .main-content .content-section .view-content{
+  margin-top:-4rem;
+}
+
 /*
 .front .main-wrapper{
   padding-right:0;
