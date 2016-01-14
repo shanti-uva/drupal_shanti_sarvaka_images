@@ -198,7 +198,7 @@ ul.pager{ margin: 0 0 0.5rem;}
 }
 
 .og-fullimg {
-  padding: 0 0 0 1rem;
+  padding: 0 1rem;
   margin:0 1rem;
   width: 52.5%;
   text-align:center;
@@ -715,6 +715,7 @@ div.pdfextlink { float: right;}
     height:auto;
     width:100%;
     padding-left:0;
+    padding: 0 1rem;
   }
 
   .og-details{
