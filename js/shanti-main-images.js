@@ -67,7 +67,7 @@
 				 var panelhgt = (infohgt > deschgt) ? infohgt : deschgt;
 				 var detheight = panelhgt + 70; // account for tabs above and link below info tab
 				 
-				if (detheight < cnthgt - 0) {
+				if (detheight < cnthgt - 30) {
 				 	var tmarg = ((cnthgt - detheight) / 2);
 				 	$('.og-details').css('margin-top', tmarg + 'px');
 				}
