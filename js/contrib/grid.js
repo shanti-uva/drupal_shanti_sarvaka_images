@@ -195,13 +195,13 @@ var Grid = (function($) {
 
 	function getWinSize() {
 
-			if ($(window).width() > 768){
+			if ($(window).width() > 767){
 
-				winsize = { width : $window.width(), height : $window.height() };
+				winsize = { width : $window.width(), height : $window.height() - 30 };
 
 			} else {
 
-				winsize = { width : $window.width(), height : $window.height() - 30 };
+				winsize = { width : $window.width(), height : $window.height() };
 
 			}
 	}
