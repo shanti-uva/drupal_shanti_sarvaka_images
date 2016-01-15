@@ -195,7 +195,7 @@ var Grid = (function($) {
 
 	function getWinSize() {
 
-			if ($(window).width() <= 768){
+			if ($(window).width() > 768){
 
 				winsize = { width : $window.width(), height : $window.height() };
 
