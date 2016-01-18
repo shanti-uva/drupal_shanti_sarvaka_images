@@ -830,7 +830,6 @@ div.pdfextlink { float: right;}
 }
  
 .og-details p::-webkit-scrollbar-thumb {
-  background-color: #555;
-  outline: 1px solid #555;
+    background-color: #555;
 }
 
