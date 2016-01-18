@@ -824,3 +824,18 @@ div.pdfextlink { float: right;}
 
 
 
+
+.og-details p::-webkit-scrollbar {
+    width: 0.8rem;
+}
+ 
+.og-details p::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
+}
+ 
+.og-details p::-webkit-scrollbar-thumb {
+  background-color: #555;
+  outline: 1px solid #555;
+  margin-left: -0.1rem;
+}
+
