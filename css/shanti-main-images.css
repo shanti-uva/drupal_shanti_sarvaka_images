@@ -1,4 +1,4 @@
-/** Custom Color Settings **/
+/** Sarvaka sub-theme Color Settings **/
 .titlearea,
 .carousel-control,
 .breadcrumb .icon,
@@ -40,15 +40,28 @@
 .navbar-brand:active .site-slogan {
   color: #444 !important;
 }
+/*** END Sarvaka subtheme colors ***/
 
+
+/*
 .titlearea{ box-shadow: inset 0 1px 5px 3px rgba(50, 50, 50, 0.100);}
 .titlearea > div{ box-shadow: inset 0 -2px 10px -4px rgba(0, 0, 0, 0.000);}
+*/
 
-/* Pagerer clear both (should this be in shanti-main.css?) */
+
+
+
+
+ul.pager{ margin: 0 0 0.5rem;}
+
 table.pagerer { 
-  /* clear: both; this is not requied so I'm removing it */
   width:100%; 
   margin-top: -0.7rem;
+}
+
+.view-media-sharedshelf-my-images table.pagerer:last-child{ 
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
 }
 
 .front .view-media-sharedshelf-my-images table.pagerer:first-of-type{
@@ -60,17 +73,15 @@ table.pagerer {
   margin-bottom: -0.5rem;
 }
 
-.view-media-sharedshelf-my-images table.pagerer:last-child{ 
-  margin-bottom: 5rem;
-  margin-top: 1.5rem;
-}
 
-ul.pager{ margin: 0 0 0.5rem;}
 
 .contextual-links-region > h2{
   white-space:nowrap;
 }
 
+
+
+/*--- Homepage Layout styles ---*/
 .front.logged-in .tab-pane.main-col > div > .block-system,
 .front.logged-in .content-section .contextual-links-region h2,
 .front.logged-in .content-section .contextual-links-region .content{ 
@@ -109,6 +120,10 @@ ul.pager{ margin: 0 0 0.5rem;}
   padding-left:0;
 }
 */
+
+
+
+
 
 /*------------------------------------------------*/
 /***** BEGIN gallery grid, dropdown, lightbox *****/
