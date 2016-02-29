@@ -711,6 +711,11 @@ div.pdfextlink { float: right;}
   font-family: 'museo-sans-500',helvetica,arial,sans-serif;
 }
 
+.pswp__bg{
+  opacity: 1;
+  background: #555 !important;
+}
+
 /**** lightbox 
 .pswp__counter{
   display:none;
