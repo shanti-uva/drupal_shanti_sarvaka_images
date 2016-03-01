@@ -715,6 +715,9 @@ div.pdfextlink { float: right;}
   opacity: 1;
   background: #222 !important;
 }
+.pswp__caption{
+  background: transparent;
+}
 
 /**** lightbox 
 .pswp__counter{
