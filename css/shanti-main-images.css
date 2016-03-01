@@ -715,7 +715,8 @@ div.pdfextlink { float: right;}
   opacity: 1;
   background: #222 !important;
 }
-.pswp__caption{
+.pswp__ui--fit .pswp__top-bar, 
+.pswp__ui--fit .pswp__caption{
   background: transparent;
 }
 
