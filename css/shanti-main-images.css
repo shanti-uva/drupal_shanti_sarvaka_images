@@ -709,6 +709,7 @@ div.pdfextlink { float: right;}
 }
 
 .pswp__caption__center{
+  text-align: center;
   font-family: 'museo-sans-500',helvetica,arial,sans-serif;
 }
 
