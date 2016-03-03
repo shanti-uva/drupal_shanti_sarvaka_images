@@ -272,7 +272,7 @@ table.pagerer {
 .og-details {
   padding: 0;
   width: 45%;
-    width:42%;
+    width:44%;
   float:left;
   margin:0;
     margin: 0 0 0 1rem;
@@ -760,6 +760,10 @@ div.pdfextlink { float: right;}
   .page-file .file-image img {
     float: none;
     margin: 2rem auto;
+  }
+
+  .og-fullimg{
+    width:51%;
   }
 }
 
