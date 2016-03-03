@@ -831,10 +831,24 @@ div.pdfextlink { float: right;}
 
 
 @media screen and (max-width: 991px) {
+  
   .front .content-section .tab-content:nth-of-type(1){
     padding-left:25px;
     padding-right: 25px;
   }
+
+  .og-nav-arrow.next{
+    position: absolute;
+    right:-1rem;
+    text-shadow: 0.2rem 0 0.5rem #111;
+  }
+
+  .og-nav-arrow.prev{
+    position: absolute;
+    left: -1rem;
+    text-shadow: 0 0.2rem 0.5rem #111;
+  }
+
 }
 
 
