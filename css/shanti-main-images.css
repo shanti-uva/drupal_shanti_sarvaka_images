@@ -272,10 +272,12 @@ table.pagerer {
 .og-details {
   padding: 0;
   width: 45%;
+    width:42%;
   float:left;
   margin:0;
-  -webkit-transition: margin .3s ease-out;
-  transition: margin .3s ease-out;
+    margin: 0 0 0 1rem;
+  /*-webkit-transition: margin .3s ease-out;
+  transition: margin .3s ease-out;*/
 }
 
 .og-details .tab-content {
