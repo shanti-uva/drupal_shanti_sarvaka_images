@@ -839,14 +839,12 @@ div.pdfextlink { float: right;}
 
   .og-nav-arrow.next{
     position: absolute;
-    right:-1rem;
-    text-shadow: 0.2rem 0 0.5rem #111;
+    right:0;
   }
 
   .og-nav-arrow.prev{
     position: absolute;
-    left: -1rem;
-    text-shadow: 0 0.2rem 0.5rem #111;
+    left: 0;
   }
 
 }
