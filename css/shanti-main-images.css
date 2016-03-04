@@ -349,9 +349,11 @@ table.pagerer {
   color: #999;
   background: #222;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.93em;
+  letter-spacing: 0.1rem;
   font-weight:bold;
   font-family: 'Helvetica Neue',helvetica,arial,sans-serif;
+  padding: 12px 21px;
 }
 
 .og-details .nav-tabs>li>a:hover,
@@ -402,7 +404,7 @@ table.pagerer {
 
 .og-details #info li label {
   color: #ccc;
-  font-size: 90%;
+  font-size: 0.88em;
   margin-left: 0;
   margin-right: .5rem;
   display:inline;
@@ -421,9 +423,9 @@ table.pagerer {
 
 .og-details h3 {
   color:#d6d6d6;
-  font-size: 1.25em;
+  font-size: 1.12em;
   font-weight:normal;
-  line-height:1.32em;
+  line-height:1.44em;
   padding: 0;
   margin: 0.5em 0;
 }
