@@ -533,7 +533,8 @@ table.pagerer {
 }
 
 .og-details .og-view-more > span {
-  font-size: 1.55rem;
+  font-size: 1.44rem;
+  letter-spacing: 0.05rem;
   color: #999;
   position: relative;
   bottom: 0.6rem;
