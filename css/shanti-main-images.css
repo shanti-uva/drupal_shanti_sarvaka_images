@@ -578,8 +578,8 @@ table.pagerer {
   content: '\f065'; /* icon for full-screen */
   font-family: 'FontAwesome';
   position: relative;
-  top: 0.1rem;
-  left: -1.62rem;
+  top: 0.01rem;
+  left: -1.5rem;
 }
 
 
@@ -587,7 +587,7 @@ table.pagerer {
   content: '\e61f'; /* unique icon for Read more... */
   font-family: 'shanticon';
   position: relative;
-  top: -0.1rem;
+  top: 0;
   right: 1.6rem;
   font-size: 1.4rem
 }
