@@ -372,7 +372,7 @@ table.pagerer {
 .og-details .nav-tabs>li.active>a:hover,
 .og-details .nav-tabs>li.active>a:active {
   color: #c0c0c0;
-  background: #171717;
+  background: #1b1b1b;
   border-width: 2px 1px 1px;
   border-color: #909090 #555 transparent #555;
 }
