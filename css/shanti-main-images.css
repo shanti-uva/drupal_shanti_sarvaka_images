@@ -577,9 +577,10 @@ table.pagerer {
 .og-details .og-view-more.btn-lightbox > span::before{
   content: '\f065'; /* icon for full-screen */
   font-family: 'FontAwesome';
+  font-size:1.12em;
   position: relative;
-  top: 0.01rem;
-  left: -1.5rem;
+  top: 0.03rem;
+  left: -1.65rem;
 }
 
 
