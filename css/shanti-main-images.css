@@ -789,7 +789,7 @@ div.pdfextlink { float: right;}
   .og-details{
     padding-right: 0;
     padding-top: 2.5rem;
-    padding-left: 1rem;
+    /*padding-left: 1rem;*/
     margin-top:0;
     width:100%;
     height: auto;
