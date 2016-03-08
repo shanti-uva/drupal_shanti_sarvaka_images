@@ -716,7 +716,7 @@ div.pdfextlink { float: right;}
 
 /* lightbox hiding search tab */
 .pswp{
-  z-index:105000
+  z-index:1000;
 }
 
 .pswp__button{
