@@ -54,6 +54,8 @@
 
 /* From index.html */
 /* clearfix because of floats */
+
+/*
     .container:before,
     .container:after {
         content: "";
@@ -74,7 +76,7 @@
     .first-item {
       clear: both;
     }
-    /* remove margin bottom on last row */
+    /*----------- remove margin bottom on last row -----------------------
     .last-row, .last-row ~ .item {
       margin-bottom: 0;
     }
@@ -89,4 +91,9 @@
 		.clearfix:after {
 			clear: both;
 		}
+
+*/
+
+
+
 		
