@@ -1,3 +1,4 @@
+/*
 .og-grid {
 	list-style: none;
 	padding: 20px 0;
@@ -17,6 +18,7 @@
 	display: block;
 	position: relative;
 }
+
 
 .og-grid div.og-expanded > a::after {
 	top: auto;
@@ -48,7 +50,7 @@
 	padding: 50px 80px;
 	height: 100%;
 }
-
+*/
 
 /* From index.html */
 /* clearfix because of floats */
