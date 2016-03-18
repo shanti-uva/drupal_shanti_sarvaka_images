@@ -36,6 +36,8 @@ stylesheets[all][] =  css/shanti-search-images.css
 scripts[] = js/shanti-main-images.js
 scripts[] = js/shanti-search-images.js
 
+scripts[] = js/shanti-images-gallery.js
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Theme Settings   
 ;;;;;;;;;;;;;;;;;;;;;
