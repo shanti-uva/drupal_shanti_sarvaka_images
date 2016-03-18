@@ -26,6 +26,7 @@ regions[admin_footer]   = Admin Footer
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] =  css/shanti-images-gallery.css
 
 stylesheets[all][] =  css/shanti-main-images.css
 stylesheets[all][] =  css/shanti-search-images.css
@@ -35,8 +36,6 @@ stylesheets[all][] =  css/shanti-search-images.css
 ;;;;;;;;;;;;;;;;;;;;;;
 scripts[] = js/shanti-main-images.js
 scripts[] = js/shanti-search-images.js
-
-scripts[] = js/shanti-images-gallery.js
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Theme Settings   
