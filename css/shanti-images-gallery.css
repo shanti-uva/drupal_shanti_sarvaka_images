@@ -536,6 +536,11 @@
   background: transparent;
 }
 
+.pswp__share-tooltip a{
+	color:#fff !important;
+	border:none;
+}
+
 /**** lightbox 
 .pswp__counter{
   display:none;
