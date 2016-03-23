@@ -536,9 +536,10 @@
   background: transparent;
 }
 
-.pswp__share-tooltip a{
+.pswp__share-tooltip a{  border:none;}
+.pswp__share-tooltip a:hover,
+.pswp__share-tooltip a:active{
 	color:#fff !important;
-	border:none;
 }
 
 /**** lightbox 
