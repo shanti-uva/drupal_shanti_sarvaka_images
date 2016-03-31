@@ -153,6 +153,35 @@ function sarvaka_images_preprocess_file_entity(&$vars) {
 
  */
  
+ /**
+ * Implements hook page alter
+ *      Sets the banner color according to the field_banner_color assigned to the group or parent group of files
+ */
+function sarvaka_images_page_alter(&$page) {
+    // If it's a collection/subcollection group node
+    $node = menu_get_object();
+    if (!empty($node->field_banner_color)) {
+        $bcfield = field_get_items('node', $node, 'field_banner_color');
+        if ($bcfield) {
+            $bcolor = str_replace('##','#', '#' . $bcfield[0]['value']);
+            drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
+                                    body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $bcolor . ' !important;} ', 
+                               array('group' => CSS_THEME, 'type' => 'inline'));
+        }
+    // If it's a file entity (menu get object won't work, but information is in the page content)
+    } else if (!empty($page['content']['system_main']['field_og_collection_ref'])) {
+        $gid = $page['content']['system_main']['field_og_collection_ref']['#items'][0]['target_id'];
+        $group = node_load($gid);
+        $bcfield = field_get_items('node', $group, 'field_banner_color');
+        if ($bcfield) {
+            $bcolor = str_replace('##','#', '#' . $bcfield[0]['value']);
+            drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
+                                    body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $bcolor . ' !important;} ', 
+                               array('group' => CSS_THEME, 'type' => 'inline'));
+        }
+    }
+}
+
 /**
  * Implements hook preprocess field
  * 		Hide empty fields in image nodes
