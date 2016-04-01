@@ -123,6 +123,11 @@ table.pagerer {
   margin-top:-4rem;
 }
 
+/*-------------------------------------------*/
+/*------                Collection Styles                 -----*/
+/*-------------------------------------------*/
+
+.page-collections .coll-type .Collection.parent { display: none; }
 
 
 
