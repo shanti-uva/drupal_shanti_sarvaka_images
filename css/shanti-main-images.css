@@ -135,6 +135,7 @@ table.pagerer {
 .view-collections .views-row .views-field-created .field-content { font-style: italic; }
 .view-collections .views-row .coll-list-type  { font-size: 0.9em; }
 .view-collections .views-row .coll-list-type .type { font-style: italic; }
+.view-collections .views-row span.icon.shanticon-stack {  padding-right: 0.25em; }
 
 /*------------------------------------------*/
 /*--- Dropdown details tab #info content ---*/
