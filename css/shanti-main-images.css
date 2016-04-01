@@ -127,9 +127,9 @@ table.pagerer {
 /*------                Collection Styles                 -----*/
 /*-------------------------------------------*/
 
+.views-exposed-form .views-exposed-widget .form-submit { margin-top: -5px; } /* for Apply (filter) button on Collection list page */
+.view-collections .add-coll-btn { position: relative; top: -0.45em; }
 .page-collections .coll-type .Collection.parent { display: none; }
-
-
 
 /*------------------------------------------*/
 /*--- Dropdown details tab #info content ---*/
