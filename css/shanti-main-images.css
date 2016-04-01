@@ -130,9 +130,9 @@ table.pagerer {
 .view-collections .views-exposed-form .views-exposed-widget .form-submit { margin-top: -5px; } /* for Apply (filter) button on Collection list page */
 .view-collections .add-coll-btn { position: relative; top: -0.45em; }
 .view-collections .coll-type .Collection.parent { display: none; }
-.view-collections .views-row .field-content p { margin: 0px; }
-.view-collections .views-row .field-content p { margin: 0px; }
-.view-collections .views-row .views-field-created .field-content { font-style: italic;}
+.view-collections .views-row .field-content p { margin: 5px 0px; }
+.view-collections .views-row p { margin: 5px 0px; }
+.view-collections .views-row .views-field-created .field-content { font-style: italic; }
 
 /*------------------------------------------*/
 /*--- Dropdown details tab #info content ---*/
