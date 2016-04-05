@@ -79,10 +79,8 @@ var Grid = (function($) {
 		};
 
 	function init( config ) {
-		
 		// the settings..
 		settings = $.extend( true, {}, settings, config );
-
 		imagesLoaded($grid, $.proxy(function() {
 			initGridLayout();
 			initLightbox();
@@ -120,7 +118,6 @@ var Grid = (function($) {
 			};
 			items.push(item);
 		});
-		
 		Drupal.settings.media_sharedshelf = {'lbitems' : items};
 		
 	}
