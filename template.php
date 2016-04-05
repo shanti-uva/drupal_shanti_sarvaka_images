@@ -159,26 +159,42 @@ function sarvaka_images_preprocess_file_entity(&$vars) {
  */
 function sarvaka_images_page_alter(&$page) {
     // If it's a collection/subcollection group node
-    $node = menu_get_object();
-    if (!empty($node->field_banner_color)) {
-        $bcfield = field_get_items('node', $node, 'field_banner_color');
-        if ($bcfield) {
-            $bcolor = str_replace('##','#', '#' . $bcfield[0]['value']);
-            drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
-                                    body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $bcolor . ' !important;} ', 
-                               array('group' => CSS_THEME, 'type' => 'inline'));
-        }
-    // If it's a file entity (menu get object won't work, but information is in the page content)
+    sarvaka_images_update_banner($page, menu_get_object());
+}
+
+function sarvaka_images_update_banner(&$page, $entity) {
+    // If there's a banner color than it's a collection or subcollection with a color, set it.
+    if (!empty($entity->field_banner_color)) {
+        sarvaka_images_add_custom_banner_css($entity);
+    // If it's a file entity (menu get object won't work, but information is in the page content), use that to find it's parent collection or subcollection and set color
     } else if (!empty($page['content']['system_main']['field_og_collection_ref'])) {
         $gid = $page['content']['system_main']['field_og_collection_ref']['#items'][0]['target_id'];
-        $group = node_load($gid);
-        $bcfield = field_get_items('node', $group, 'field_banner_color');
-        if ($bcfield) {
-            $bcolor = str_replace('##','#', '#' . $bcfield[0]['value']);
-            drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
-                                    body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $bcolor . ' !important;} ', 
-                               array('group' => CSS_THEME, 'type' => 'inline'));
-        }
+        sarvaka_images_add_custom_banner_css($gid);
+    // If it's an edito for adding something to a collection, use the collections banner color
+    } else if(isset($_GET['field_og_parent_collection_ref'])) {
+        sarvaka_images_add_custom_banner_css($_GET['field_og_parent_collection_ref']);
+    // Subcollections inherit banner color from parent unless theirs is set different (first if statement)
+    } else if(isset($entity->field_og_parent_collection_ref)) {
+        $gid = $entity->field_og_parent_collection_ref['und'][0]['target_id'];
+        sarvaka_images_add_custom_banner_css($gid);
+    // Other possibilities?
+    } else {
+       /* dpm($page, 'page');
+        dpm($entity, 'entity');*/
+    }
+}
+
+function sarvaka_images_add_custom_banner_css($group) {
+    if (is_numeric($group)) {
+        $group = node_load($group);
+        if (!$group) { return; }
+    }
+    $bcfield = field_get_items('node', $group, 'field_banner_color');
+    if ($bcfield) {
+        $color_code = str_replace('##','#', '#'. $bcfield[0]['value']);
+        drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
+                                body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $color_code . ' !important;} ', 
+                           array('group' => CSS_THEME, 'type' => 'inline'));
     }
 }
 
@@ -201,7 +217,29 @@ function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
 		$active_trail = array(); // remove default breadcrumbs which are messed up
 		drupal_set_title(t("Search for “@term”", array('@term' => $item['page_arguments'][1])));
 		return;
-	}
+	} else if (strpos(current_path(), 'node/add/subcollection') > -1) {
+	     // if it's a subcollection add form, redo the breadcrumbs to have collection list and parent collection in trail
+	    $active_trail = array();
+        $active_trail[] = array( 
+                'title' => t("Collections"),
+                'href' => '/collections',
+                'link_path' => '/collections', 
+                'localized_options' => array(),
+                'type' => 0
+         );
+         if(isset($_GET['field_og_parent_collection_ref'])) {
+               $pgid = $_GET['field_og_parent_collection_ref'];
+               $pgroup = node_load($pgid);
+               $path = url('node/' . $pgid);
+                $active_trail[] = array( 
+                    'title' => $pgroup->title,
+                    'href' => $path,
+                    'link_path' => $path, 
+                    'localized_options' => array(),
+                    'type' => 0
+                );
+         }
+    }
  }
 
 /**
