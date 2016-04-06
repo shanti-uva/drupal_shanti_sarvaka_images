@@ -167,12 +167,15 @@ function sarvaka_images_update_banner(&$page, $entity) {
     if (!empty($entity->field_banner_color)) {
         sarvaka_images_add_custom_banner_css($entity);
     // If it's a file entity (menu get object won't work, but information is in the page content), use that to find it's parent collection or subcollection and set color
-    } else if (!empty($page['content']['system_main']['field_og_collection_ref'])) {
+    } else if (!empty($page['content']['system_main']['field_og_collection_ref']['#items'])) {
         $gid = $page['content']['system_main']['field_og_collection_ref']['#items'][0]['target_id'];
         sarvaka_images_add_custom_banner_css($gid);
-    // If it's an edito for adding something to a collection, use the collections banner color
+    // If it's an edito for adding a subcollection to a collection, use the collections banner color
     } else if(isset($_GET['field_og_parent_collection_ref'])) {
         sarvaka_images_add_custom_banner_css($_GET['field_og_parent_collection_ref']);
+    // If it's an edito for adding an content item to a collection, use the collections banner color
+    } else if(isset($_GET['field_og_collection_ref'])) {
+        sarvaka_images_add_custom_banner_css($_GET['field_og_collection_ref']);
     // Subcollections inherit banner color from parent unless theirs is set different (first if statement)
     } else if(isset($entity->field_og_parent_collection_ref)) {
         $gid = $entity->field_og_parent_collection_ref['und'][0]['target_id'];
