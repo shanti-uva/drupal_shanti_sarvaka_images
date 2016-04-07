@@ -158,13 +158,7 @@ table.pagerer {
 
 .page-file .file-image img {
   float: right;
-  margin: 2rem 1rem 2rem 3rem;
-  padding: 0.7rem;
-  border-radius: 0.2rem;
-  background: #fff;
-  border: 1px solid #d0d0d0;
-  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
-  box-shadow: 0 1px 2px rgba(0,0,0,.075);
+  margin: 0 0 1rem 1rem !important;
 }
 
 .page-file .file-image .field .field-label {
