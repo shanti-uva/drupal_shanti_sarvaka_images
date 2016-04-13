@@ -2,16 +2,14 @@
 .titlearea,
 .carousel-control,
 .breadcrumb .icon,
-.nav-justified>li.active a,
-.nav-justified>li.active a:hover,
-.nav-justified>li.active a:active {
+.nav-tabs.nav-justified>li.active a,
+.nav-tabs.nav-justified>li.active a:hover,
+.nav-tabs.nav-justified>li.active a:active,
+.shanti-thumbnail-image.shanti-field-visuals .icon {
   background-color: #c4be28 !important;
 }
 
-.nav-justified>li.active::before {
-  color: #c4be28 !important;
-}
-    /* darker shades below are used to better define details */
+/* darker shades below are used to better define details */
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a .check-mark,
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a:active .check-mark,
 .navbar-brand:hover .site-slogan,
@@ -27,14 +25,8 @@
   color: rgb(196,190,40) !important;
 }
 
-.view-section .nav-tabs>li.active>a, 
-.view-section .nav-tabs>li.active>a:hover, 
-.view-section .nav-tabs>li.active>a:active {
+.nav-tabs.nav-justified>li.active {
   border-top-color: rgb(196,190,40) !important;
-}
-
-.shanti-thumbnail-image.shanti-field-visuals .icon {
-  background: rgba(196,190,40,0.8);
 }
 
 .navbar-brand:active .site-slogan {
@@ -47,7 +39,16 @@
 ::selection {
   background: #b728c4 !important;
 }
-/*** END Sarvaka subtheme colors ***/
+
+@media screen and (min-width: 768px) {
+  .nav-tabs.nav-justified>li.active::before {
+    color: #c4be28 !important;
+  }
+}
+
+/**
+***  END Sarvaka subtheme colors */
+
 
 
 .front .wrap-all > .container-fluid{  
