@@ -6,7 +6,8 @@
 .nav-tabs.nav-justified>li.active a:hover,
 .nav-tabs.nav-justified>li.active a:active,
 .shanti-thumbnail-image.shanti-field-visuals .icon {
-  background-color: #c4be28 !important;
+  /* background-color: #c4be28 !important; */
+  background-color: #c0ba27 !important;
 }
 
 /* darker shades below are used to better define details */
@@ -22,11 +23,12 @@
 .view-section .fancytree-container .fancytree-node:active > .glyphicon,
 .view-section .fancytree-node.fancytree-active > .glyphicon,
 .view-section .fancytree-node.fancytree-selected > .glyphicon {
-  color: rgb(196,190,40) !important;
+  /* color: rgb(196,190,40) !important; */
+  color: #c0ba27 !important;
 }
 
 .nav-tabs.nav-justified>li.active {
-  border-top-color: rgb(196,190,40) !important;
+  border-top-color: #c0ba27 !important;
 }
 
 .navbar-brand:active .site-slogan {
@@ -42,7 +44,7 @@
 
 @media screen and (min-width: 768px) {
   .nav-tabs.nav-justified>li.active::before {
-    color: #c4be28 !important;
+    color: #c0ba27 !important;
   }
 }
 
