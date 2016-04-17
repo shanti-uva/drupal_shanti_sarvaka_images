@@ -86,7 +86,7 @@
   <div class="file-content"<?php print $content_attributes; ?>>
 	  <!-- Nav tabs -->
 	  <!--<ul class="nav nav-tabs" role="tablist">--></ul>
-	<nav class="content-resources col-xs-6 col-sm-3 col-md-3 col-lg-2 sidebar-offcanvas equal-height">
+	<nav class="content-resources col-xs-6 col-md-3 sidebar-offcanvas equal-height">
       <ul class="nav nav-pills nav-stacked">
 	    <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
 	    <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
@@ -95,7 +95,7 @@
     </nav>
   
 	  <!-- Tab panes -->
-	  <section class="content-section col-sm-12 col-md-9 col-lg-10 equal-height">
+	  <section class="content-section col-sm-12 col-md-9 equal-height">
 		  <div class="tab-content">
 		    <div role="tabpanel" class="tab-pane iframe active" id="pdf">
 		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
