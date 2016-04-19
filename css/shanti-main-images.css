@@ -2,9 +2,7 @@
 .titlearea,
 .carousel-control,
 .breadcrumb .icon,
-.nav-tabs.nav-justified>li.active a,
-.nav-tabs.nav-justified>li.active a:hover,
-.nav-tabs.nav-justified>li.active a:active,
+.nav-tabs.nav-justified>li.active,
 .shanti-thumbnail-image.shanti-field-visuals .icon {
   /* background-color: #c4be28 !important; */
   background-color: #c0ba27 !important;
