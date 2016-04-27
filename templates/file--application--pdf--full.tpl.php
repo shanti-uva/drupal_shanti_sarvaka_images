@@ -86,7 +86,7 @@
   <div class="file-content"<?php print $content_attributes; ?>>
 	  <!-- Nav tabs -->
 	  <!--<ul class="nav nav-tabs" role="tablist">--></ul>
-	<nav class="content-resources col-xs-6 col-md-3 sidebar-offcanvas equal-height">
+	<nav id="#sidebar-first" class="col-xs-6 col-md-3 sidebar-offcanvas equal-height">
       <ul class="nav nav-pills nav-stacked">
 	    <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
 	    <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
