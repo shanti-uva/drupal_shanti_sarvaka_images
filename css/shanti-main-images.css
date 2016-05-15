@@ -1,4 +1,14 @@
-/** Sarvaka sub-theme Color Settings **/
+/**
+* Mandala Images - Development
+* 
+* version 1.x - shanti-main-images.css
+* --------------------------------------------------
+* University of Virginia / SHANTI MANDALA / IMAGES
+* --------------------------------------------------
+* 
+*/
+
+/* BEGIN sub-theme colors */
 .titlearea,
 .carousel-control,
 .breadcrumb .icon,
@@ -9,7 +19,6 @@
   /* background-color: #c4be28 !important; */
   background-color: #c0ba27 !important;
 }
-
 /* darker shades below are used to better define details */
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a .check-mark,
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a:active .check-mark,
