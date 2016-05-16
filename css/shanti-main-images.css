@@ -80,64 +80,27 @@
 
 ul.pager{ margin: 0 0 0.5rem;}
 
-table.pagerer { 
-  width:100%; 
-  margin-top: -0.7rem;
-}
-
-.view-media-sharedshelf-my-images table.pagerer:last-child{ 
-  margin-bottom: 5rem;
-  margin-top: 1.5rem;
-}
-
-.front .view-media-sharedshelf-my-images table.pagerer:first-of-type{
-  margin-top: -2.4rem;
-}
-
 .front.logged-in .view-media-sharedshelf-my-images table.pagerer:first-of-type{
-  margin-top: 1rem;
-  margin-bottom: -0.5rem;
+  position: relative;
+  top:0.5rem;
 }
 
-
-
-
-/*--- Homepage Layout styles ---*/
-.front.logged-in .tab-pane.main-col > div > .block-system,
-.front.logged-in .content-section .contextual-links-region h2,
-.front.logged-in .content-section .contextual-links-region .content{ 
-  max-width: 1050px !important;
-  margin: 0 auto !important;
+.front.logged-in .content-section .contextual-links-region h2{
+  position: relative;
+  top: 1.5rem;
 }
 
-.front.logged-in .tab-pane.main-col > div > .block-system{ 
-  float:none;
-}
-
-.front.logged-in .content-section .contextual-links-region .content{
-  padding: 0 0 4rem;
-}
-
-.front.logged-in .tab-pane.main-col > div,
 .front.logged-in .main-col .block-views.contextual-links-region{
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 1.7rem 0 4rem;
-}
-
-.front.logged-in .content-section .contextual-links-region{
-  padding-top: 0.1rem;
-  margin-top: -1rem;
-  position: relative !important;
+  margin-top:-3rem;
 }
 
 .front.logged-in .main-content .content-section .view-content{
-  margin-top:-4rem;
+  margin-top:-2rem;
 }
 
-/*-------------------------------------------*/
-/*------                Collection Styles                 -----*/
-/*-------------------------------------------*/
+/**
+* BEGIN ollection Styles
+*/
 
 /*----- Collection List page ------*/
 .view-collections .views-exposed-form .views-exposed-widget .form-submit { margin-top: -5px; } /* for Apply (filter) button on Collection list page */
