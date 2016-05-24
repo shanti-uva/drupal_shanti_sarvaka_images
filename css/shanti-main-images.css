@@ -64,6 +64,12 @@
   padding-bottom: 7rem;
 }
 
+.content-section.equal-height > div.messages{
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+}
+
+
 .front .wrap-all > .container-fluid{  
   padding-left: 0;
   padding-right: 0;
