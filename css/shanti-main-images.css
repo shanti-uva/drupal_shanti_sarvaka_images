@@ -60,7 +60,9 @@
 /**
 ***  END Sarvaka subtheme colors */
 
-
+.content-section.equal-height{
+  padding-bottom: 7rem;
+}
 
 .front .wrap-all > .container-fluid{  
   padding-left: 0;
@@ -70,15 +72,6 @@
 .front .page-title .icon{
   margin: 0 1rem 0 1.2rem;
 }
-
-
-.contextual-links-region > h2{
-  white-space:nowrap;
-}
-
-
-
-ul.pager{ margin: 0 0 0.5rem;}
 
 .front.logged-in .view-media-sharedshelf-my-images table.pagerer:first-of-type{
   position: relative;
@@ -97,6 +90,15 @@ ul.pager{ margin: 0 0 0.5rem;}
 .front.logged-in .main-content .content-section .view-content{
   margin-top:-2rem;
 }
+
+
+.contextual-links-region > h2{
+  white-space:nowrap;
+}
+
+ul.pager{ margin: 0 0 0.5rem;}
+
+
 
 /**
 * BEGIN ollection Styles
