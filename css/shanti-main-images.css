@@ -179,7 +179,12 @@ body.page-file-pdf .main-col .block-system > .content {
 	border-bottom: none;
 }
 
-div.pdfextlink { float: right;}
+body.page-file-pdf #block-system-main > .content{ padding-top:1rem;}
+
+div.pdfextlink{ position:absolute; right:0; top:-4rem; }
+
+div#pdf.tab-pane.iframe.active{ position:relative; }
+
 
 iframe.pdf-frame {
     background-image: url('/sites/all/themes/shanti_sarvaka/images/ajax-loader.gif');
