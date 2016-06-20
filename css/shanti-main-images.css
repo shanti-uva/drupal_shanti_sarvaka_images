@@ -181,7 +181,23 @@ body.page-file-pdf .main-col .block-system > .content {
 
 body.page-file-pdf #block-system-main > .content{ padding-top:1rem;}
 
-div.pdfextlink{ position:absolute; right:0; top:-4rem; }
+body.page-file-pdf ul.nav.nav-tabs{ margin-left:1rem; }
+
+body.page-file-pdf ul.nav.nav-tabs a{
+  text-transform: uppercase;
+  font-family: 'museo-sans-700', helvetica, arial, sans-serif !important;
+  font-size: 0.88em !important;
+  line-height: 1.75em !important;
+  height: 3em !important;
+}
+
+div.pdfextlink{ 
+  position:absolute; 
+  right:0; 
+  top: -4.8rem;
+  font-family: 'museo-sans-700';
+  font-size: 0.88em; 
+}
 
 div#pdf.tab-pane.iframe.active{ position:relative; }
 
