@@ -97,7 +97,7 @@
 		  <div class="tab-content">
 		    <div role="tabpanel" class="tab-pane iframe active" id="pdf">
 		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
-		    	 <iframe class="pdf-frame" title="PDF in IFrame" src="/sites/all/themes/sarvaka_images/pdfdl.php?url=<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
+		    	 <iframe class="pdf-frame" title="PDF in IFrame" src="/sites/all/themes/sarvaka_images/loadpdf.php?url=<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="metadata">
 		    	<div class="file-ss-div file-ss-info">
