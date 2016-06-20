@@ -84,22 +84,20 @@
   <?php endif; ?>
 
   <div class="file-content"<?php print $content_attributes; ?>>
-	  <!-- Nav tabs -->
-	  <!--<ul class="nav nav-tabs" role="tablist"></ul> The Closing Tag on this list was not included in the comment so I added it MF*YK may 4, 2016 -->
-	<section id="sidebar-first" class="region sidebar sidebar-first sidebar-offcanvas<?php print " $bsclass_sb1"; ?> equal-height">
-      <ul class="nav nav-pills nav-stacked">
-	    <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
-	    <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
-	    <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
-	  </ul>
-    </section>
-  
-	  <!-- Tab panes -->
-	  <section class="content-section <?php if (!empty($bsclass_main)) { print " $bsclass_main"; } ?> equal-height">
+
+	  <section class="content-section equal-height">
+	      <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
+            <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
+            <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+          </ul>
+        
+          <!-- Tab panes -->
 		  <div class="tab-content">
 		    <div role="tabpanel" class="tab-pane iframe active" id="pdf">
 		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
-	  			<iframe src="<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
+		    	 <iframe class="pdf-frame" title="PDF in IFrame" src="/sites/all/themes/sarvaka_images/pdfdl.php?url=<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="metadata">
 		    	<div class="file-ss-div file-ss-info">

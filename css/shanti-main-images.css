@@ -181,6 +181,11 @@ body.page-file-pdf .main-col .block-system > .content {
 
 div.pdfextlink { float: right;}
 
+iframe.pdf-frame {
+    background-image: url('/sites/all/themes/shanti_sarvaka/images/ajax-loader.gif');
+    background-repeat: no-repeat;
+    background-position: center 200px;
+}
 /*------ File Page ------*/
 .file-ss-div {
 	margin: 12px auto;
