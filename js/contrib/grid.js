@@ -290,7 +290,8 @@ var Grid = (function($) {
 	   		this.$creator = $('<li class="creator">Photographer</li>');
 	   		this.$dtype = $('<li class="dtype">Type</li>');
 	   		this.$ssid = $('<li class="dtype">Shared Shelf ID</li>');
-	   		this.$infolist = $('<ul></ul>').append(this.$creator, this.$date, this.$place, this.$dtype, this.$ssid);
+	   		//this.$infolist = $('<ul></ul>').append(this.$creator, this.$date, this.$place, this.$dtype, this.$ssid);
+	   		this.$infolist = $('<ul class="detail-list"></ul>');
 	   		this.$infotab = $('<div role="tabpanel" class="tab-pane" id="info"></div>').append(this.$infolist, this.$href);
 	   		this.$tabcontent = $('<div class="tab-content"></div>').append(this.$desctab, this.$infotab);
 			this.$details = $( '<div class="og-details"></div>' ).append(this.$tabs, this.$tabcontent);
@@ -337,25 +338,35 @@ var Grid = (function($) {
 					hugesrc : $itemEl.data( 'hugesrc' ),
 					title : $itemEl.data( 'title' ),
 					description : $itemEl.data( 'description' ),
+					meta: '',
+					/*
 					creator : $itemEl.data( 'creator' ),
 					date : $itemEl.data( 'date' ),
 					place : $itemEl.data( 'place' ), 
 					dtype: $itemEl.data('type'),
-					ssid: $itemEl.data('ssid'),
+					ssid: $itemEl.data('ssid'),*/
 				};
 
 			this.$title.html( eldata.title );
-			this.$description.html( eldata.description );
+			this.$description.text( eldata.description );
 			
 			var lnktxt = (eldata.dtype == 'pdf') ? "View PDF" : "Read more";
 			this.$href.html('<span>' + lnktxt + '</span>').attr( 'href', eldata.href );
+			var metavals = '';
+			for (var p in $itemEl.data()) {
+			    if ("title,description".indexOf(p) == -1 && p.indexOf('src') == -1) {
+			        metavals += '<li><label>' + p + ':</label> ' + $itemEl.data(p) + '</li>';
+			    }
+			}
+			this.$infolist.html(metavals);
 			
+			/*
 			this.$creator.html( "<label>Photographer:</label> " + eldata.creator );
 			this.$date.html( "<label>Date:</label> " + eldata.date );
 			this.$place.html( "<label>Location:</label> " + eldata.place );
 			this.$dtype.html("<label>Type:</label> " + eldata.dtype);
 			this.$ssid.html("<label>Shared Shelf ID:</label> " + eldata.ssid);
-
+            */
 
 			var self = this;
 			

@@ -46,64 +46,87 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		
 		// Process Results
 		$results = $view->result;
+        //dpm($results, 'results');
 		$rows = '<div id="og-grid" class="og-grid clearfix">';
-		
 		// Iterate through results, get info about each file, and build item html 
 		foreach ($results as $res) {
 			$file = file_load($res->fid); // Load file
-			$furl = url('file/' . $file->fid); // Url to file's page
-			// Get image paths for various sizes (thumb, large, huge)
-			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
-			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . '.jpg';
-			$thumb_path = image_style_url('media_thumbnail', $furi) ; 		// Thumb path for grid
-			$large_path = image_style_url('media_large', $furi) ;					// Large path for popup
-			$huge_path = image_style_url('media_lightbox_large', $furi) ;	// Huge path for lightbox
-			// Get dimensions for huge image and append to url with "::" separators (url::width::height)
-			$hugepts = explode('/sites/', $huge_path);
-			$hugepts = explode('?', $hugepts[1]);
-			$huge_info = image_get_info('sites/' . $hugepts[0]);
-			$huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
-			
-			// Get details about file from metadata_wrapper
-		    $info_bundle = array('bundle' => $file->type);
-		    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
-			$ftitle = $file->filename;
-			// Creator
-			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
-			if(empty($creator)) {$creator = "Not available";}
-			// Date
-			$date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
-			if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
-			$photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
-			// Photographer
-			if(empty($photographer)) {$photographer = "Not available";}
-			// Place
-			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
-			if(empty($place)) {$place = "Not available";}
-			// SSID
-			$ssid = sarvaka_images_metadata_process($wrapper->field_sharedshelf_ssid->value());
-			
-			// Description
-			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
-			if (empty($fdesc)) {$fdesc = t("No description currently available.");} 
-				// Trim Description 
-			if (strlen($fdesc) > 750) { // Trim to 750 characters
-				$fdesc = substr($fdesc, 0, 750);
-				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
-			}
-			// Type of file (from mimetype)
-			$dtype = substr($file->filemime, strpos($file->filemime, '/') + 1); // Take last part of mimetype
-			// Create HTML
-			$rows .= '<div class="item">
-		    		<a href="' . $furl . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
-			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
-			    	data-ssid="' . $ssid . '" > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
-			    </a>
-		    </div>';
+			$rows .= _sarvaka_images_create_item_markup($file);
 		}
 		$rows .= '</div>';
 		$vars['rows'] = $rows;
 	}
+}
+
+function _sarvaka_images_create_item_markup($file) {
+    $furl = url('file/' . $file->fid); // Url to file's page
+    $metadata = $file->ssmetadata;
+    // Get image paths for various sizes (thumb, large, huge)
+    $file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
+    $furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . '.jpg';
+    $ftitle = $file->filename;
+    $thumb_path = image_style_url('media_thumbnail', $furi) ;       // Thumb path for grid
+    $metadata['largesrc'] = image_style_url('media_large', $furi) ;                   // Large path for popup
+    $huge_path = image_style_url('media_lightbox_large', $furi) ;   // Huge path for lightbox
+    // Get dimensions for huge image and append to url with "::" separators (url::width::height)
+    $hugepts = explode('/sites/', $huge_path);
+    $hugepts = explode('?', $hugepts[1]);
+    $huge_info = image_get_info('sites/' . $hugepts[0]);
+    $huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
+    $metadata['hugesrc'] = $huge_path;
+    
+    $markup = '<div class="item"><a href="' . $furl . '" ';
+    foreach($metadata as $lbl => $val) {
+        $attnm = str_replace(' ', '-', $lbl);
+        if (strpos($attnm, '/') > -1) {
+            $pts = explode('/', $attnm);
+            $attnm = $pts[0];
+        }
+        $attnm = trim(strtolower($attnm), ' -');
+        $markup .= 'data-' . $attnm . '="' . trim($val) . '" ';
+    }
+    $markup .= ' ><img src="' . $thumb_path . '" alt="' . $ftitle . '" title="' . $ftitle . '"/></a></div>';
+    return $markup;
+    
+    /* Old code using metadata wrapper and fields in Drupal
+    // Get details about file from metadata_wrapper
+    $info_bundle = array('bundle' => $file->type);
+    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
+    $ftitle = $file->filename;
+    // Creator
+    $creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
+    if(empty($creator)) {$creator = "Not available";}
+    // Date
+    $date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
+    if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
+    $photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
+    // Photographer
+    if(empty($photographer)) {$photographer = "Not available";}
+    // Place
+    $place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
+    if(empty($place)) {$place = "Not available";}
+    // SSID
+    $ssid = sarvaka_images_metadata_process($wrapper->field_sharedshelf_ssid->value());
+    
+    // Description
+    $fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
+    if (empty($fdesc)) {$fdesc = t("No description currently available.");} 
+        // Trim Description 
+    if (strlen($fdesc) > 750) { // Trim to 750 characters
+        $fdesc = substr($fdesc, 0, 750);
+        $fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
+    }
+    // Type of file (from mimetype)
+    $dtype = substr($file->filemime, strpos($file->filemime, '/') + 1); // Take last part of mimetype
+    // Create HTML
+    $markup = '<div class="item">
+            <a href="' . $furl . '" data-fid="'. $file->fid . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
+            data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
+            data-ssid="' . $ssid . '" > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
+        </a>
+    </div>';
+    return $markup;
+     * */
 }
 
 function sarvaka_images_metadata_process($mdinfo) {
