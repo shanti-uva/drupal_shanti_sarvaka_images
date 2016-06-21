@@ -250,7 +250,6 @@
   margin-left: 0.75rem;
 }
 
-
 /*-------------------------*/
 /*--- tab #info content ---*/
 /*-------------------------*/
@@ -262,12 +261,14 @@
 .og-details #info ul {
   margin: 0 0 0 0.75rem;
   padding: 0;
+  overflow-y: auto;
+  height: 340px;
 }
 
 .og-details #info li {
   list-style-type: none;
   color: #aaa;
-  margin: 1.5rem 0 0 0;
+  margin: 0.25rem 0 0 0;
   padding: 0;
 }
 
@@ -425,8 +426,8 @@
 
 .og-details .og-view-more.og-details-more{
   position: absolute;
-  bottom:0.2rem;
-  margin-left:0.5rem;
+  /*bottom:0.2rem;*/
+  margin-left:-2.5rem;
 }
 
 .og-details .og-view-more.og-details-more > span{

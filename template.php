@@ -74,7 +74,7 @@ function _sarvaka_images_create_item_markup($file) {
     $huge_info = image_get_info('sites/' . $hugepts[0]);
     $huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
     $metadata['hugesrc'] = $huge_path;
-    
+    if (!isset($metadata['description']) || !$metadata['description']) { $metadata['description'] = "No description avialable."; }
     $markup = '<div class="item"><a href="' . $furl . '" ';
     foreach($metadata as $lbl => $val) {
         $attnm = str_replace(' ', '-', $lbl);
