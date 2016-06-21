@@ -58,14 +58,17 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 	}
 }
 
+/**
+ * Creates markup for the grid.js library to show a dropdown with metadata
+ */
 function _sarvaka_images_create_item_markup($file) {
     $furl = url('file/' . $file->fid); // Url to file's page
     $metadata = $file->ssmetadata;
-    // Get image paths for various sizes (thumb, large, huge)
+    // Get image paths for various sizes (thumb, large, huge) and add to metadata
     $file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
     $furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . '.jpg';
     $ftitle = $file->filename;
-    $thumb_path = image_style_url('media_thumbnail', $furi) ;       // Thumb path for grid
+    $thumb_path = image_style_url('media_thumbnail', $furi) ;       // Thumb path for grid used as img src attribute below
     $metadata['largesrc'] = image_style_url('media_large', $furi) ;                   // Large path for popup
     $huge_path = image_style_url('media_lightbox_large', $furi) ;   // Huge path for lightbox
     // Get dimensions for huge image and append to url with "::" separators (url::width::height)
@@ -74,9 +77,11 @@ function _sarvaka_images_create_item_markup($file) {
     $huge_info = image_get_info('sites/' . $hugepts[0]);
     $huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
     $metadata['hugesrc'] = $huge_path;
+    // If no description, add string to say so.
     if (!isset($metadata['description']) || !$metadata['description']) { $metadata['description'] = "No description avialable."; }
+    // Create the Markup variable to be returned
     $markup = '<div class="item"><a href="' . $furl . '" data-fid="' . $file->fid . '" ';
-    //dpm($metadata, 'metadata');
+    // Iterate through Shared Shelf metadata formatting data attribute names, labels, and values
     foreach($metadata as $lbl => $val) {
         if (strpos($lbl, 'On') > -1) { continue; }
         if (strpos($lbl, 'By') > -1) {
