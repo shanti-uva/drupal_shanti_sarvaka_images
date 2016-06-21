@@ -91,6 +91,7 @@
 
 .front.logged-in .main-col .block-views.contextual-links-region{
   margin-top:-3rem;
+  clear:both;
 }
 
 .front.logged-in .main-content .content-section .view-content{
