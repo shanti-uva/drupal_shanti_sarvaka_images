@@ -353,9 +353,17 @@ var Grid = (function($) {
 			var lnktxt = (eldata.dtype == 'pdf') ? "View PDF" : "Read more";
 			this.$href.html('<span>' + lnktxt + '</span>').attr( 'href', eldata.href );
 			var metavals = '';
-			for (var p in $itemEl.data()) {
+			var props = $itemEl.data();
+			for (var p in props) {
+			    var lbl = p;
 			    if ("title,description".indexOf(p) == -1 && p.indexOf('src') == -1) {
-			        metavals += '<li><label>' + p + ':</label> ' + $itemEl.data(p) + '</li>';
+			        var myval = $itemEl.data(p).toString();
+			        if (myval.indexOf('$$$') > -1) {
+			            var mypts = myval.split('$$$');
+			            lbl = mypts[0];
+			            myval = mypts[1];
+			        }
+			        metavals += '<li><label>' + lbl + ':</label> ' + myval + '</li>';
 			    }
 			}
 			this.$infolist.html(metavals);

@@ -75,15 +75,29 @@ function _sarvaka_images_create_item_markup($file) {
     $huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
     $metadata['hugesrc'] = $huge_path;
     if (!isset($metadata['description']) || !$metadata['description']) { $metadata['description'] = "No description avialable."; }
-    $markup = '<div class="item"><a href="' . $furl . '" ';
+    $markup = '<div class="item"><a href="' . $furl . '" data-fid="' . $file->fid . '" ';
+    //dpm($metadata, 'metadata');
     foreach($metadata as $lbl => $val) {
+        if (strpos($lbl, 'On') > -1) { continue; }
+        if (strpos($lbl, 'By') > -1) {
+            $datt = str_replace('By', 'On', $lbl);
+            $dval = date_create($metadata[$datt]) ;
+            $val .= ' (' . date_format($dval,"m/d/Y H:i:s") . ')';
+        }
+        if ($lbl == 'Date') {
+            $val = date_format(date_create($val),"m/d/Y H:i:s");
+        }
         $attnm = str_replace(' ', '-', $lbl);
         if (strpos($attnm, '/') > -1) {
             $pts = explode('/', $attnm);
             $attnm = $pts[0];
         }
         $attnm = trim(strtolower($attnm), ' -');
-        $markup .= 'data-' . $attnm . '="' . trim($val) . '" ';
+        if (!preg_match('/title|description|src/', $attnm)) {
+            $markup .= 'data-' . $attnm . '="' . $lbl . '$$$' . trim($val) . '" ';
+        } else {
+            $markup .= 'data-' . $attnm . '="' . trim($val) . '" ';
+        }
     }
     $markup .= ' ><img src="' . $thumb_path . '" alt="' . $ftitle . '" title="' . $ftitle . '"/></a></div>';
     return $markup;
