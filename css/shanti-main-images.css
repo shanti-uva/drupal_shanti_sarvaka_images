@@ -191,7 +191,7 @@ body.page-file-pdf .content-section.equal-height .tab-content .tabpane:nth-child
   border-width: 0 1px 1px;
 }
 
-body.page-file-pdf ul.nav.nav-tabs{ margin-left:1rem; }
+body.page-file-pdf ul.nav.nav-tabs li:first-child{ margin-left:1rem; }
 
 body.page-file-pdf ul.nav.nav-tabs a{
   text-transform: uppercase;
