@@ -183,7 +183,7 @@ body.page-file-pdf #block-system-main > .content{ padding-top:1rem;}
 
 body.page-file-pdf .content-section.equal-height{ padding-bottom:1rem; }
 
-body.page-file-pdf .content-section.equal-height .tab-content .tabpane:nth-child(n+2){
+body.page-file-pdf .content-section.equal-height .tab-content .tab-pane:nth-child(n+2){
   padding: 1rem 2.5rem 7rem;
   background: #fff;
   border-radius: .2rem .2rem .5rem .5rem;
