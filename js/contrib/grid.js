@@ -356,7 +356,8 @@ var Grid = (function($) {
 			var props = $itemEl.data();
 			for (var p in props) {
 			    var lbl = p;
-			    if ("title,description".indexOf(p) == -1 && p.indexOf('src') == -1) {
+			    if(['fid', 'ssid', 'thumbnail', 'title', 'description', 'projectId'].indexOf(p) > -1) {continue;}
+			    if (p.indexOf('src') == -1) {
 			        var myval = $itemEl.data(p).toString();
 			        if (myval.indexOf('$$$') > -1) {
 			            var mypts = myval.split('$$$');
