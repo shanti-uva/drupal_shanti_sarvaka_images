@@ -71,8 +71,8 @@
 
 
 .front .wrap-all > .container-fluid{  
-  padding-left: 0;
-  padding-right: 0;
+  /*padding-left: 0;
+  padding-right: 0;*/
 }
 
 .front .page-title .icon{
