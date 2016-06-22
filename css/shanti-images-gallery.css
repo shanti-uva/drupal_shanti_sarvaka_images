@@ -426,8 +426,8 @@
 
 .og-details .og-view-more.og-details-more{
   position: absolute;
-  /*bottom:0.2rem;*/
-  margin-left:-2.5rem;
+  bottom:0.2rem;
+  /*margin-left:-2.5rem;*/
 }
 
 .og-details .og-view-more.og-details-more > span{
