@@ -84,7 +84,7 @@ function _sarvaka_images_create_item_markup($file) {
     // Iterate through Shared Shelf metadata formatting data attribute names, labels, and values
     foreach($metadata as $lbl => $val) {
         if (strpos($lbl, 'On') > -1) { continue; }
-        if (strpos($lbl, 'By') > -1) {
+        if (strpos($lbl, 'By') > -1) { continue;
             $datt = str_replace('By', 'On', $lbl);
             $dval = date_create($metadata[$datt]) ;
             $val .= ' (' . date_format($dval,"m/d/Y H:i:s") . ')';

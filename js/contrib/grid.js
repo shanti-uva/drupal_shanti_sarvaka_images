@@ -356,13 +356,17 @@ var Grid = (function($) {
 			var props = $itemEl.data();
 			for (var p in props) {
 			    var lbl = p;
-			    if(['fid', 'ssid', 'thumbnail', 'title', 'description', 'projectId'].indexOf(p) > -1) {continue;}
+			    if(['fid', 'thumbnail', 'title', 'description', 'projectId'].indexOf(p) > -1) {continue;}
 			    if (p.indexOf('src') == -1) {
 			        var myval = $itemEl.data(p).toString();
 			        if (myval.indexOf('$$$') > -1) {
 			            var mypts = myval.split('$$$');
 			            lbl = mypts[0];
 			            myval = mypts[1];
+			        }
+			        //for lat long coordinates, create a link to google
+			        if (myval.match(/\-?\d+\.\d+,\s*\-?\d+\.\d+/)) {
+			            myval = '<a href="http://www.google.com/maps?q=' + myval + '" target="_blank">' +myval + '</a>';
 			        }
 			        metavals += '<li><label>' + lbl + ':</label> ' + myval + '</li>';
 			    }
