@@ -157,8 +157,13 @@
 .og-details .tab-pane {
   padding: 0;
   max-height: 450px;
-  min-height: 240px;
+  /*min-height: 240px;*/
+  min-height:350px;
   position: relative;
+}
+
+.og-details #info.tab-pane{
+  min-height:360px;
 }
 
 .row-offcanvas > section.content-section .og-details .tab-content:nth-of-type(1){
@@ -262,7 +267,10 @@
   margin: 0 0 0 0.75rem;
   padding: 0;
   overflow-y: auto;
-  height: 340px;
+  /*height: 340px;*/
+
+  max-height: 290px;
+  min-height: 150px;
 }
 
 .og-details #info li {
