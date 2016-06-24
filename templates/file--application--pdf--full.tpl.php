@@ -102,19 +102,40 @@
 		    <div role="tabpanel" class="tab-pane" id="metadata">
 		    	<div class="file-ss-div file-ss-info">
 				    <?php
-				      print $ssmetadata;
+				        if (isset($ssmetadata)) {
+				            $len = array_search('Author', array_keys($ssmetadata));
+                            $truemeta = array_splice($ssmetadata, 0, $len);
+                            $truemeta += array_splice($ssmetadata, -1, 1); // Project ID
+        				        foreach ($truemeta as $key => $val) {
+        				            ?>
+        				            <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
+        				                <div class="field-label"><? print $key; ?>:&nbsp;</div>
+        				                <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
+        				             </div><br/>
+        				            <?php
+        				        }
+                        }
 				    ?>
 			    </div>
 				</div>
 		    <div role="tabpanel" class="tab-pane" id="info">
 		    	<div class="file-ss-div file-ss-info">
 				    <?php
-				      // We hide the links now so that we can render them later.
-				      hide($content['links']);
-							hide($content['file']);
-				      //print render($content);
-							print $ssfields;
-				    ?>
+        				       hide($content['links']);
+        					   hide($content['file']);
+        				       //print render($content);
+        					   //if(!empty($ssfields)) { print $ssfields;} 
+                            if (isset($ssmetadata)) {
+                                    foreach ($ssmetadata as $key => $val) {
+                                        ?>
+                                        <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
+                                            <div class="field-label"><? print $key; ?>:&nbsp;</div>
+                                            <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
+                                        </div><br/>
+                                        <?php
+                                    }
+                            } else { print render($content); }
+                    ?>
 				  </div>
 				</div>
 		  </div>
