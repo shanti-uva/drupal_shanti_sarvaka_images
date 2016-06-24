@@ -109,7 +109,7 @@
         				        foreach ($truemeta as $key => $val) {
         				            ?>
         				            <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
-        				                <div class="field-label"><? print $key; ?>:&nbsp;</div>
+        				                <div class="field-label"><?php print $key; ?>:&nbsp;</div>
         				                <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
         				             </div><br/>
         				            <?php
@@ -130,7 +130,7 @@
                                     foreach ($ssmetadata as $key => $val) {
                                         ?>
                                         <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
-                                            <div class="field-label"><? print $key; ?>:&nbsp;</div>
+                                            <div class="field-label"><?php print $key; ?>:&nbsp;</div>
                                             <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
                                         </div><br/>
                                         <?php
