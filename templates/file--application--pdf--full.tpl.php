@@ -123,6 +123,7 @@
 				    <?php
         				       hide($content['links']);
         					   hide($content['file']);
+                               //dpm($content, 'content');
         				       //print render($content);
         					   //if(!empty($ssfields)) { print $ssfields;} 
                             if (isset($ssmetadata)) {
@@ -134,6 +135,7 @@
                                         </div><br/>
                                         <?php
                                     }
+                                    print render($content['field_sharedshelf_description']);
                             } else { print render($content); }
                     ?>
 				  </div>
