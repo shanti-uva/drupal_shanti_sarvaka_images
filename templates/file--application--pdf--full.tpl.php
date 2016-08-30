@@ -84,60 +84,39 @@
   <?php endif; ?>
 
   <div class="file-content"<?php print $content_attributes; ?>>
-
-	  <section class="content-section equal-height">
-	      <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
-            <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
-            <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
-          </ul>
-        
-          <!-- Tab panes -->
+      
+      <section class="content-section equal-height">
+	  <!-- Nav tabs -->
+	  <!--<ul class="nav nav-tabs" role="tablist">--></ul>
+      <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#pdf" aria-controls="pdf" role="tab" data-toggle="tab">PDF</a></li>
+	    <li role="presentation"><a href="#metadata" aria-controls="info" role="tab" data-toggle="tab">Metadata</a></li>
+	    <li role="presentation"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">Info</a></li>
+	  </ul>
+	
+  
+	  <!-- Tab panes -->
 		  <div class="tab-content">
 		    <div role="tabpanel" class="tab-pane iframe active" id="pdf">
 		    	<div class="pdfextlink"><a href="<?php print $iframe_url; ?>" target="_blank"> <?php print t('View in Separate Window') ?></a></div>
-		    	 <iframe class="pdf-frame" title="PDF in IFrame" src="<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
+	  			<iframe class="pdf-frame" title="PDF in IFrame" src="<?php print $iframe_url; ?>" width="100%" height="800"></iframe>
 		    </div>
 		    <div role="tabpanel" class="tab-pane" id="metadata">
 		    	<div class="file-ss-div file-ss-info">
 				    <?php
-				        if (isset($ssmetadata)) {
-				            $len = array_search('Author', array_keys($ssmetadata));
-                            $truemeta = array_splice($ssmetadata, 0, $len);
-                            $truemeta += array_splice($ssmetadata, -1, 1); // Project ID
-        				        foreach ($truemeta as $key => $val) {
-        				            ?>
-        				            <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
-        				                <div class="field-label"><?php print $key; ?>:&nbsp;</div>
-        				                <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
-        				             </div><br/>
-        				            <?php
-        				        }
-                        }
+				      print $ssmetadata;
 				    ?>
 			    </div>
 				</div>
 		    <div role="tabpanel" class="tab-pane" id="info">
 		    	<div class="file-ss-div file-ss-info">
 				    <?php
-        				       hide($content['links']);
-        					   hide($content['file']);
-                               //dpm($content, 'content');
-        				       //print render($content);
-        					   //if(!empty($ssfields)) { print $ssfields;} 
-                            if (isset($ssmetadata)) {
-                                    foreach ($ssmetadata as $key => $val) {
-                                        ?>
-                                        <div class="field field-name-field-sharedshelf-meta field-type-text field-label-inline">
-                                            <div class="field-label"><?php print $key; ?>:&nbsp;</div>
-                                            <div class="field-items"><div class="field-item even"><?php print $val; ?></div></div>
-                                        </div><br/>
-                                        <?php
-                                    }
-                                    print render($content['field_sharedshelf_description']);
-                            } else { print render($content); }
-                    ?>
+				      // We hide the links now so that we can render them later.
+				      hide($content['links']);
+							hide($content['file']);
+				      //print render($content);
+							print $ssfields;
+				    ?>
 				  </div>
 				</div>
 		  </div>

@@ -10,6 +10,14 @@
   *   Use it to implement custom functions or override existing functions in the theme. 
   */ 
   
+function sarvaka_images_preprocess_page(&$vars) {
+    // Remove extra search tabs for pages with "search/site" in the current path
+    $cp = current_path();
+    if (strpos($cp, 'search/site/') > -1) {
+        $vars['tabs']['#primary'] = array();
+    }
+}
+
 /**
  * Impelments hook_preprocess_views_view
  * 
@@ -46,106 +54,65 @@ function sarvaka_images_preprocess_views_view(&$vars) {
 		
 		// Process Results
 		$results = $view->result;
-        //dpm($results, 'results');
 		$rows = '<div id="og-grid" class="og-grid clearfix">';
+		
 		// Iterate through results, get info about each file, and build item html 
+
 		foreach ($results as $res) {
 			$file = file_load($res->fid); // Load file
-			$rows .= _sarvaka_images_create_item_markup($file);
+			$furl = url('file/' . $file->fid); // Url to file's page
+			// Get image paths for various sizes (thumb, large, huge)
+			$file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
+			$furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . $file_ext;
+			$thumb_path = image_style_url('media_thumbnail', $furi) ; 		// Thumb path for grid
+			$large_path = image_style_url('media_large', $furi) ;					// Large path for popup
+			$huge_path = image_style_url('media_lightbox_large', $furi) ;	// Huge path for lightbox
+			// Get dimensions for huge image and append to url with "::" separators (url::width::height)
+			$hugepts = explode('/sites/', $huge_path);
+			$hugepts = explode('?', $hugepts[1]);
+			$huge_info = image_get_info('sites/' . $hugepts[0]);
+			$huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
+			
+			// Get details about file from metadata_wrapper
+		    $info_bundle = array('bundle' => $file->type);
+		    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
+			$ftitle = $file->filename;
+			// Creator
+			$creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
+			if(empty($creator)) {$creator = "Not available";}
+			// Date
+			$date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
+			if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
+			$photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
+			// Photographer
+			if(empty($photographer)) {$photographer = "Not available";}
+			// Place
+			$place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
+			if(empty($place)) {$place = "Not available";}
+			// SSID
+			$ssid = sarvaka_images_metadata_process($wrapper->field_sharedshelf_ssid->value());
+			
+			// Description
+			$fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
+			if (empty($fdesc)) {$fdesc = t("No description currently available.");} 
+				// Trim Description 
+			if (strlen($fdesc) > 750) { // Trim to 750 characters
+				$fdesc = substr($fdesc, 0, 750);
+				$fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
+			}
+			// Type of file (from mimetype)
+			$dtype = substr($file->filemime, strpos($file->filemime, '/') + 1); // Take last part of mimetype
+			// Create HTML
+			$rows .= '<div class="item">
+		    		<a href="' . $furl . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
+			    	data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
+			    	data-ssid="' . $ssid . '" > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
+			    </a>
+		    </div>';
 		}
 		$rows .= '</div>';
 		$vars['rows'] = $rows;
 	}
-}
-
-/**
- * Creates markup for the grid.js library to show a dropdown with metadata
- */
-function _sarvaka_images_create_item_markup($file) {
-    $furl = url('file/' . $file->fid); // Url to file's page
-    $metadata = $file->ssmetadata;
-    // Get image paths for various sizes (thumb, large, huge) and add to metadata
-    $file_ext = ($file->type == 'document') ? '.jpg' : sarvaka_images_get_image_extension($file);
-    $furi = str_replace('sharedshelf://', 'public://media-sharedshelf/', check_plain($file->uri)) . '.jpg';
-    $ftitle = $file->filename;
-    $thumb_path = image_style_url('media_thumbnail', $furi) ;       // Thumb path for grid used as img src attribute below
-    $metadata['largesrc'] = image_style_url('media_large', $furi) ;                   // Large path for popup
-    $huge_path = image_style_url('media_lightbox_large', $furi) ;   // Huge path for lightbox
-    // Get dimensions for huge image and append to url with "::" separators (url::width::height)
-    $hugepts = explode('/sites/', $huge_path);
-    $hugepts = explode('?', $hugepts[1]);
-    $huge_info = image_get_info('sites/' . $hugepts[0]);
-    $huge_path .= '::' . $huge_info['width'] . '::' . $huge_info['height']; 
-    $metadata['hugesrc'] = $huge_path;
-    // If no description, add string to say so.
-    if (!isset($metadata['description']) || !$metadata['description']) { $metadata['description'] = "No description avialable."; }
-    // Create the Markup variable to be returned
-    $markup = '<div class="item"><a href="' . $furl . '" data-fid="' . $file->fid . '" ';
-    // Iterate through Shared Shelf metadata formatting data attribute names, labels, and values
-    foreach($metadata as $lbl => $val) {
-        if (strpos($lbl, 'On') > -1) { continue; }
-        if (strpos($lbl, 'By') > -1) { continue;
-            $datt = str_replace('By', 'On', $lbl);
-            $dval = date_create($metadata[$datt]) ;
-            $val .= ' (' . date_format($dval,"m/d/Y H:i:s") . ')';
-        }
-        if ($lbl == 'Date') {
-            $val = date_format(date_create($val),"m/d/Y H:i:s");
-        }
-        $attnm = str_replace(' ', '-', $lbl);
-        if (strpos($attnm, '/') > -1) {
-            $pts = explode('/', $attnm);
-            $attnm = $pts[0];
-        }
-        $attnm = trim(strtolower($attnm), ' -');
-        if (!preg_match('/title|description|src/', $attnm)) {
-            $markup .= 'data-' . $attnm . '="' . $lbl . '$$$' . trim($val) . '" ';
-        } else {
-            $markup .= 'data-' . $attnm . '="' . trim($val) . '" ';
-        }
-    }
-    $markup .= ' ><img src="' . $thumb_path . '" alt="' . $ftitle . '" title="' . $ftitle . '"/></a></div>';
-    return $markup;
-    
-    /* Old code using metadata wrapper and fields in Drupal
-    // Get details about file from metadata_wrapper
-    $info_bundle = array('bundle' => $file->type);
-    $wrapper = entity_metadata_wrapper('file', $file, $info_bundle);
-    $ftitle = $file->filename;
-    // Creator
-    $creator = sarvaka_images_metadata_process($wrapper->field_sharedshelf_creator->value());
-    if(empty($creator)) {$creator = "Not available";}
-    // Date
-    $date = sarvaka_images_metadata_process($wrapper->field_sharedshelf_date->value());
-    if(empty($date)) {$date = "Not available";} else { $date = date('F j, Y', strtotime($date)); }
-    $photographer = sarvaka_images_metadata_process($wrapper->field_sharedshelf_photographer->value());
-    // Photographer
-    if(empty($photographer)) {$photographer = "Not available";}
-    // Place
-    $place = sarvaka_images_metadata_process($wrapper->field_sharedshelf_place->value());
-    if(empty($place)) {$place = "Not available";}
-    // SSID
-    $ssid = sarvaka_images_metadata_process($wrapper->field_sharedshelf_ssid->value());
-    
-    // Description
-    $fdesc = $wrapper->field_sharedshelf_description->value(array('sanitize' => TRUE));
-    if (empty($fdesc)) {$fdesc = t("No description currently available.");} 
-        // Trim Description 
-    if (strlen($fdesc) > 750) { // Trim to 750 characters
-        $fdesc = substr($fdesc, 0, 750);
-        $fdesc = substr($fdesc, 0, strrpos($fdesc, ' ')) . "...";
-    }
-    // Type of file (from mimetype)
-    $dtype = substr($file->filemime, strpos($file->filemime, '/') + 1); // Take last part of mimetype
-    // Create HTML
-    $markup = '<div class="item">
-            <a href="' . $furl . '" data-fid="'. $file->fid . '" data-largesrc="' . $large_path . '" data-hugesrc="' . $huge_path . '" data-title="' . $ftitle . '" data-description="' . $fdesc . '" 
-            data-creator="' . $creator . '" data-photographer="' . $photographer . '" data-date="' . $date . '" data-place="' . $place . '" data-type="' . $dtype . '" 
-            data-ssid="' . $ssid . '" > <img src="' . $thumb_path . '" alt="' . $ftitle . '" />
-        </a>
-    </div>';
-    return $markup;
-     * */
 }
 
 function sarvaka_images_metadata_process($mdinfo) {
@@ -176,7 +143,7 @@ function sarvaka_images_get_image_extension($file) {
         break;
 
       case 'image/gif':
-        return '.gif';
+        return '.png'; // Shared Shelf Gifs get saved as PNGs in Drupal (?)
         break;
 
       default:
@@ -195,54 +162,6 @@ function sarvaka_images_preprocess_file_entity(&$vars) {
 
  */
  
- /**
- * Implements hook page alter
- *      Sets the banner color according to the field_banner_color assigned to the group or parent group of files
- */
-function sarvaka_images_page_alter(&$page) {
-    // If it's a collection/subcollection group node
-    sarvaka_images_update_banner($page, menu_get_object());
-}
-
-function sarvaka_images_update_banner(&$page, $entity) {
-    // If there's a banner color than it's a collection or subcollection with a color, set it.
-    if (!empty($entity->field_banner_color)) {
-        sarvaka_images_add_custom_banner_css($entity);
-    // If it's a file entity (menu get object won't work, but information is in the page content), use that to find it's parent collection or subcollection and set color
-    } else if (!empty($page['content']['system_main']['field_og_collection_ref']['#items'])) {
-        $gid = $page['content']['system_main']['field_og_collection_ref']['#items'][0]['target_id'];
-        sarvaka_images_add_custom_banner_css($gid);
-    // If it's an edito for adding a subcollection to a collection, use the collections banner color
-    } else if(isset($_GET['field_og_parent_collection_ref'])) {
-        sarvaka_images_add_custom_banner_css($_GET['field_og_parent_collection_ref']);
-    // If it's an edito for adding an content item to a collection, use the collections banner color
-    } else if(isset($_GET['field_og_collection_ref'])) {
-        sarvaka_images_add_custom_banner_css($_GET['field_og_collection_ref']);
-    // Subcollections inherit banner color from parent unless theirs is set different (first if statement)
-    } else if(isset($entity->field_og_parent_collection_ref)) {
-        $gid = $entity->field_og_parent_collection_ref['und'][0]['target_id'];
-        sarvaka_images_add_custom_banner_css($gid);
-    // Other possibilities?
-    } else {
-       /* dpm($page, 'page');
-        dpm($entity, 'entity');*/
-    }
-}
-
-function sarvaka_images_add_custom_banner_css($group) {
-    if (is_numeric($group)) {
-        $group = node_load($group);
-        if (!$group) { return; }
-    }
-    $bcfield = field_get_items('node', $group, 'field_banner_color');
-    if ($bcfield) {
-        $color_code = str_replace('##','#', '#'. $bcfield[0]['value']);
-        drupal_add_css('body .titlearea, body .carousel-control, body .breadcrumb .icon, body .nav-justified>li.active a, 
-                                body .nav-justified>li.active a:hover, body .nav-justified>li.active a:active {background-color: ' . $color_code . ' !important;} ', 
-                           array('group' => CSS_THEME, 'type' => 'inline'));
-    }
-}
-
 /**
  * Implements hook preprocess field
  * 		Hide empty fields in image nodes
@@ -262,29 +181,7 @@ function sarvaka_images_menu_breadcrumb_alter(&$active_trail, $item) {
 		$active_trail = array(); // remove default breadcrumbs which are messed up
 		drupal_set_title(t("Search for “@term”", array('@term' => $item['page_arguments'][1])));
 		return;
-	} else if (strpos(current_path(), 'node/add/subcollection') > -1) {
-	     // if it's a subcollection add form, redo the breadcrumbs to have collection list and parent collection in trail
-	    $active_trail = array();
-        $active_trail[] = array( 
-                'title' => t("Collections"),
-                'href' => '/collections',
-                'link_path' => '/collections', 
-                'localized_options' => array(),
-                'type' => 0
-         );
-         if(isset($_GET['field_og_parent_collection_ref'])) {
-               $pgid = $_GET['field_og_parent_collection_ref'];
-               $pgroup = node_load($pgid);
-               $path = url('node/' . $pgid);
-                $active_trail[] = array( 
-                    'title' => $pgroup->title,
-                    'href' => $path,
-                    'link_path' => $path, 
-                    'localized_options' => array(),
-                    'type' => 0
-                );
-         }
-    }
+	}
  }
 
 /**
